@@ -1,2 +1,2 @@
-# algs
-java algorithm exercise
+# algsoj
+java algorithm exercise 
