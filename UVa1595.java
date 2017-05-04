@@ -13,7 +13,9 @@ import java.util.LinkedList;
 public class UVa1595 {
         static HashMap<Integer, LinkedList<Integer>> map;
 
-        public static void main(String[] args) throws IOException {
+
+        static void solve() throws IOException {
+
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
                 int t = new Integer(bfr.readLine());
@@ -22,7 +24,7 @@ public class UVa1595 {
                         int n = new Integer(bfr.readLine());
                         for (int i = 0; i < n; i++) {
                                 String[] rts = bfr.readLine().split("\\s+");
-                                int x = new Integer(rts[0]);
+                                int x = new Integer(rts[0]) * 2;
                                 int y = new Integer(rts[1]);
                                 if (map.containsKey(y)) {
                                         map.get(y).add(x);
@@ -33,7 +35,7 @@ public class UVa1595 {
                                         map.put(y, tmp);
                                 }
                         }
-                        double mid = 1000000;
+                        int mid = 1000000;
                         boolean flag = true;
                         for (Integer i : map.keySet()) {
                                 LinkedList<Integer> tmp = map.get(i);
@@ -43,19 +45,8 @@ public class UVa1595 {
 //                                }
                                 Collections.sort(tmp);
                                 //比两边对称点
-                                for (int j = 0; j < tmp.size() / 2; j++) {
-                                        double tmpMid = (tmp.get(j) + tmp.get(tmp.size() - j - 1)) / 2.0;
-                                        if (mid == 1000000)
-                                                mid = tmpMid;
-                                        if (tmpMid != mid) {
-                                                flag = false;
-                                                break;
-                                        }
-                                        mid = tmpMid;
-                                }
-                                //比中间的点（单数情况下）
-                                if (tmp.size() % 2 != 0) {
-                                        double tmpMid = tmp.get(tmp.size() / 2);
+                                for (int j = 0; j <= tmp.size() / 2; j++) {
+                                        int tmpMid = (tmp.get(j) + tmp.get(tmp.size() - j - 1)) / 2;
                                         if (mid == 1000000)
                                                 mid = tmpMid;
                                         if (tmpMid != mid) {
@@ -73,5 +64,9 @@ public class UVa1595 {
                 }
                 bfr.close();
                 bfw.close();
+        }
+
+        public static void main(String[] args) throws IOException {
+                solve();
         }
 }
