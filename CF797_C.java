@@ -39,6 +39,7 @@ public class CF797_C {
                         }
                         n.append(t.reverse());
                         bfw.write(n.toString());
+                        bfw.flush();
                 }
                 bfw.close();
                 bfr.close();
