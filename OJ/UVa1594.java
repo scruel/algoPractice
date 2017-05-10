@@ -38,7 +38,7 @@ public class UVa1594 {
                                         break;
                                 set.add(tmp);
 //                                for (int i = 0; i < n; i++) {
-//                                        if (nextNums[i] != nums[i]) {
+//                                        if (nextNums[i] != arr[i]) {
 //                                                flag = false;
 //                                                break;
 //                                        }

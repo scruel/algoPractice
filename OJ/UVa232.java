@@ -96,7 +96,7 @@ public class UVa232 {
                         bfw.write("puzzle #" + ++sum + ":\n");
                         findAcross();
                         findDown();
-//                        MyTools.print_r(nums);
+//                        MyTools.print_r(arr);
                 }
                 bfr.close();
                 bfw.close();

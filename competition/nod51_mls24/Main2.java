@@ -1,4 +1,4 @@
-package algsPractice.competition;
+package algsPractice.competition.nod51_mls24;
 
 
 import java.io.*;

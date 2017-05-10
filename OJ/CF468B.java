@@ -14,7 +14,7 @@ import java.util.HashMap;
  * Github : https://github.com/scruel
  * http://codeforces.com/contest/468/problem/B
  */
-public class CF268B {
+public class CF468B {
         //        static int[] szA;
         static int[] id = new int[8];
         static int[] array = new int[8];

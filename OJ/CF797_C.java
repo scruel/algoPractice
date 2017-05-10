@@ -1,6 +1,9 @@
 package algsPractice.OJ;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by Scruel on 2017/5/4.
@@ -34,6 +37,7 @@ public class CF797_C {
                                 while (tIndex >= 0 && t.charAt(tIndex) <= (char) (c + 1))
                                         tIndex--;
                                 //倒出t
+
                                 n.append(new StringBuilder(t.substring(tIndex + 1, t.length())).reverse());
                                 t = new StringBuilder(t.substring(0, tIndex + 1));
                         }

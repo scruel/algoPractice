@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
  * Github : https://github.com/scruel
  */
 public class UVa815 {
-        //        static int[][] nums;
+        //        static int[][] arr;
         static PriorityQueue<Integer> pq;
         static int n, m, k;
 
@@ -26,13 +26,13 @@ public class UVa815 {
                                 break;
 //                        if (round > 0) bfw.write("\n");
                         bfw.write("Region " + ++round + "\n");
-//                        nums = new int[n][m];
+//                        arr = new int[n][m];
 
                         for (int i = 0; i < n; i++) {
                                 rts = bfr.readLine().split("\\s+");
                                 for (int j = 0; j < m; j++) {
                                         pq.add(new Integer(rts[j]));
-//                                        nums[i][j] = new Integer(rts[j]);
+//                                        arr[i][j] = new Integer(rts[j]);
                                 }
                         }
 
