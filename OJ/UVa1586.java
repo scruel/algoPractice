@@ -6,7 +6,7 @@ import java.io.*;
  * Created by Scruel on 2017/4/3.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * **string**
+ * #string
  */
 public class UVa1586 {
         static final double[] nums = {12.01, 1.008, 16.00, 14.01};//CHON

@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/4/4.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * **string**数组
+ * #string
  */
 public class UVa227 {
         static char[][] puzzle = new char[10][10];

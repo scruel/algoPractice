@@ -6,7 +6,7 @@ import java.io.*;
  * Created by Scruel on 2017/4/13.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * **动态规划/循环**
+ * #loop #dp
  */
 public class UVa10340 {
         static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));

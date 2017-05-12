@@ -18,6 +18,7 @@ import java.io.*;
  * 记“m加上m的各个数字之和得到的数有一个生成元是m”，最后查表即可。
  * <p>
  * 多组问题可以考虑 查表 的方法！
+ * #table #preprocessing
  */
 public class UVa1583 {
         public static void main(String[] args) throws Exception {

@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
- * Created by Scruel on 2012/1/7.
+ * #union
  */
 public class POJ3723_Conscription {
         static int res;

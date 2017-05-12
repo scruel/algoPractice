@@ -8,7 +8,7 @@ import java.util.*;
  * Created by Scruel on 2017/4/25.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * 中点离散化
+ * #离散化  中点
  */
 public class UVa221 {
         static int maxn = 100 + 5;

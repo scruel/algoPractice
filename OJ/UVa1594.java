@@ -7,6 +7,7 @@ import java.util.HashSet;
  * Created by Scruel on 2017/4/26.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #easy #structure
  */
 public class UVa1594 {
 

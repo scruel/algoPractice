@@ -8,6 +8,7 @@ import java.util.LinkedList;
  * Created by Scruel on 2017/5/5.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #simulate
  */
 public class UVa210 {
         static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);

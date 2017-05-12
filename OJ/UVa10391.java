@@ -7,7 +7,7 @@ import java.util.Arrays;
  * Created by Scruel on 2017/4/27.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * 数据结构
+ * #structure
  */
 public class UVa10391 {
         static String[] words = new String[120005];

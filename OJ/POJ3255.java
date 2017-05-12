@@ -11,6 +11,7 @@ import java.util.PriorityQueue;
  * Created by Scruel on 2017/4/6.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #graph #bfs
  */
 public class POJ3255 {
         static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));

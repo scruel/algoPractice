@@ -7,6 +7,7 @@ import java.util.HashMap;
  * Created by Scruel on 2017/4/27.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #recursion #simulate
  */
 public class UVa1596 {
         static HashMap<String, Integer> initMap;

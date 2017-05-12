@@ -6,7 +6,7 @@ import java.io.*;
  * Created by Scruel on 2017/4/3.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * **string**
+ * #string
  */
 public class UVa1585 {
         static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));

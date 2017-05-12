@@ -6,7 +6,7 @@ import java.io.*;
  * Created by Scruel on 2017/4/5.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * **二进制** 读取
+ * #binary  读取
  */
 public class UVa213 {
         static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));

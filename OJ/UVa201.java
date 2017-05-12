@@ -7,6 +7,7 @@ import java.io.*;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  * 细节题 枚举，滑动窗口
+ * #graph
  */
 public class UVa201 {
         static int[] sideH;

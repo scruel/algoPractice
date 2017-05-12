@@ -8,7 +8,8 @@ import java.util.Arrays;
  * Created by Scruel on 2017/4/5.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * 可排序--即忽略顺序，**string**统计 **排序**
+ * 可排序--即忽略顺序
+ * #string #sort #static
  */
 public class UVa1339 {
         public static void main(String[] args) throws IOException {

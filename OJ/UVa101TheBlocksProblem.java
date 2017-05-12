@@ -11,8 +11,9 @@ import java.util.LinkedList;
  * Created by Scruel on 2017/4/14.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * **数据结构标准库**可以用stack做，更为直观，index也可以保存高度值，更为快速
+ * 可以用stack做，更为直观，index也可以保存高度值，更为快速
  * 在题解中其实就是stack，一直在操作尾部，这里也可以使用removeLast和addLast来实现。
+ * #structure
  */
 public class UVa101TheBlocksProblem {
         static int n;

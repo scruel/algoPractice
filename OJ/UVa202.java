@@ -7,7 +7,8 @@ import java.util.LinkedList;
  * Created by Scruel on 2017/4/4.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * 大整数除法及**string**
+ * #大整数除法  #string
+ *
  */
 public class UVa202 {
         static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));

@@ -10,6 +10,7 @@ import java.util.List;
  * Created by Scruel on 2017/4/27.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #simulate
  */
 public class UVa230 {
         static HashMap<String, Book> bookMap = new HashMap<String, Book>();

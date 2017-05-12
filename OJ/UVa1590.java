@@ -6,6 +6,7 @@ import java.io.*;
  * Created by Scruel on 2017/4/18.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #ipAddress #binary #string
  */
 public class UVa1590 {
 

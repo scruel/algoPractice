@@ -4,7 +4,7 @@ package algsPractice.OJ;
  * Created by Scruel on 2017/4/13.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * **二进制转换**
+ * #binary
  */
 public class UVa11809 {
         static long solve(String s) {

@@ -7,6 +7,7 @@ import java.io.*;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  * **string** 滚动数组优化
+ * #string
  */
 public class UVa1584 {
         static int n;
