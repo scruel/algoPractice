@@ -8,6 +8,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/4/7.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #unsolved
  */
 public class Nod1384 {
         static char[] array;

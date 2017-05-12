@@ -4,7 +4,7 @@ package algsPractice.OJ;
  * Created by Scruel on 2017/4/16.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * **dp**
+ * #dp
  */
 public class Leet198_HouseRobber {
         //        static int rob(int[] arr) {

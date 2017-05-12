@@ -9,6 +9,7 @@ import java.util.Set;
  * Created by Scruel on 2017/5/4.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com3/scruel
+ * #greedy
  */
 public class CF797_C {
         static void solve() throws IOException {

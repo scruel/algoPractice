@@ -6,6 +6,7 @@ import java.io.*;
  * Created by Scruel on 2017/4/5.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #dp
  */
 public class NOJ1730 {
         static int[][] dp;
@@ -19,7 +20,7 @@ public class NOJ1730 {
                         for (int i = 0; i < n; i++) {
                                 String[] rTs = bfr.readLine().split("\\s+");
                                 for (int j = 0; j <= i; j++) {
-                                        dp[i + 1 & 1][j + 1] = Math.max(dp[i & 1][j], dp[i & 1][j + 1]) + new Integer(rTs[j]);
+                                        dp[(i + 1) & 1][j + 1] = Math.max(dp[i & 1][j], dp[i & 1][j + 1]) + new Integer(rTs[j]);
                                 }
                         }
                         int res = 0;

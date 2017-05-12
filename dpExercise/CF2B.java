@@ -7,7 +7,7 @@ import java.util.Scanner;
  * **DP**
  * #unsolve
  */
-public class CF2_B {
+public class CF2B {
         static int min = 999999999;
         static int size, z_x = -1, z_y = -1;
         static String re = "";

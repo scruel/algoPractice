@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/3/28.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * greed 取木板
+ * #greedy 取木板
  */
 public class POJ3253_FenceRepair {
         public static void main(String[] args) {

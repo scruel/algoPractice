@@ -76,7 +76,6 @@ public class UVa210 {
                         if (!flag && !programList.isEmpty())
                                 waitList.add(id);
 
-
                 }
         }
 

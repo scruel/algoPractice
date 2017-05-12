@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * Created by Scruel on 2016/4/9.
+ * #structure
  */
 public class POJ2431_expedition {
         public static void main(String[] args) {

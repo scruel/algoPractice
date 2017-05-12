@@ -6,7 +6,8 @@ import java.util.Scanner;
  * Created by Scruel on 2017/4/1.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * 计蒜客模拟赛5第9题 union
+ * 计蒜客模拟赛5第9题
+ * #union
  */
 public class JSK_BoomUnion {
 

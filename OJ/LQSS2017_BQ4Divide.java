@@ -4,6 +4,7 @@ package algsPractice.OJ;
  * Created by Scruel on 2017/4/9.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #dfs 点线面分割
  */
 public class LQSS2017_BQ4Divide {
         static int count = 0;

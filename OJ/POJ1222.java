@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/3/29.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * 枚举
+ * #enum
  * //TODO 高斯消元解法
  */
 public class POJ1222 {

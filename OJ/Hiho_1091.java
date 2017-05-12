@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
  * Created by Scruel on 2017/4/20.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #dp 泛化背包
  */
 public class Hiho_1091 {
         static int[] damage;

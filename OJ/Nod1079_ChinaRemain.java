@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/3/31.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * math
+ * #math
  */
 public class Nod1079_ChinaRemain {
         //获取最小公倍数

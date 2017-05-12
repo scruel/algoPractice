@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
  * Created by Scruel on 2017/4/14.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * 简单题
+ * #easy
  */
 public class CF16A_Flag {
         static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));

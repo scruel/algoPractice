@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/4/9.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #details
  */
 public class LQSS2017_BQ3CQ4 {
         public static void main(String[] args) {

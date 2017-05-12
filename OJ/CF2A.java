@@ -35,7 +35,6 @@ public class CF2A {
                                 scoreList[count] = map.get(name);
                                 winnerList[count++] = name;
                         }
-
                 }
 
                 Set<String> set = map.keySet();

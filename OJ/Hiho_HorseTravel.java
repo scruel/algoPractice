@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  * https://hihocoder.com/problemset/problem/1504
- * unsolved
+ * #unsolved
  */
 public class Hiho_HorseTravel {
         static final int MOD = 1000000007;

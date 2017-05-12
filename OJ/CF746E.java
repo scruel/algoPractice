@@ -8,7 +8,8 @@ import java.util.Iterator;
  * Created by Scruel on 2017/5/10.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * //TODO
+ * #structure
+ * //REDO
  */
 public class CF746E {
         static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
@@ -19,9 +20,7 @@ public class CF746E {
         static String[] rts;
         static int[] arr;
         static boolean[] isRep;
-        static int n, m, exchangeSum;
-        static int oddIndex = 1;
-        static int evenIndex = 2;
+        static int n, m;
 
 
         public static void main(String[] args) throws IOException {

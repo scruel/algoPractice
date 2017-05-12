@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/3/27.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * 智力题
+ * #智力题
  */
 public class POJ1852_ants {
         public static void main(String[] args) {

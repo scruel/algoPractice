@@ -24,7 +24,7 @@ import java.util.Scanner;
  * 本解决方案时间复杂度为O(n ^ 4)，但删除字符O(n)的复杂度是可以优化为O(1)的，只需多维护一个链表或记录每个位置"V"、"K"、"?"的前缀（或后缀）数量即可；
  * 优化后的时间复杂度可降至O(n ^ 3)。
  */
-public class CF_771D {
+public class CF771D {
         static int[][][][] d = new int[76][76][76][2];
         static char[] a;
         static char[] ch = new char[4];

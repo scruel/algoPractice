@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/4/2.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * union
+ * #union
  */
 public class POJ1182_FoodLink {
         static int[] selfUf;

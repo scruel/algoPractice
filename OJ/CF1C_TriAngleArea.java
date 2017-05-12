@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * Created by Administrator on 2016/3/29.
- * geometry
+ * #geometry
  */
 public class CF1C_TriAngleArea {
         static final double EPS = 1E-6;

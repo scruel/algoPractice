@@ -5,6 +5,7 @@ package algsPractice.OJ;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  * 蓝桥杯2017省赛，BQ2  210
+ * #prime
  */
 public class LQSS2017_BQ2 {
         public static void main(String[] args) {

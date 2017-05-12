@@ -13,6 +13,7 @@ import java.util.HashMap;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  * http://codeforces.com/contest/468/problem/B
+ * #union
  */
 public class CF468B {
         //        static int[] szA;

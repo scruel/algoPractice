@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/3/28.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * P47 greed
+ * #greedy  P47
  */
 public class POJ3069_SarumanArmy {
 

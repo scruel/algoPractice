@@ -10,8 +10,8 @@ import java.util.StringTokenizer;
  * Created by Scruel on 2017/4/10.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * **快速幂**
- * WA unsolved
+ * #快速幂
+ * #unsolved
  */
 public class Lydsy_2751 {
         static final int MOD = 1000000007;

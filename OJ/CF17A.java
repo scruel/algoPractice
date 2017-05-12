@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/4/14.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * 素数
+ * #prime
  */
 public class CF17A {
         static boolean[] isNotPrime;

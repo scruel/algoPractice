@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/3/30.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * unsolve:TLE
+ * #unsolve:TLE
  */
 public class POJ2718_SmallestDifference {
 
@@ -77,7 +77,6 @@ public class POJ2718_SmallestDifference {
                                 int tempM = ok();
                                 if (tempM < min)
                                         min = tempM;
-//                                if (tempM == 25)
                         }
                         char temp = chars[chars.length - newSize];
                         for (int j = chars.length - newSize; j < chars.length - 1; j++) {

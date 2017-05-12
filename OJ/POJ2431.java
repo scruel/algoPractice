@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/3/31.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * greed
+ * #greedy
  */
 public class POJ2431 {
         static int N;
