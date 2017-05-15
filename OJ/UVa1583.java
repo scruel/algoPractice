@@ -40,9 +40,9 @@ public class UVa1583 {
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
                 String s = bfr.readLine();
-                int n = new Integer(s);
+                int n = Integer.parseInt(s);
                 for (int i = 0; i < n; i++) {
-                        bfw.write(res[new Integer(bfr.readLine())] + "\n");
+                        bfw.write(res[Integer.parseInt(bfr.readLine())] + "\n");
                 }
 //                while ((s = bfr.readLine()) != null && s.length() != 0)
                 bfr.close();

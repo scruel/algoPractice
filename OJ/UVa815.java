@@ -21,8 +21,8 @@ public class UVa815 {
                 while (true) {
                         pq = new PriorityQueue<Integer>();
                         String[] rts = bfr.readLine().split("\\s+");
-                        n = new Integer(rts[0]);
-                        m = new Integer(rts[1]);
+                        n = Integer.parseInt(rts[0]);
+                        m = Integer.parseInt(rts[1]);
                         if (n == 0 && m == 0)
                                 break;
 //                        if (round > 0) bfw.write("\n");
@@ -32,12 +32,12 @@ public class UVa815 {
                         for (int i = 0; i < n; i++) {
                                 rts = bfr.readLine().split("\\s+");
                                 for (int j = 0; j < m; j++) {
-                                        pq.add(new Integer(rts[j]));
-//                                        arr[i][j] = new Integer(rts[j]);
+                                        pq.add(Integer.parseInt(rts[j]));
+//                                        arr[i][j] = Integer.parseInt(rts[j]);
                                 }
                         }
 
-                        k = new Integer(bfr.readLine());
+                        k = Integer.parseInt(bfr.readLine());
                         int sumSameH = 0;
                         double waterH = pq.peek();
 

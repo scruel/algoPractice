@@ -23,14 +23,14 @@ public class Hiho_1091 {
                 System.out.println(1 << 16);
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
                 String[] rts = bfr.readLine().split("\\s+");
-                n = new Integer(rts[0]);
-                m = new Integer(rts[1]);
+                n = Integer.parseInt(rts[0]);
+                m = Integer.parseInt(rts[1]);
                 damage = new int[n];
                 cost = new int[n];
                 for (int i = 0; i < n; i++) {
                         rts = bfr.readLine().split("\\s+");
-                        damage[i] = new Integer(rts[0]);
-                        cost[i] = new Integer(rts[1]);
+                        damage[i] = Integer.parseInt(rts[0]);
+                        cost[i] = Integer.parseInt(rts[1]);
                 }
 
                 System.out.print(solve());

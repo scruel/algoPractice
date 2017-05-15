@@ -65,10 +65,10 @@ public class UVa12096 {
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
                 IDCache = new HashMap<HashSet<Integer>, Integer>();
                 setcache = new LinkedList<HashSet<Integer>>();
-                int n = new Integer(bfr.readLine());
+                int n = Integer.parseInt(bfr.readLine());
                 while (n-- != 0) {
                         res = new Stack<Integer>();
-                        int opNum = new Integer(bfr.readLine());
+                        int opNum = Integer.parseInt(bfr.readLine());
                         while (opNum-- != 0) {
                                 String rT = bfr.readLine();
                                 if ("PUSH".equals(rT)) {

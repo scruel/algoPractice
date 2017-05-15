@@ -18,7 +18,7 @@ public class UVa202 {
                 String s;
                 while ((s = bfr.readLine()) != null && s.length() != 0) {
                         String[] rTs = s.split(" ");
-                        div(new Integer(rTs[0]), new Integer(rTs[1]));
+                        div(Integer.parseInt(rTs[0]), Integer.parseInt(rTs[1]));
                 }
                 bfr.close();
                 bfw.close();

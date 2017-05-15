@@ -16,7 +16,7 @@ public class UVa1590 {
         static void solve1() throws IOException {
                 String s;
                 while ((s = bfr.readLine()) != null && s.length() != 0) {
-                        int n = new Integer(s);
+                        int n = Integer.parseInt(s);
                         String[] rts = bfr.readLine().split("\\.");
                         String binaryS = ssTobinaryS(rts);
 //                        bfw.write(binaryS + "\n");
@@ -57,7 +57,7 @@ public class UVa1590 {
         static void solve2() throws IOException {
                 String s;
                 while ((s = bfr.readLine()) != null && s.length() != 0) {
-                        int n = new Integer(s);
+                        int n = Integer.parseInt(s);
                         String[] maxrtS = null;
                         String[] minrtS = null;
 
@@ -107,7 +107,7 @@ public class UVa1590 {
         static String ssTobinaryS(String[] ss) {
 
 
-                String tmp = String.format("%8s", Integer.toBinaryString(new Integer(ss[0]))) + String.format("%8s", Integer.toBinaryString(new Integer(ss[1]))) + String.format("%8s", Integer.toBinaryString(new Integer(ss[2]))) + String.format("%8s", Integer.toBinaryString(new Integer(ss[3])));
+                String tmp = String.format("%8s", Integer.toBinaryString(Integer.parseInt(ss[0]))) + String.format("%8s", Integer.toBinaryString(Integer.parseInt(ss[1]))) + String.format("%8s", Integer.toBinaryString(Integer.parseInt(ss[2]))) + String.format("%8s", Integer.toBinaryString(Integer.parseInt(ss[3])));
 
                 return tmp.replaceAll(" ", "0");
         }
@@ -125,7 +125,7 @@ public class UVa1590 {
         static void solve3() throws IOException {
                 String s;
                 while ((s = bfr.readLine()) != null && s.length() != 0) {
-                        int n = new Integer(s);
+                        int n = Integer.parseInt(s);
                         long min = ~(long) 0 >>> 32;
                         long max = 0;
                         for (int i = 0; i < n; i++) {

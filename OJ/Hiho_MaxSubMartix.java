@@ -52,19 +52,19 @@ public class Hiho_MaxSubMartix {
                         remain = stk.countTokens();
                 }
                 remain--;
-                return new Integer(stk.nextToken());
+                return Integer.parseInt(stk.nextToken());
         }
 
         public static void main(String[] args) throws IOException {
 
-                n = new Integer(nextInt());
-                m = new Integer(nextInt());
-                k = new Integer(nextInt());
+                n = nextInt();
+                m = nextInt();
+                k = nextInt();
 
                 martix = new int[n + 1][m + 1];
                 for (int i = 0; i < n; i++) {
                         for (int j = 0; j < m; j++) {
-                                martix[i][j] = new Integer(nextInt());
+                                martix[i][j] = nextInt();
                         }
                 }
                 System.out.println(dfs(n, m));

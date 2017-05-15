@@ -28,7 +28,7 @@ public class Lydsy_2751 {
                         left = st.countTokens();
                 }
                 left--;
-                return new Integer(st.nextToken());
+                return Integer.parseInt(st.nextToken());
         }
 
         public static void main(String[] args) throws IOException {

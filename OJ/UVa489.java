@@ -15,7 +15,7 @@ public class UVa489 {
         public static void main(String[] args) throws IOException {
                 while (true) {
                         String rT = bfr.readLine();
-                        int roundNum = new Integer(rT);
+                        int roundNum = Integer.parseInt(rT);
                         if (roundNum == -1) break;
 
                         String cS = bfr.readLine();

@@ -23,7 +23,7 @@ public class UVa814 {
                 while (!"*".equals(s = bfr.readLine())) {
                         rts = s.split("\\s+");
                         String mta = rts[1];
-                        int n = new Integer(rts[2]);
+                        int n = Integer.parseInt(rts[2]);
                         for (int i = 0; i < n; i++) {
                                 set.add(rts[i + 3] + "@" + mta);
                         }

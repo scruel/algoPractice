@@ -38,7 +38,6 @@ public class UVa213 {
 
 
         public static void main(String[] args) throws IOException {
-                System.out.println(Integer.toBinaryString(new Integer(-5)));
                 init();
                 String s;
                 while (null != (s = bfr.readLine()) && s.length() != 0) {

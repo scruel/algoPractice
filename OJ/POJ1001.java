@@ -10,7 +10,7 @@ public class POJ1001 {
                 String res = a.pow(b).toString();
                 //99.999  25
                 if (res.contains("E-")) {
-                        int num = new Integer(res.substring(res.indexOf("-") + 1, res.length()));
+                        int num = Integer.parseInt(res.substring(res.indexOf("-") + 1, res.length()));
                         res = res.substring(0, res.indexOf('.')) + res.substring(res.indexOf('.') + 1, res.indexOf("E"));
 
                         for (int i = 0; i < num - 1; i++) {
@@ -46,7 +46,7 @@ public class POJ1001 {
                         BigDecimal a = new BigDecimal(rTs[0]);
                         int b;
                         if (rTs.length != 1)
-                                b = new Integer(rTs[1]);
+                                b = Integer.parseInt(rTs[1]);
                         else
                                 b = input.nextInt();
                         solve(a, b);

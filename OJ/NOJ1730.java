@@ -15,12 +15,12 @@ public class NOJ1730 {
         public static void main(String[] args) throws IOException {
                 String s;
                 while (null != (s = bfr.readLine()) && s.length() != 0) {
-                        int n = new Integer(s);
+                        int n = Integer.parseInt(s);
                         dp = new int[2][1005];
                         for (int i = 0; i < n; i++) {
                                 String[] rTs = bfr.readLine().split("\\s+");
                                 for (int j = 0; j <= i; j++) {
-                                        dp[(i + 1) & 1][j + 1] = Math.max(dp[i & 1][j], dp[i & 1][j + 1]) + new Integer(rTs[j]);
+                                        dp[(i + 1) & 1][j + 1] = Math.max(dp[i & 1][j], dp[i & 1][j + 1]) + Integer.parseInt(rTs[j]);
                                 }
                         }
                         int res = 0;

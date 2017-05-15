@@ -58,7 +58,7 @@ public class UVa1596 {
                                                 }
                                         } else {
                                                 String tmp = rep[i].substring(rep[i].indexOf("[") + 1, rep[i].lastIndexOf("]"));
-                                                initMap.put(rep[i].substring(0, 1), new Integer(tmp));
+                                                initMap.put(rep[i].substring(0, 1), Integer.parseInt(tmp));
                                         }
                                 }
                                 if (flag)
@@ -77,7 +77,7 @@ public class UVa1596 {
         //递归查询情况
         static int getRes(String rep) {
                 if (rep.matches("\\d+"))
-                        return new Integer(rep);
+                        return Integer.parseInt(rep);
                 String tmp = rep.substring(rep.indexOf("[") + 1, rep.lastIndexOf("]"));
                 int res = getRes(tmp);
                 String arrName = rep.substring(0, 1);

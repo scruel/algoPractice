@@ -17,13 +17,13 @@ public class Nod1091 {
         static int n;
 
         public static void main(String[] args) throws IOException {
-                n = new Integer(bfr.readLine());
+                n = Integer.parseInt(bfr.readLine());
                 pairs = new Pair[n];
                 for (int i = 0; i < n; i++) {
                         String[] rts = bfr.readLine().split("\\s+");
                         pairs[i] = new Pair();
-                        pairs[i].head = new Integer(rts[0]);
-                        pairs[i].tail = new Integer(rts[1]);
+                        pairs[i].head = Integer.parseInt(rts[0]);
+                        pairs[i].tail = Integer.parseInt(rts[1]);
                         pq.add(pairs[i]);
                 }
                 int ans = 0;

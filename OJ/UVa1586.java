@@ -21,7 +21,7 @@ public class UVa1586 {
         }
 
         static void solve() throws IOException {
-                int n = new Integer(bfr.readLine());
+                int n = Integer.parseInt(bfr.readLine());
                 for (int i = 0; i < n; i++) {
                         String s = bfr.readLine();
                         double result = 0.0;
@@ -36,7 +36,7 @@ public class UVa1586 {
                                         if ("".equals(tempNum))
                                                 result += tempR;
                                         else
-                                                result += tempR * new Integer(tempNum);
+                                                result += tempR * Integer.parseInt(tempNum);
                                         tempNum = "";
                                         switch (ch) {
                                                 case 'C':
@@ -62,7 +62,7 @@ public class UVa1586 {
                         if ("".equals(tempNum))
                                 result += tempR;
                         else
-                                result += tempR * new Integer(tempNum);
+                                result += tempR * Integer.parseInt(tempNum);
                         result += 1e-10;
 //                        System.out.println(result);
                         System.out.printf("%.3f\n", result);

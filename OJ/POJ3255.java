@@ -49,12 +49,12 @@ public class POJ3255 {
         void solve() throws IOException {
                 PriorityQueue<Pair> pq = new PriorityQueue<Pair>();
                 String[] rTs = bfr.readLine().split("\\s+");
-                int n = new Integer(rTs[0]);
-                int m = new Integer(rTs[1]);
+                int n = Integer.parseInt(rTs[0]);
+                int m = Integer.parseInt(rTs[1]);
                 init(n);
                 for (int i = 0; i < m; i++) {
                         rTs = bfr.readLine().split("\\s+");
-                        addEdge(new Integer(rTs[0]) - 1, new Integer(rTs[1]) - 1, new Integer(rTs[2]));
+                        addEdge(Integer.parseInt(rTs[0]) - 1, Integer.parseInt(rTs[1]) - 1, Integer.parseInt(rTs[2]));
                 }
 
                 Arrays.fill(distTo, Integer.MAX_VALUE);

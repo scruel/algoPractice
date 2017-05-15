@@ -31,7 +31,7 @@ public class UVa1593 {
                 }
 
                 for (int i = 0; i < index; i++) {
-                        int wLen = new Integer(strs[i][0]);
+                        int wLen = Integer.parseInt(strs[i][0]);
                         for (int j = 1; j < wLen; j++) {
                                 String tmp = formatS(strs[i][j], maxWLen[j]);
                                 bfw.write(tmp);

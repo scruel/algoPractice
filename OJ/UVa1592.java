@@ -24,8 +24,8 @@ public class UVa1592 {
                         map = new HashMap<String, Integer>();
                         pairSet = new HashSet<Pair>();
                         String[] rTs = rT.split("\\s+");
-                        int n = new Integer(rTs[0]);
-                        int m = new Integer(rTs[1]);
+                        int n = Integer.parseInt(rTs[0]);
+                        int m = Integer.parseInt(rTs[1]);
                         boolean flag = true;
                         //rows
                         for (int i = 0; i < n; i++) {

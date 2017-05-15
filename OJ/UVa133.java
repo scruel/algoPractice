@@ -24,10 +24,10 @@ public class UVa133 {
         static void solve() throws IOException {
                 while (true) {
                         String[] rTs = bfr.readLine().split("\\s+");
-                        n = new Integer(rTs[0]);
+                        n = Integer.parseInt(rTs[0]);
                         if (n == 0) break;
-                        int k = new Integer(rTs[1]);
-                        int m = new Integer(rTs[2]);
+                        int k = Integer.parseInt(rTs[1]);
+                        int m = Integer.parseInt(rTs[2]);
                         list = new int[n];
                         for (int i = 1; i <= n; i++) {
                                 list[i - 1] = i;

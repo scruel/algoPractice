@@ -17,7 +17,7 @@ public class UVa1584 {
         public static void main(String[] args) throws IOException {
                 bfr = new BufferedReader(new InputStreamReader(System.in));
                 bfw = new BufferedWriter(new OutputStreamWriter(System.out));
-                n = new Integer(bfr.readLine());
+                n = Integer.parseInt(bfr.readLine());
                 solve2();
                 bfr.close();
                 bfw.close();

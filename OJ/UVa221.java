@@ -37,7 +37,7 @@ public class UVa221 {
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
                 Set<Double> set = new HashSet<Double>();
                 int kase = 0;
-                while ((n = new Integer(bfr.readLine())) != 0) {
+                while ((n = Integer.parseInt(bfr.readLine())) != 0) {
                         for (int i = 0; i < n; i++) {
                                 b[i] = new Builder();
                                 String[] rts = bfr.readLine().split("\\s+");
@@ -57,7 +57,7 @@ public class UVa221 {
                         list.toArray(x);
                         System.out.println(x.length);
 //                        int m = unique(x, x + n * 2) - x; //x坐标排序后去重，得到m个坐标
-//                        (in java, m = set.size())
+//                        (in java, m = pq.size())
                         if (kase++ > 0)
                                 bfw.write("\n");
                         bfw.write(String.format("For map #%d, the visible buildings are numbered as follows:\n%d", kase, b[0].id));

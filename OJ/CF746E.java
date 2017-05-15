@@ -25,8 +25,8 @@ public class CF746E {
 
         public static void main(String[] args) throws IOException {
                 rts = bfr.readLine().split("\\s+");
-                n = new Integer(rts[0]);
-                m = new Integer(rts[1]);
+                n = Integer.parseInt(rts[0]);
+                m = Integer.parseInt(rts[1]);
                 arr = new int[n + 1];
                 isRep = new boolean[n];
                 rts = bfr.readLine().split("\\s+");

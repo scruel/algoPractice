@@ -17,14 +17,14 @@ public class Nod1163 {
         static PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
 
         public static void main(String[] args) throws IOException {
-                int n = new Integer(bfr.readLine());
+                int n = Integer.parseInt(bfr.readLine());
                 pairs = new Pair[n];
 
                 for (int i = 0; i < n; i++) {
                         String[] rts = bfr.readLine().split("\\s+");
                         pairs[i] = new Pair();
-                        pairs[i].eT = new Integer(rts[0]);
-                        pairs[i].weight = new Integer(rts[1]);
+                        pairs[i].eT = Integer.parseInt(rts[0]);
+                        pairs[i].weight = Integer.parseInt(rts[1]);
                 }
 
                 Arrays.sort(pairs);

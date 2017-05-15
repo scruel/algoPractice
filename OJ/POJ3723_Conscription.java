@@ -51,14 +51,14 @@ public class POJ3723_Conscription {
 
         public static void main(String[] args) throws Exception {
 //                Scanner scanner = new Scanner(System.in);
-                int round = new Integer(cin.nextInt());
+                int round = cin.nextInt();
                 while (round-- != 0) {
 //                        bfr.readLine();
                         res = 0;
 //                        rTs = bfr.readLine().split("\\s+");
-//                        int n = new Integer(rTs[0]);
-//                        int m = new Integer(rTs[1]);
-//                        int r = new Integer(rTs[2]);
+//                        int n = Integer.parseInt(rTs[0]);
+//                        int m = Integer.parseInt(rTs[1]);
+//                        int r = Integer.parseInt(rTs[2]);
                         int n = cin.nextInt();
                         int m = cin.nextInt();
                         int r = cin.nextInt();
@@ -66,7 +66,7 @@ public class POJ3723_Conscription {
                         for (int i = 0; i < E; i++) {
 //                                rTs = bfr.readLine().split("\\s+");
                                 edges[i] = new Edge(cin.nextInt(), n + cin.nextInt(), -cin.nextInt());
-//                                edges[i] = new Edge(new Integer(rTs[0]), n + new Integer(rTs[1]), -new Integer(rTs[2]));
+//                                edges[i] = new Edge(Integer.parseInt(rTs[0]), n + Integer.parseInt(rTs[1]), -Integer.parseInt(rTs[2]));
                         }
                         Arrays.sort(edges);
                         for (int i = 0; i < E; i++) {

@@ -146,8 +146,8 @@ public class POJ1182_FoodLink {
 //                Scanner input = new Scanner(System.in);
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
                 String[] s = bfr.readLine().split(" ");
-                n = new Integer(s[0]);
-                k = new Integer(s[1]);
+                n = Integer.parseInt(s[0]);
+                k = Integer.parseInt(s[1]);
 //                n = 50000;
 //                k = 100000;
                 T = new int[k];
@@ -157,9 +157,9 @@ public class POJ1182_FoodLink {
                 Random rm = new Random();
                 for (int i = 0; i < k; i++) {
                         s = bfr.readLine().split(" ");
-                        T[i] = new Integer(s[0]);
-                        X[i] = new Integer(s[1]);
-                        Y[i] = new Integer(s[2]);
+                        T[i] = Integer.parseInt(s[0]);
+                        X[i] = Integer.parseInt(s[1]);
+                        Y[i] = Integer.parseInt(s[2]);
 //                        T[i] = rm.nextInt(n);
 //                        X[i] = rm.nextInt(n);
 //                        Y[i] = rm.nextInt(n);

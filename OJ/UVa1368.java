@@ -17,11 +17,11 @@ public class UVa1368 {
         static int[][] tb;
 
         static void solve() throws IOException {
-                int item = new Integer(bfr.readLine());
+                int item = Integer.parseInt(bfr.readLine());
                 for (int t = 0; t < item; t++) {
                         String[] rTs = bfr.readLine().split(" ");
-                        int m = new Integer(rTs[0]);
-                        int n = new Integer(rTs[1]);
+                        int m = Integer.parseInt(rTs[0]);
+                        int n = Integer.parseInt(rTs[1]);
                         tb = new int[n][256];
                         for (int i = 0; i < m; i++) {
                                 String s = bfr.readLine();

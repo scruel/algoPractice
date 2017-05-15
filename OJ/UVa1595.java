@@ -19,14 +19,14 @@ public class UVa1595 {
 
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
-                int t = new Integer(bfr.readLine());
+                int t = Integer.parseInt(bfr.readLine());
                 while (t-- > 0) {
                         map = new HashMap<Integer, LinkedList<Integer>>();
-                        int n = new Integer(bfr.readLine());
+                        int n = Integer.parseInt(bfr.readLine());
                         for (int i = 0; i < n; i++) {
                                 String[] rts = bfr.readLine().split("\\s+");
-                                int x = new Integer(rts[0]) * 2;
-                                int y = new Integer(rts[1]);
+                                int x = Integer.parseInt(rts[0]) * 2;
+                                int y = Integer.parseInt(rts[1]);
                                 if (map.containsKey(y)) {
                                         map.get(y).add(x);
                                 } else {

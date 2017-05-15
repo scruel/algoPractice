@@ -44,12 +44,12 @@ public class CF468B {
         public static void main(String[] args) throws IOException {
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
                 String[] rts = bfr.readLine().split("\\s+");
-                n = new Integer(rts[0]);
-                a = new Integer(rts[1]);
-                b = new Integer(rts[2]);
+                n = Integer.parseInt(rts[0]);
+                a = Integer.parseInt(rts[1]);
+                b = Integer.parseInt(rts[2]);
                 rts = bfr.readLine().split("\\s+");
                 for (int i = 1; i <= n; i++) {
-                        array[i] = new Integer(rts[i - 1]);
+                        array[i] = Integer.parseInt(rts[i - 1]);
                         map.put(array[i], i);
                 }
                 //多两个作为并查集A\B标识

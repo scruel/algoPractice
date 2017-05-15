@@ -17,7 +17,7 @@ public class POJ3751 {
                         String year = ("" + time[0] + time[1] + time[2] + time[3]);
                         String month = ("" + time[5] + time[6]);
                         String day = ("" + time[8] + time[9]);
-                        int hour = new Integer("" + time[11] + time[12]);
+                        int hour = Integer.parseInt("" + time[11] + time[12]);
                         String min = ("" + time[14] + time[15]);
                         String sec = ("" + time[17] + time[18]);
 

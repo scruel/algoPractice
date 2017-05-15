@@ -22,7 +22,7 @@ public class UVa101TheBlocksProblem {
         static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
 
         public static void main(String[] args) throws IOException {
-                n = new Integer(bfr.readLine());
+                n = Integer.parseInt(bfr.readLine());
                 blocksWorld = new LinkedList[n];
                 index = new int[n];
                 for (int i = 0; i < n; i++) {
@@ -36,9 +36,9 @@ public class UVa101TheBlocksProblem {
                                 break;
                         String[] rTs = s.split("\\s+");
                         if ("move".equals(rTs[0])) {
-                                move(rTs[2], new Integer(rTs[1]), new Integer(rTs[3]));
+                                move(rTs[2], Integer.parseInt(rTs[1]), Integer.parseInt(rTs[3]));
                         } else {
-                                pile(rTs[2], new Integer(rTs[1]), new Integer(rTs[3]));
+                                pile(rTs[2], Integer.parseInt(rTs[1]), Integer.parseInt(rTs[3]));
                         }
                 }
 

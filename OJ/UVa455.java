@@ -22,7 +22,7 @@ public class UVa455 {
         }
 
         static void solve() throws IOException {
-                int n = new Integer(bfr.readLine().trim());
+                int n = Integer.parseInt(bfr.readLine().trim());
                 //读入为空的时候继续读入
                 for (int t = 0; t < n; t++) {
                         String s = bfr.readLine();

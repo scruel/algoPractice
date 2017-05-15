@@ -67,15 +67,15 @@ public class UVa201 {
 //                        if (pNum > 0)
 //                                bfw.write("\n**********************************\n\n");
 //                        bfw.write("Problem #" + ++pNum + "\n\n");
-//                        n = new Integer(s);
+//                        n = Integer.parseInt(s);
 //                        sideH = new int[n][n];
 //                        sideV = new int[n][n];
 ////                for (int i = 0; i < n * n; i++) sideH[i] = i;
-//                        int ops = new Integer(bfr.readLine());
+//                        int ops = Integer.parseInt(bfr.readLine());
 //                        for (int i = 0; i < ops; i++) {
 //                                String[] rTs = bfr.readLine().split("\\s+");
-//                                int p = new Integer(rTs[1]) - 1;
-//                                int q = new Integer(rTs[2]) - 1;
+//                                int p = Integer.parseInt(rTs[1]) - 1;
+//                                int q = Integer.parseInt(rTs[2]) - 1;
 //                                if ("H".equals(rTs[0])) {
 //                                        sideH[p][q] = 1;
 //                                } else if ("V".equals(rTs[0])) {
@@ -163,15 +163,15 @@ public class UVa201 {
                         if (pNum > 0)
                                 bfw.write("\n**********************************\n\n");
                         bfw.write("Problem #" + ++pNum + "\n\n");
-                        n = new Integer(s);
+                        n = Integer.parseInt(s);
                         sideH = new int[n * n];
                         sideV = new int[n * n];
 //                for (int i = 0; i < n * n; i++) sideH[i] = i;
-                        int ops = new Integer(bfr.readLine());
+                        int ops = Integer.parseInt(bfr.readLine());
                         for (int i = 0; i < ops; i++) {
                                 String[] rTs = bfr.readLine().split("\\s+");
-                                int p = new Integer(rTs[1]) - 1;
-                                int q = new Integer(rTs[2]) - 1;
+                                int p = Integer.parseInt(rTs[1]) - 1;
+                                int q = Integer.parseInt(rTs[2]) - 1;
                                 if ("H".equals(rTs[0])) {
                                         sideH[p] = q;
                                 } else if ("V".equals(rTs[0])) {

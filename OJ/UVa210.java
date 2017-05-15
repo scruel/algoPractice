@@ -17,7 +17,6 @@ public class UVa210 {
         static HashMap<Integer, LinkedList<Order>> programMap;
         static LinkedList<Integer> waitList;
         static LinkedList<Integer> blockList;
-        //        static int n, assT, outT, lockT, unLockT, endT, programT;
         static int n;
         static boolean isLock = false;
         static int[] eTime;
@@ -59,8 +58,6 @@ public class UVa210 {
                                 Order order = programList.getFirst();
                                 int orderTime = eTime[order.type];
                                 //执行语句
-//                                bfw.write("order(" + id + "):" + order.order + "\n");
-//                                bfw.flush();
                                 if (!executeOrder(id, order.type, order.order)) {
                                         //lock处理
                                         if (order.type == 4)
@@ -76,18 +73,16 @@ public class UVa210 {
                         //程序指令还未执行完毕，重新加入等待队列
                         if (!flag && !programList.isEmpty())
                                 waitList.add(id);
-
                 }
         }
 
         static boolean executeOrder(int id, int type, String order) throws IOException {
                 if (type == 1) {
                         String[] rts = order.split("\\s+");
-                        value[rts[0].charAt(0)] = new Integer(rts[2]);
+                        value[rts[0].charAt(0)] = Integer.parseInt(rts[2]);
                 } else if (type == 2) {
                         String[] rts = order.split("\\s+");
                         bfw.write(id + ": " + value[rts[1].charAt(0)] + "\n");
-//                        bfw.flush();
                 } else if (type == 3) {
                         if (!isLock) {
                                 isLock = true;
@@ -97,7 +92,6 @@ public class UVa210 {
                         }
                 } else if (type == 4) {
                         isLock = false;
-//                        waitList.addFirst(id);
                         if (!blockList.isEmpty())
                                 waitList.addFirst(blockList.removeFirst());
                 }
@@ -108,15 +102,14 @@ public class UVa210 {
         public static void main(String[] args) throws IOException {
                 String tmpS;
                 while ((tmpS = bfr.readLine()) == null || tmpS.isEmpty()) ;
-                int t = new Integer(tmpS);
+                int t = Integer.parseInt(tmpS);
                 while (t-- > 0) {
-
                         while ((tmpS = bfr.readLine()) == null || tmpS.isEmpty()) ;
                         String[] rts = tmpS.split("\\s+");
-                        n = new Integer(rts[0]);
+                        n = Integer.parseInt(rts[0]);
                         eTime = new int[7];
                         for (int i = 1; i < rts.length; i++) {
-                                eTime[i] = new Integer(rts[i]);
+                                eTime[i] = Integer.parseInt(rts[i]);
                         }
                         value = new int[256];
                         programMap = new HashMap<Integer, LinkedList<Order>>();
@@ -142,7 +135,6 @@ public class UVa210 {
         }
 
         static class Order {
-                int id;
                 int remainTime;
                 int type;
                 String order;

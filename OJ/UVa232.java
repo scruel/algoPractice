@@ -81,9 +81,9 @@ public class UVa232 {
                 while (true) {
                         String[] rTs = bfr.readLine().split(" ");
                         String rT;
-                        r = new Integer(rTs[0]);
+                        r = Integer.parseInt(rTs[0]);
                         if (r == 0) break;
-                        c = new Integer(rTs[1]);
+                        c = Integer.parseInt(rTs[1]);
 
                         for (int i = 0; i < r; i++) {
                                 rT = bfr.readLine();

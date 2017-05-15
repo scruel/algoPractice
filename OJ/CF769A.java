@@ -12,11 +12,11 @@ import java.io.InputStreamReader;
 public class CF769A {
         public static void main(String[] args) throws IOException {
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
-                int n = new Integer(bfr.readLine());
+                int n = Integer.parseInt(bfr.readLine());
                 int[] years = new int[n];
                 String[] rts = bfr.readLine().split("\\s+");
                 for (int i = 0; i < rts.length; i++) {
-                        years[i] = new Integer(rts[i]);
+                        years[i] = Integer.parseInt(rts[i]);
                 }
                 int year;
                 for (int x = 0; x < 100; x++) {

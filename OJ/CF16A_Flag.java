@@ -15,8 +15,8 @@ public class CF16A_Flag {
 
         public static void main(String[] args) throws IOException {
                 String[] rTs = bfr.readLine().split("\\s+");
-                int n = new Integer(rTs[0]);
-                int m = new Integer(rTs[1]);
+                int n = Integer.parseInt(rTs[0]);
+                int m = Integer.parseInt(rTs[1]);
                 char lastChar = ' ';
                 for (int i = 0; i < n; i++) {
                         char[] chars = bfr.readLine().toCharArray();

@@ -19,7 +19,7 @@ public class UVa1585 {
         }
 
         static void solve() throws IOException {
-                int n = new Integer(bfr.readLine());
+                int n = Integer.parseInt(bfr.readLine());
                 for (int i = 0; i < n; i++) {
                         String s = bfr.readLine();
                         int sum = 0;

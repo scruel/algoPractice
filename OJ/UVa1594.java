@@ -14,15 +14,15 @@ public class UVa1594 {
         public static void main(String[] args) throws IOException {
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
-                int t = new Integer(bfr.readLine());
+                int t = Integer.parseInt(bfr.readLine());
                 while (t-- > 0) {
-                        int n = new Integer(bfr.readLine());
+                        int n = Integer.parseInt(bfr.readLine());
                         HashSet<Pair> set = new HashSet<Pair>();
                         int[] nums = new int[n];
                         int[] nextNums = new int[n];
                         String[] rts = bfr.readLine().split("\\s+");
                         for (int i = 0; i < n; i++) {
-                                nums[i] = new Integer(rts[i]);
+                                nums[i] = Integer.parseInt(rts[i]);
                         }
                         int zeroSum;
 //                        int loopSum = 0;

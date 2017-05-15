@@ -1,6 +1,8 @@
 package algsPractice.OJ;
 
 import java.io.*;
+import java.util.Iterator;
+import java.util.Stack;
 
 /**
  * Created by Scruel on 2017/5/11.
@@ -14,6 +16,11 @@ public class Nod1255 {
         static char[] s;
         static int[][] f = new int[100001][26];
         static int mask;
+        //还剩下多少个字符
+        static int[] c = new int[128];
+        //是否在栈中
+        static boolean[] v = new boolean[128];
+        static Stack<Character> stack = new Stack<Character>();
 
         static void solve1() throws IOException {
                 int n = s.length;
@@ -46,18 +53,39 @@ public class Nod1255 {
                                 }
                         }
                 }
-
         }
 
+        static void solve2() {
+                int n = s.length;
+                for (int i = 0; i < n; i++) {
+                        c[s[i]]++;
+                }
+                for (int i = 0; i < n; i++) {
+                        c[s[i]]--;
+                        if (!v[s[i]]) {
+                                while (!stack.isEmpty()) {
+                                        if (s[i] > stack.peek() || c[stack.peek()] <= 0)
+                                                break;
+                                        v[stack.peek()] = false;
+                                        stack.pop();
+                                }
+                                stack.add(s[i]);
+                                v[s[i]] = true;
+                        }
+                }
+                StringBuilder sb = new StringBuilder();
+                for (Iterator iter = stack.iterator(); iter.hasNext(); ) {
 
-        static void slove2() {
+                        sb.append(iter.next());
+                }
+                System.out.println(sb);
 
         }
 
 
         public static void main(String[] args) throws IOException {
                 s = bfr.readLine().toCharArray();
-                solve1();
+                solve2();
                 bfr.close();
                 bfw.close();
         }
