@@ -21,9 +21,13 @@ import java.io.*;
  * #table #preprocessing
  */
 public class UVa1583 {
+        static int[] ans;
+
         public static void main(String[] args) throws Exception {
+                BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
                 int MAX_N = 100005;
-                int[] res = new int[MAX_N];
+                ans = new int[MAX_N];
                 for (int i = 1; i < MAX_N; i++) {
                         int x = i;
                         //累加当前位
@@ -33,18 +37,15 @@ public class UVa1583 {
                                 y += x % 10;
                                 x /= 10;
                         }
-                        if (y < MAX_N && (res[y] == 0 || res[y] > i))
-                                res[y] = i;
+                        if (y < MAX_N && (ans[y] == 0 || ans[y] > i))
+                                ans[y] = i;
                 }
 
-                BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
-                BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
                 String s = bfr.readLine();
                 int n = Integer.parseInt(s);
                 for (int i = 0; i < n; i++) {
-                        bfw.write(res[Integer.parseInt(bfr.readLine())] + "\n");
+                        bfw.write(ans[Integer.parseInt(bfr.readLine())] + "\n");
                 }
-//                while ((s = bfr.readLine()) != null && s.length() != 0)
                 bfr.close();
                 bfw.close();
         }

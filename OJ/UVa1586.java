@@ -10,11 +10,9 @@ import java.io.*;
  */
 public class UVa1586 {
         static final double[] nums = {12.01, 1.008, 16.00, 14.01};//CHON
-        //        static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
-        static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+        static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
+        static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
 
-        static void solve2() throws IOException {
-        }
 
         public static void main(String[] args) throws IOException {
                 solve();
@@ -64,11 +62,10 @@ public class UVa1586 {
                         else
                                 result += tempR * Integer.parseInt(tempNum);
                         result += 1e-10;
-//                        System.out.println(result);
-                        System.out.printf("%.3f\n", result);
+                        bfw.write(String.format("%.3f\n", result));
                 }
 
-//                bfw.close();
+                bfw.close();
                 bfr.close();
         }
 

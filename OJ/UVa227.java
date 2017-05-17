@@ -18,8 +18,8 @@ public class UVa227 {
         static int sum = 0;
         static boolean OK;
         static char[] dir = " ABRL".toCharArray();
-        //  1.使用字符表对应方式来去下一步情况，这样还可以防止非法输入
         static int[] ha = new int[300];
+        //  1.使用字符表对应方式来去下一步情况，这样还可以防止非法输入
         static int dy[] = {0, -1, 1, 0, 0};
         static int dx[] = {0, 0, 0, 1, -1};
         Scanner scanner = new Scanner(System.in);

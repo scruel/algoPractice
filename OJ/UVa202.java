@@ -41,7 +41,7 @@ public class UVa202 {
                 int sum = 0;
                 LinkedList<Integer> list = new LinkedList<Integer>();
                 //这里的思想是，如果再次出现相同的m，那么接下来一定会有相同序列。
-                //做题的时候不能被分类迷惑，也不能随便想分类情况，要多方面考虑可行性。
+                //做题的时候不能被题目的分类迷惑，也不能随便想分类情况，要多方面考虑可行性及解法。
                 while (sum < 99999999) {
                         m = (int) (m * 10 + 1e-9);
                         int index = list.indexOf(m);
