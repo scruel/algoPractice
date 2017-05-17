@@ -72,8 +72,8 @@ public class UVa1587 {
                                         ok = flag;
                                 }
 
-                                bfw.write(ok ? "POSSIBLE\n" : "IMPOSSIBLE\n");
                         }
+                        bfw.write(ok ? "POSSIBLE\n" : "IMPOSSIBLE\n");
 
 
                 }
