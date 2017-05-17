@@ -1,7 +1,6 @@
 package algsPractice.OJ;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
@@ -10,6 +9,7 @@ import java.util.*;
  * Created by Scruel on 2017/5/15.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #TODO
  */
 public class Nod1380 {
         static int[] L = new int[99999];
@@ -121,46 +121,40 @@ public class Nod1380 {
         }
 
         static class MyScanner {
-                BufferedReader br;
+                BufferedReader bfr;
                 StringTokenizer st;
 
                 public MyScanner() {
-                        br = new BufferedReader(new InputStreamReader(System.in));
+                        bfr = new BufferedReader(new InputStreamReader(System.in));
                 }
 
-                String next() {
+                String next() throws IOException {
                         while (st == null || !st.hasMoreElements()) {
-                                try {
-                                        st = new StringTokenizer(br.readLine());
-                                } catch (IOException e) {
-                                        e.printStackTrace();
-                                }
+                                st = new StringTokenizer(bfr.readLine());
                         }
                         return st.nextToken();
                 }
 
-                int nextInt() {
+                int nextInt() throws IOException {
                         return Integer.parseInt(next());
                 }
 
-                long nextLong() {
+                long nextLong() throws IOException {
                         return Long.parseLong(next());
                 }
 
-                double nextDouble() {
+                double nextDouble() throws IOException {
                         return Double.parseDouble(next());
                 }
 
-                String nextLine() {
-                        String str = "";
-                        try {
-                                str = br.readLine();
-                        } catch (IOException e) {
-                                e.printStackTrace();
-                        }
+                String nextLineSet() throws IOException {
+                        String str = bfr.readLine();
+                        st = new StringTokenizer(str);
                         return str;
                 }
 
+                String nextLine() throws IOException {
+                        return bfr.readLine();
+                }
         }
-
 }

@@ -8,6 +8,8 @@ package algsPractice.competition.nod51_mls24;
 import java.io.*;
 
 public class Main {
+        static StringBuilder sb = new StringBuilder(1 << 16);
+
         public static void main(String[] args) throws IOException {
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
@@ -20,12 +22,15 @@ public class Main {
                 if ((n & 1) != 0) {
                         bfw.write("0");
                 } else {
-                        for (int i = 1; i < n; ++i) {
-                                bfw.write(String.format("%d%c", i, i == n - 1 ? '\n' : ' '));
+                        for (int i = 1; i < n - 1; ++i) {
+                                sb.append(i).append(" ");
                         }
-                        for (int i = 1; i < n; ++i) {
-                                bfw.write(String.format("%d%c", (i & 1) != 0 ? n / 2 - i / 2 : n - i / 2, i == n - 1 ? '\n' : ' '));
+                        sb.append(n - 1).append("\n");
+                        for (int i = 1; i < n - 1; ++i) {
+                                sb.append((i & 1) != 0 ? n / 2 - i / 2 : n - i / 2).append(" ");
                         }
+                        sb.append(((n - 1) & 1) != 0 ? n / 2 - (n - 1) / 2 : n - (n - 1) / 2).append("\n");
+                        bfw.write(sb.toString());
                 }
                 bfw.close();
                 bfr.close();

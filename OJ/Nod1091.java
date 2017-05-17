@@ -43,9 +43,9 @@ public class Nod1091 {
 //                int last = pairs[0].tail;
 //                for (int i = 1; i < n; i++) {
 //                        if (pairs[i].tail <= last) {
-//                                ans = Math.max(ans, pairs[i].tail - pairs[i].head);
+//                                ans = Math.max(ans, pairs[i].tail - pairs[i].cur);
 //                        } else {
-//                                ans = Math.max(ans, last - pairs[i].head);
+//                                ans = Math.max(ans, last - pairs[i].cur);
 //                                last = pairs[i].tail;
 //                        }
 //                }
