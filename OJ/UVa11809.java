@@ -46,7 +46,6 @@ public class UVa11809 {
                         }
 
                 }
-
                 bfr.close();
                 bfw.close();
         }
