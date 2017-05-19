@@ -7,7 +7,7 @@ import java.io.*;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  * http://blog.csdn.net/crazysillynerd/article/details/43339157
- * #binary math int --> log
+ * #binary math big --> log
  */
 public class UVa11809 {
 

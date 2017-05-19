@@ -6,6 +6,7 @@ import java.io.*;
  * Created by Scruel on 2017/5/17.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #simulate
  */
 public class UVa11988 {
         static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
