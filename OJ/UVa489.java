@@ -34,7 +34,6 @@ public class UVa489 {
                         for (int i = 0; i < pS.length(); i++) {
                                 if (pFNum > 6) break;
                                 if (pRNum == cRNum) break;
-                                //charAt可以被数组替代，数组的查找是O(1)
                                 char ch = pS.charAt(i);
                                 if (displayed[ch] == 0) {
                                         pFNum++;

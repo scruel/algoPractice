@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
  * Created by Scruel on 2017/5/16.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #simulate
  */
 public class UVa514 {
         static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -47,7 +48,6 @@ public class UVa514 {
                                 bfw.write(String.format("%s\n", ok ? "Yes" : "No"));
                         }
                 }
-
                 sc.bfr.close();
                 bfw.close();
         }
@@ -72,6 +72,5 @@ public class UVa514 {
                         st = new StringTokenizer(s);
                         return s;
                 }
-
         }
 }
