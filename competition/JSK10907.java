@@ -7,7 +7,7 @@ import java.io.*;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  */
-public class Main {
+public class JSK10907 {
         static int res, n;
         static String nS;
 
