@@ -17,25 +17,21 @@ public class Main2_KMP {
         static int res = 0;
         static String pat;
 
-        static void search(int index) {
-                int i = index;
+        static void search() {
+                int i = 0;
                 int j = 0;
                 while (i < txt.length()) {
-                        if (j == -1 || txt.charAt(i) == pat.charAt(j)) {
+                        if (j < 0 || txt.charAt(i) == pat.charAt(j)) {
                                 ++i;
                                 ++j;
                         } else {
                                 j = next[j];
                         }
-
                         if (j == pat.length()) {
                                 res++;
                                 j = next[j];
                         }
-
                 }
-
-
         }
 
         static void initNext() {
@@ -44,25 +40,18 @@ public class Main2_KMP {
                 next[0] = -1;
                 int k = -1;
                 int j = 0;
+                int tmp;
                 while (j < n) {
-                        if (k == -1 || pat.charAt(j) == pat.charAt(k)) {
-                                ++k;
-                                ++j;
-//                                next[j] = k;
-//                                while (next[j] >= 0 && pat.charAt(j) == pat.charAt(next[j])) {
-//                                        next[j] = next[next[j]];
-//                                }
-
-
-//                                if (pat.charAt(j) == pat.charAt(k)) {
-                                next[j] = k;   //之前只有这一行
-//                                } else {
-                                //因为不能出现p[j] = p[next[j]]，所以当出现时需要继续递归，k = next[k] = next[next[k]]
-//                                        next[j] = next[k];
-//                                }
-                        } else {
+                        while (k >= 0 && pat.charAt(j) != pat.charAt(k)) {
                                 k = next[k];
                         }
+                        ++j;
+                        ++k;
+                        tmp = k;
+                        while (tmp >= 0 && j < n && k < n && pat.charAt(j) == pat.charAt(tmp)) {
+                                tmp = next[tmp];
+                        }
+                        next[j] = tmp;
                 }
         }
 
@@ -98,8 +87,8 @@ public class Main2_KMP {
                         lastW = w;
                 }
                 initNext();
-                search(0);
-                //本题只要不重复找就行了，直接在kmp中查找并统计，以免丢失kmp的价值
+                search();
+                //本题只要不重复找就行了，直接在kmp中统计，以免丢失kmp的价值
 //                while (res != -1) {
 //                        cnt++;
 //                        res = search(res + 1);
