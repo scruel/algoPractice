@@ -1,61 +1,90 @@
 package algsPractice.competition.JSK2017.Round2;
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
-import java.io.*;
-import java.math.BigDecimal;
+import algsPractice.lib.InputReader;
+import algsPractice.lib.OutputWriter;
+
+import javax.script.*;
+import java.util.regex.Pattern;
 
 /**
- * Created by Scruel on 2017/5/24.
+ * Created by Scruel on 2017/5/26.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  */
 public class Main2_HKJ {
-    static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
-    static StringBuilder tSB = new StringBuilder();
-    static StringBuilder str = new StringBuilder();
-    static BigDecimal b = new BigDecimal(1000000);
 
-    public static void main(String[] args) throws IOException {
+    public static int cnt = 31;
+    public static Pattern floatPattern = Pattern.compile("[0-9]+\\.[0-9]*|parseFloat\\(.*\\)");
 
-        bfr.readLine();
-        ScriptEngineManager manager = new ScriptEngineManager();
-        ScriptEngine se = manager.getEngineByName("js");
-        String ts = bfr.readLine();
-        for (int i = 0; i < ts.length(); i++) {
-            char ch = ts.charAt(i);
-            if (Character.isDigit(ch) || ch == '.') {
-                tSB.append(ch);
-            } else {
+    public static String convertStatement(String s) {
+        return s.replace("int", "parseInt")
+            .replace("float", "parseFloat");
+    }
 
-                if (tSB.length() != 0) {
-                    str.append(new BigDecimal(tSB.toString()).multiply(b));
-                    tSB.delete(0, tSB.length());
+    public static String replaceFloat(String s) {
+        String a = s, b;
+        while ((b = a.replaceFirst("[0-9]+\\.[0-9]+", "1e" + (cnt++))) != a) {
+            a = b;
+        }
+        while ((b = a.replaceFirst("parseFloat", "1e" + (cnt++) + " + xxxxxxxxxxx")) != a) {
+            a = b;
+        }
+        return a.replaceAll("xxxxxxxxxxx", "parseFloat").replaceAll("parseInt", "0*");
+    }
+
+    public static String convert(String s) {
+        return "function "
+            + convertStatement(s.replaceFirst("=", "{ return "))
+            + ";}";
+    }
+
+    public void solve(int testNumber, InputReader in, OutputWriter out) {
+        int T = 1;
+//        int T = input.nextInt();
+        while (T-- > 0) {
+            cnt = 31;
+            int n = in.nextInt();
+            ScriptEngine engine = new ScriptEngineManager().getEngineByName("ECMAScript");
+            Bindings bind = engine.createBindings();
+            engine.setBindings(bind, ScriptContext.ENGINE_SCOPE);
+            ScriptEngine engine2 = new ScriptEngineManager().getEngineByName("ECMAScript");
+            Bindings bind2 = engine2.createBindings();
+            engine2.setBindings(bind2, ScriptContext.ENGINE_SCOPE);
+
+            try {
+                while (n-- > 0) {
+                    String c = convert(in.nextLine());
+                    engine.eval(c);
+                    engine2.eval(replaceFloat(c));
                 }
-                str.append(ch);
+            } catch (ScriptException e) {
+                e.printStackTrace();
+            }
+            try {
+                String c = convertStatement(in.nextLine());
+                Object ret = engine.eval(c);
+                Object ret2 = engine2.eval(replaceFloat(c));
+                if ((ret2 instanceof Double)) {
+                    if ((Double) ret2 > 1e30 || (Double) ret2 < -1e30) {
+                        out.write(String.format("%.6f\n", ret));
+                    } else if (ret instanceof Integer) {
+                        out.write(String.format("%d\n", ret));
+                    } else if (Double.isNaN((Double) ret)) {
+                        out.write("No Answer");
+                    } else {
+                        out.write(String.format("%.0f\n", ret));
+                    }
+                } else if (ret instanceof Integer) {
+                    out.write(String.format("%d\n", ret));
+                } else if (Double.isNaN((Double) ret)) {
+                    out.write("No Answer");
+                } else {
+                    out.write(String.format("%0.f\n", ret));
+                }
+            } catch (Exception e) {
+                out.write("No Answer");
+//                System.out.println("No Answer" + e.toString());
             }
         }
-        if (tSB.length() != 0) {
-            str.append(new BigDecimal(tSB.toString()).multiply(b));
-            tSB.delete(0, tSB.length());
-        }
-
-        try {
-            Object result = se.eval(str.toString());
-            if (result instanceof Integer) {
-                System.out.printf("%d", (Integer) result / 1000);
-            } else {
-//                                BigDecimal
-                Double tmp = (Double) result / 1000.0;
-                if (Math.floor(tmp) != tmp)
-                    System.out.printf("%.6f", tmp);
-                else
-                    System.out.printf("%d", tmp.longValue());
-            }
-        } catch (ScriptException e) {
-            System.out.println("No Answer");
-        }
-        bfr.close();
     }
 }

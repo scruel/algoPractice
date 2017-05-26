@@ -10,7 +10,6 @@ import java.io.*;
  * #binary math big --> log
  */
 public class UVa11809 {
-
         static final double EPSINON = 1e-4;
         static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
         static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);

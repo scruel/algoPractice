@@ -1,35 +1,27 @@
 package algsPractice.competition.JSK2017.Round2;
 
-import java.io.*;
+import algsPractice.lib.InputReader;
+import algsPractice.lib.OutputWriter;
+
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Stack;
 
-/**
- * Created by Scruel on 2017/5/21.
- * Personal blog : http://blog.csdn.net/scruelt
- * Github : https://github.com/scruel
- * #string #表达式解析
- * https://zh.wikipedia.org/zh-sg/%E8%B0%83%E5%BA%A6%E5%9C%BA%E7%AE%97%E6%B3%95
- */
 public class Main2 {
+    static StringBuilder sb = null;
+    static HashMap<String, String[]> eMap = null;
+    static boolean isF;
 
-    static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
-    static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
-    static StringBuilder sb = new StringBuilder();
-    static HashMap<String, String[]> eMap = new HashMap<String, String[]>();
-    static boolean isF = false;
-
-
-    public static void main(String[] args) throws IOException {
+    public void solve(int testNumber, InputReader in, OutputWriter out) {
         String result, exp;
-        int n = Integer.parseInt(bfr.readLine().trim());
+        sb = new StringBuilder();
+        eMap = new HashMap<String, String[]>();
+        isF = false;
+        int n = Integer.parseInt(in.readLine().trim());
         for (int i = 0; i < n; i++) {
-            String ts = bfr.readLine();
+            String ts = in.readLine();
             int t = ts.indexOf('(');
             int t2 = ts.indexOf(')');
             String fn = ts.substring(0, t);
@@ -38,12 +30,11 @@ public class Main2 {
             ve[1] = ts.substring(ts.indexOf('=') + 1, ts.length());
             eMap.put(fn, ve);
         }
-        exp = bfr.readLine();
+        exp = in.readLine();
         for (String fn : eMap.keySet()) {
             while (exp.contains(fn)) {
                 int t = exp.indexOf(fn);
                 int srt = exp.indexOf("(", t);
-
                 String vs = "(" + getPairS(exp, srt) + ")";
                 String[] ve = eMap.get(fn);
 //                ve[1].replace(ve[0], vs);
@@ -67,31 +58,17 @@ public class Main2 {
 //            e.printStackTrace();
             result = "No Answer";
         }
-        bfw.write(result);
-//        String expctS = bfr.readLine();
-//        if (!expctS.equals(result)) {
-//            System.err.println("Wrong Answer");
-//            System.err.println("Except:" + expctS);
-//            System.err.println("Result:" + result);
-//        } else {
-//            System.out.println("Accept");
-//        }
-
-        bfr.close();
-        bfw.close();
+        out.write(result);
     }
 
-
     // 优先级   符号		运算顺序
-// 1		!		从右至左
-// 2		* / %	从左至右
-// 3		+ -		从左至右
-// 4		=		从右至左
+    // 2		* / %	从左至右
+    // 3		+ -		从左至右
+    // 4		=		从右至左
     static int rank(char ch) {
-
         if (ch == '+' || ch == '-') {
             return 1;
-        } else if (ch == '*' || ch == '/') {
+        } else if (ch == '*' || ch == '/' || ch == '%') {
             return 2;
         } else if (ch == '^') {
             return 3;
@@ -122,8 +99,8 @@ public class Main2 {
         LinkedList<String> pList = new LinkedList<String>();
         for (int i = 0; i < exp.length(); i++) {
             char ch = exp.charAt(i);
-//            if ((ch >= 48 || ch == '.') && ch != '^') {
-            if (ch >= 48 || ch == '.') {
+            if ((ch >= 48 || ch == '.') && ch != '^') {
+//            if (ch >= 48 || ch == '.') {
                 if (fChange && ch == '.')
                     isF = true;
                 if (exp.indexOf("int", i) == i) {
@@ -135,12 +112,6 @@ public class Main2 {
                         s = s.substring(0, s.indexOf("."));
                     }
                     sb.append(s);
-
-//                    while (ch != ')') {
-//                        sb.append(ch);
-//                        ch = exp.charAt(++i);
-//                    }
-//                    sb.append(")");
 
                 } else if (exp.indexOf("float", i) == i) {
                     int srt = exp.indexOf("(", i);
