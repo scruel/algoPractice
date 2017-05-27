@@ -9,14 +9,14 @@ import java.io.*;
  */
 public class UVa1589 {
 
-        static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
-        static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
+    static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
+    static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
 
-        public static void main(String[] args) throws IOException {
-                String ts;
+    public static void main(String[] args) throws IOException {
+        String ts;
 
 
-                bfr.close();
-                bfw.close();
-        }
+        bfr.close();
+        bfw.close();
+    }
 }

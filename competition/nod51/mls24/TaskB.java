@@ -1,4 +1,4 @@
-package algsPractice.competition.nod51_mls24;
+package algsPractice.competition.nod51.mls24;
 
 
 import java.io.*;
@@ -8,7 +8,7 @@ import java.io.*;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  */
-public class Main2 {
+public class TaskB {
         static int[][] nums = new int[25][105];
         static int res, n, m;
         static int[] tmpA = new int[25];

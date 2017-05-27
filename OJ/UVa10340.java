@@ -9,11 +9,11 @@ import java.io.*;
  * #loop #dp
  */
 public class UVa10340 {
-        static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
-        static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+    static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 
-        static boolean solve(String s1, String s2) {
+    static boolean solve(String s1, String s2) {
 //                char[] chars1 = s1.toCharArray();
 //                char[] chars2 = s2.toCharArray();
 //
@@ -28,30 +28,30 @@ public class UVa10340 {
 //                }
 //                return dp[s1.length()][s2.length()] == s1.length();
 
-                int sum = 0;
-                int j = 0;
-                for (int i = 0; i < s1.length(); i++) {
-                        if (j >= s2.length())
-                                break;
-                        while (j < s2.length()) {
-                                if (s1.charAt(i) == s2.charAt(j++)) {
-                                        sum++;
-                                        break;
-                                }
-                        }
+        int sum = 0;
+        int j = 0;
+        for (int i = 0; i < s1.length(); i++) {
+            if (j >= s2.length())
+                break;
+            while (j < s2.length()) {
+                if (s1.charAt(i) == s2.charAt(j++)) {
+                    sum++;
+                    break;
                 }
-                return sum == s1.length();
+            }
         }
+        return sum == s1.length();
+    }
 
 
-        public static void main(String[] args) throws IOException {
-                String temp;
-                while (null != (temp = bfr.readLine()) && temp.length() != 0) {
-                        String[] rTs = temp.split("\\s+");
-                        if (solve(rTs[0], rTs[1])) bfw.write("Yes\n");
-                        else bfw.write("No\n");
-                }
-                bfr.close();
-                bfw.close();
+    public static void main(String[] args) throws IOException {
+        String temp;
+        while (null != (temp = bfr.readLine()) && temp.length() != 0) {
+            String[] rTs = temp.split("\\s+");
+            if (solve(rTs[0], rTs[1])) bfw.write("Yes\n");
+            else bfw.write("No\n");
         }
+        bfr.close();
+        bfw.close();
+    }
 }

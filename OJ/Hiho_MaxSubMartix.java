@@ -38,65 +38,65 @@ import java.util.StringTokenizer;
  * #unsolve TLE
  */
 public class Hiho_MaxSubMartix {
-        static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
-        static StringTokenizer stk;
+    static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+    static StringTokenizer stk;
 
-        static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
-        static int n, m, k;
-        static int[][] martix;
-        static int remain;
+    static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static int n, m, k;
+    static int[][] martix;
+    static int remain;
 
-        static int nextInt() throws IOException {
-                while (remain == 0) {
-                        stk = new StringTokenizer(bfr.readLine());
-                        remain = stk.countTokens();
-                }
-                remain--;
-                return Integer.parseInt(stk.nextToken());
+    static int nextInt() throws IOException {
+        while (remain == 0) {
+            stk = new StringTokenizer(bfr.readLine());
+            remain = stk.countTokens();
         }
+        remain--;
+        return Integer.parseInt(stk.nextToken());
+    }
 
-        public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
-                n = nextInt();
-                m = nextInt();
-                k = nextInt();
+        n = nextInt();
+        m = nextInt();
+        k = nextInt();
 
-                martix = new int[n + 1][m + 1];
-                for (int i = 0; i < n; i++) {
-                        for (int j = 0; j < m; j++) {
-                                martix[i][j] = nextInt();
-                        }
-                }
-                System.out.println(dfs(n, m));
-                bfw.close();
-                bfr.close();
+        martix = new int[n + 1][m + 1];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                martix[i][j] = nextInt();
+            }
         }
+        System.out.println(dfs(n, m));
+        bfw.close();
+        bfr.close();
+    }
 
 
-        static int dfs(int newN, int newM) {
-                if (newN <= 0 || newM <= 0) return -1;
-                int max = -1;
-                int sum = 0;
-                for (int i = 0; i + newN <= n; i++) {
-                        for (int j = 0; j + newM <= m; j++) {
-                                sum = 0;
-                                for (int sumI = i; sumI < newN + i; sumI++) {
-                                        for (int sumJ = j; sumJ < newM + j; sumJ++) {
-                                                sum += martix[sumI][sumJ];
-                                                if (sum > k) break;
-                                        }
-                                }
-                                if (sum <= k) break;
-                        }
-                        if (sum <= k) {
-                                max = newN * newM;
-                                break;
-                                //某一层找到了就不需要再减少往下找了
-                        }
+    static int dfs(int newN, int newM) {
+        if (newN <= 0 || newM <= 0) return -1;
+        int max = -1;
+        int sum = 0;
+        for (int i = 0; i + newN <= n; i++) {
+            for (int j = 0; j + newM <= m; j++) {
+                sum = 0;
+                for (int sumI = i; sumI < newN + i; sumI++) {
+                    for (int sumJ = j; sumJ < newM + j; sumJ++) {
+                        sum += martix[sumI][sumJ];
+                        if (sum > k) break;
+                    }
                 }
-                if (max == -1)
-                        return Math.max(dfs(newN - 1, newM), dfs(newN, newM - 1));
-                else
-                        return max;
+                if (sum <= k) break;
+            }
+            if (sum <= k) {
+                max = newN * newM;
+                break;
+                //某一层找到了就不需要再减少往下找了
+            }
         }
+        if (max == -1)
+            return Math.max(dfs(newN - 1, newM), dfs(newN, newM - 1));
+        else
+            return max;
+    }
 }

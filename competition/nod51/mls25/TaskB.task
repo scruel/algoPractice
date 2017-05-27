@@ -1,0 +1,31 @@
+5 TaskB
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+2
+0
+13 6
+1 1 2 2 3 3
+2 12
+0
+1
+7 3
+1 2 3
+0 
+1
+40 src/algsPractice/competition/nod51/mls25
+16 -Xmx512m -Xss64m
+4 Main
+42 algsPractice.competition.nod51.mls25.TaskB
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2017.05.27
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

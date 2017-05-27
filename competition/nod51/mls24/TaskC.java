@@ -1,4 +1,4 @@
-package algsPractice.competition.nod51_mls24;
+package algsPractice.competition.nod51.mls24;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  */
-public class Main3 {
+public class TaskC {
         public static void main(String[] args) {
                 Scanner input = new Scanner(System.in);
                 int n = input.nextInt();

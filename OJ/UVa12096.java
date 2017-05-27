@@ -10,9 +10,9 @@ import java.util.*;
  * #simulate
  */
 public class UVa12096 {
-        static HashMap<HashSet<Integer>, Integer> IDCache;
-        static LinkedList<HashSet<Integer>> setcache;
-        static Stack<Integer> res;
+    static HashMap<HashSet<Integer>, Integer> IDCache;
+    static LinkedList<HashSet<Integer>> setcache;
+    static Stack<Integer> res;
 
 //        static class Set {
 //                int size = 0;
@@ -36,71 +36,71 @@ public class UVa12096 {
 //                }
 //        }
 
-        static int getID(HashSet<Integer> set) {
-                if (IDCache.containsKey(set)) {
-                        return IDCache.get(set);
+    static int getID(HashSet<Integer> set) {
+        if (IDCache.containsKey(set)) {
+            return IDCache.get(set);
+        }
+        setcache.add(set);
+        IDCache.put(set, IDCache.size());
+        return IDCache.size() - 1;
+    }
+
+
+    static Collection intersection(Collection set1, Collection set2) {
+        Collection set = new ArrayList();
+        set.addAll(set1);
+        set.removeAll(set2);
+        set1.removeAll(set);
+        return set1;
+    }
+
+    static Collection union(Collection set1, Collection set2) {
+        set1.addAll(set2);
+        return set1;
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
+        BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
+        IDCache = new HashMap<HashSet<Integer>, Integer>();
+        setcache = new LinkedList<HashSet<Integer>>();
+        int n = Integer.parseInt(bfr.readLine());
+        while (n-- != 0) {
+            res = new Stack<Integer>();
+            int opNum = Integer.parseInt(bfr.readLine());
+            while (opNum-- != 0) {
+                String rT = bfr.readLine();
+                if ("PUSH".equals(rT)) {
+                    int id = getID(new HashSet());
+                    res.push(id);
+                } else if ("DUP".equals(rT)) {
+                    res.push(res.peek());
+                } else {
+                    int p1 = res.pop();
+                    int p2 = res.pop();
+                    //这里必须是new，否则在add中，会导致IDcache和setcache中之前的对象也被改变
+                    HashSet<Integer> s1 = new HashSet<Integer>();
+                    HashSet<Integer> s2 = new HashSet<Integer>();
+                    s1.addAll(setcache.get(p1));
+                    s2.addAll(setcache.get(p2));
+                    HashSet<Integer> x = null;
+                    if ("UNION".equals(rT)) {
+                        x = (HashSet<Integer>) union(s1, s2);
+                    } else if ("INTERSECT".equals(rT)) {
+                        x = (HashSet<Integer>) intersection(s1, s2);
+                    } else if ("ADD".equals(rT)) {
+                        x = s2;
+                        x.add(getID(s1));
+                    }
+                    res.push(getID(x));
                 }
-                setcache.add(set);
-                IDCache.put(set, IDCache.size());
-                return IDCache.size() - 1;
+                bfw.write(setcache.get(res.peek()).size() + "\n");
+            }
+            bfw.write("***\n");
         }
-
-
-        static Collection intersection(Collection set1, Collection set2) {
-                Collection set = new ArrayList();
-                set.addAll(set1);
-                set.removeAll(set2);
-                set1.removeAll(set);
-                return set1;
-        }
-
-        static Collection union(Collection set1, Collection set2) {
-                set1.addAll(set2);
-                return set1;
-        }
-
-        public static void main(String[] args) throws IOException {
-
-                BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
-                BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
-                IDCache = new HashMap<HashSet<Integer>, Integer>();
-                setcache = new LinkedList<HashSet<Integer>>();
-                int n = Integer.parseInt(bfr.readLine());
-                while (n-- != 0) {
-                        res = new Stack<Integer>();
-                        int opNum = Integer.parseInt(bfr.readLine());
-                        while (opNum-- != 0) {
-                                String rT = bfr.readLine();
-                                if ("PUSH".equals(rT)) {
-                                        int id = getID(new HashSet());
-                                        res.push(id);
-                                } else if ("DUP".equals(rT)) {
-                                        res.push(res.peek());
-                                } else {
-                                        int p1 = res.pop();
-                                        int p2 = res.pop();
-                                        //这里必须是new，否则在add中，会导致IDcache和setcache中之前的对象也被改变
-                                        HashSet<Integer> s1 = new HashSet<Integer>();
-                                        HashSet<Integer> s2 = new HashSet<Integer>();
-                                        s1.addAll(setcache.get(p1));
-                                        s2.addAll(setcache.get(p2));
-                                        HashSet<Integer> x = null;
-                                        if ("UNION".equals(rT)) {
-                                                x = (HashSet<Integer>) union(s1, s2);
-                                        } else if ("INTERSECT".equals(rT)) {
-                                                x = (HashSet<Integer>) intersection(s1, s2);
-                                        } else if ("ADD".equals(rT)) {
-                                                x = s2;
-                                                x.add(getID(s1));
-                                        }
-                                        res.push(getID(x));
-                                }
-                                bfw.write(setcache.get(res.peek()).size() + "\n");
-                        }
-                        bfw.write("***\n");
-                }
-                bfw.close();
-                bfr.close();
-        }
+        bfw.close();
+        bfr.close();
+    }
 
 }

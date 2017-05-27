@@ -7,7 +7,7 @@ package algsPractice.OJ;
  * #dp
  */
 public class Leet198_HouseRobber {
-        //        static int rob(int[] arr) {
+    //        static int rob(int[] arr) {
 //                int[][] dp = new int[num.length + 1][2];
 //                for (int i = 1; i <= num.length; i++) {
 //                        dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1]);
@@ -15,11 +15,11 @@ public class Leet198_HouseRobber {
 //                }
 //                return Math.max(dp[num.length][0], dp[num.length][1]);
 //        }
-        static int rob(int[] nums) {
-                int n = nums.length;
-                if (n == 0) return 0;
-                int[] dp = new int[n];
-                dp[0] = nums[0];
+    static int rob(int[] nums) {
+        int n = nums.length;
+        if (n == 0) return 0;
+        int[] dp = new int[n];
+        dp[0] = nums[0];
 
 //                for (int i = 1; i < n; i++) {
 //                        for (int j = 0; j <= i; j++) {
@@ -27,12 +27,12 @@ public class Leet198_HouseRobber {
 //                        }
 //                }
 
-                //dp[i] 为0...i的最大值
-                for (int i = 1; i < n; i++) {
-                        dp[i] = Math.max(dp[i - 1], nums[i] + (i - 2 >= 0 ? dp[i - 2] : 0));
-                }
-                return dp[n - 1];
+        //dp[i] 为0...i的最大值
+        for (int i = 1; i < n; i++) {
+            dp[i] = Math.max(dp[i - 1], nums[i] + (i - 2 >= 0 ? dp[i - 2] : 0));
         }
+        return dp[n - 1];
+    }
 //        static int rob(int[] arr) {
 //                int n = arr.length;
 //                if (n == 0) return 0;
@@ -65,9 +65,9 @@ public class Leet198_HouseRobber {
 //        }
 
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-                System.out.println(rob(new int[]{4, 2, 3, 1}));
-                System.out.println(rob(new int[]{4, 3, 2, 1}));
-        }
+        System.out.println(rob(new int[]{4, 2, 3, 1}));
+        System.out.println(rob(new int[]{4, 3, 2, 1}));
+    }
 }

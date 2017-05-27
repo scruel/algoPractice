@@ -1,4 +1,4 @@
-package algsPractice.competition.nod51_mls24;
+package algsPractice.competition.nod51.mls24;
 
 
 /**
@@ -7,7 +7,7 @@ package algsPractice.competition.nod51_mls24;
 
 import java.io.*;
 
-public class Main {
+public class TaskA {
         static StringBuilder sb = new StringBuilder(1 << 16);
 
         public static void main(String[] args) throws IOException {

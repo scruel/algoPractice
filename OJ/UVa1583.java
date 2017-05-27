@@ -1,6 +1,9 @@
 package algsPractice.OJ;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 /**
  * Created by Scruel on 2017/4/3.
@@ -21,32 +24,32 @@ import java.io.*;
  * #table #preprocessing
  */
 public class UVa1583 {
-        static int[] ans;
+    static int[] ans;
 
-        public static void main(String[] args) throws Exception {
-                BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
-                BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
-                int MAX_N = 100005;
-                ans = new int[MAX_N];
-                for (int i = 1; i < MAX_N; i++) {
-                        int x = i;
-                        //累加当前位
-                        int y = i;
-                        while (x > 0) {
-                                //累加每一位
-                                y += x % 10;
-                                x /= 10;
-                        }
-                        if (y < MAX_N && (ans[y] == 0 || ans[y] > i))
-                                ans[y] = i;
-                }
-
-                String s = bfr.readLine();
-                int n = Integer.parseInt(s);
-                for (int i = 0; i < n; i++) {
-                        bfw.write(ans[Integer.parseInt(bfr.readLine())] + "\n");
-                }
-                bfr.close();
-                bfw.close();
+    public static void main(String[] args) throws Exception {
+        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int MAX_N = 100005;
+        ans = new int[MAX_N];
+        for (int i = 1; i < MAX_N; i++) {
+            int x = i;
+            //累加当前位
+            int y = i;
+            while (x > 0) {
+                //累加每一位
+                y += x % 10;
+                x /= 10;
+            }
+            if (y < MAX_N && (ans[y] == 0 || ans[y] > i))
+                ans[y] = i;
         }
+
+        String s = bfr.readLine();
+        int n = Integer.parseInt(s);
+        for (int i = 0; i < n; i++) {
+            bfw.write(ans[Integer.parseInt(bfr.readLine())] + "\n");
+        }
+        bfr.close();
+        bfw.close();
+    }
 }

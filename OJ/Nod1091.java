@@ -10,34 +10,34 @@ import java.util.PriorityQueue;
  * #greedy
  */
 public class Nod1091 {
-        static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
-        static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
-        static PriorityQueue<Pair> pq = new PriorityQueue<Pair>();
-        static Pair[] pairs;
-        static int n;
+    static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
+    static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
+    static PriorityQueue<Pair> pq = new PriorityQueue<Pair>();
+    static Pair[] pairs;
+    static int n;
 
-        public static void main(String[] args) throws IOException {
-                n = Integer.parseInt(bfr.readLine());
-                pairs = new Pair[n];
-                for (int i = 0; i < n; i++) {
-                        String[] rts = bfr.readLine().split("\\s+");
-                        pairs[i] = new Pair();
-                        pairs[i].head = Integer.parseInt(rts[0]);
-                        pairs[i].tail = Integer.parseInt(rts[1]);
-                        pq.add(pairs[i]);
-                }
-                int ans = 0;
-                int last = pq.poll().tail;
+    public static void main(String[] args) throws IOException {
+        n = Integer.parseInt(bfr.readLine());
+        pairs = new Pair[n];
+        for (int i = 0; i < n; i++) {
+            String[] rts = bfr.readLine().split("\\s+");
+            pairs[i] = new Pair();
+            pairs[i].head = Integer.parseInt(rts[0]);
+            pairs[i].tail = Integer.parseInt(rts[1]);
+            pq.add(pairs[i]);
+        }
+        int ans = 0;
+        int last = pq.poll().tail;
 
-                while (!pq.isEmpty()) {
-                        Pair tmp = pq.poll();
-                        if (tmp.tail <= last) {
-                                ans = Math.max(ans, tmp.tail - tmp.head);
-                        } else {
-                                ans = Math.max(ans, last - tmp.head);
-                                last = tmp.tail;
-                        }
-                }
+        while (!pq.isEmpty()) {
+            Pair tmp = pq.poll();
+            if (tmp.tail <= last) {
+                ans = Math.max(ans, tmp.tail - tmp.head);
+            } else {
+                ans = Math.max(ans, last - tmp.head);
+                last = tmp.tail;
+            }
+        }
 
 //                Arrays.sort(pairs);
 //                int last = pairs[0].tail;
@@ -49,19 +49,19 @@ public class Nod1091 {
 //                                last = pairs[i].tail;
 //                        }
 //                }
-                bfw.write(ans + "");
-                bfr.close();
-                bfw.close();
-        }
+        bfw.write(ans + "");
+        bfr.close();
+        bfw.close();
+    }
 
-        static class Pair implements Comparable<Pair> {
-                int head;
-                int tail;
+    static class Pair implements Comparable<Pair> {
+        int head;
+        int tail;
 
-                @Override
-                public int compareTo(Pair o) {
-                        return this.head - o.head;
-                }
+        @Override
+        public int compareTo(Pair o) {
+            return this.head - o.head;
         }
+    }
 
 }

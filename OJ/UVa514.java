@@ -11,66 +11,66 @@ import java.util.StringTokenizer;
  * #simulate
  */
 public class UVa514 {
-        static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
-        static int[] qList = new int[1005];
-        static Stack<Integer> stack = new Stack<Integer>();
+    static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static int[] qList = new int[1005];
+    static Stack<Integer> stack = new Stack<Integer>();
 
-        public static void main(String[] args) throws IOException {
-                String s;
-                MyScanner sc = new MyScanner();
-                int n;
-                while ((n = sc.nextInt()) != 0) {
-                        while (true) {
-                                if ("0".equals(sc.nextLine())) {
-                                        sc.nextInt();
-                                        bfw.write("\n");
-                                        break;
-                                }
-                                for (int i = 1; i <= n; i++) {
-                                        qList[i] = sc.nextInt();
-                                }
-                                int A = 1;
-                                int B = 1;
-                                boolean ok = true;
-                                while (B <= n) {
-                                        if (A == qList[B]) {
-                                                A++;
-                                                B++;
-                                        } else if (!stack.isEmpty() && stack.peek() == qList[B]) {
-                                                stack.pop();
-                                                B++;
-                                        } else if (A <= n) stack.push(A++);
-                                        else {
-                                                ok = false;
-                                                break;
-                                        }
-                                }
-                                bfw.write(String.format("%s\n", ok ? "Yes" : "No"));
-                        }
+    public static void main(String[] args) throws IOException {
+        String s;
+        MyScanner sc = new MyScanner();
+        int n;
+        while ((n = sc.nextInt()) != 0) {
+            while (true) {
+                if ("0".equals(sc.nextLine())) {
+                    sc.nextInt();
+                    bfw.write("\n");
+                    break;
                 }
-                sc.bfr.close();
-                bfw.close();
+                for (int i = 1; i <= n; i++) {
+                    qList[i] = sc.nextInt();
+                }
+                int A = 1;
+                int B = 1;
+                boolean ok = true;
+                while (B <= n) {
+                    if (A == qList[B]) {
+                        A++;
+                        B++;
+                    } else if (!stack.isEmpty() && stack.peek() == qList[B]) {
+                        stack.pop();
+                        B++;
+                    } else if (A <= n) stack.push(A++);
+                    else {
+                        ok = false;
+                        break;
+                    }
+                }
+                bfw.write(String.format("%s\n", ok ? "Yes" : "No"));
+            }
+        }
+        sc.bfr.close();
+        bfw.close();
+    }
+
+    static class MyScanner {
+        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+
+        String next() throws IOException {
+            while (st == null || !st.hasMoreElements()) {
+                st = new StringTokenizer(bfr.readLine());
+            }
+            return st.nextToken();
         }
 
-        static class MyScanner {
-                BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
-                StringTokenizer st;
-
-                String next() throws IOException {
-                        while (st == null || !st.hasMoreElements()) {
-                                st = new StringTokenizer(bfr.readLine());
-                        }
-                        return st.nextToken();
-                }
-
-                int nextInt() throws IOException {
-                        return Integer.parseInt(next());
-                }
-
-                String nextLine() throws IOException {
-                        String s = bfr.readLine();
-                        st = new StringTokenizer(s);
-                        return s;
-                }
+        int nextInt() throws IOException {
+            return Integer.parseInt(next());
         }
+
+        String nextLine() throws IOException {
+            String s = bfr.readLine();
+            st = new StringTokenizer(s);
+            return s;
+        }
+    }
 }
