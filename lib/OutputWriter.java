@@ -61,7 +61,7 @@ public class OutputWriter {
     public void writeln(Object... objects) {
 //    public OutputWriter writeln(Object... objects) {
         write(objects);
-        write(10);
+        write((char) 10);
 //        return this;
     }
 

@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class TaskC {
     static HashMap<Pair, Integer> map = new HashMap<Pair, Integer>();
-    static double EPS = 1e-4;
+    static double EPS = 1e-6;
     static int n;
     static double[][] nums;
 
