@@ -8,11 +8,11 @@ import algsPractice.lib.OutputWriter;
  */
 
 public class TaskC {
-    static int n;
-    static int[] a;
-    static int[] b;
-    static int[][] t;
-    static int res = 0;
+    int n;
+    int[] a;
+    int[] b;
+    int[][] t;
+    int res = 0;
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
         n = in.nextInt();
@@ -23,10 +23,8 @@ public class TaskC {
             int maxA = a[i];
             int maxB = b[i];
             for (int j = i; j < n; j++) {
-                if (maxA < a[j])
-                    maxA = a[j];
-                if (maxB < b[j])
-                    maxB = b[j];
+                if (maxA < a[j]) maxA = a[j];
+                if (maxB < b[j]) maxB = b[j];
                 if (maxA == maxB) {
                     res++;
                 }

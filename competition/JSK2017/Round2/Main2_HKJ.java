@@ -16,12 +16,11 @@ public class Main2_HKJ {
     public static int cnt = 31;
     public static Pattern floatPattern = Pattern.compile("[0-9]+\\.[0-9]*|parseFloat\\(.*\\)");
 
-    public static String convertStatement(String s) {
-        return s.replace("int", "parseInt")
-            .replace("float", "parseFloat");
+    String convertStatement(String s) {
+        return s.replace("int", "parseInt").replace("float", "parseFloat");
     }
 
-    public static String replaceFloat(String s) {
+    String replaceFloat(String s) {
         String a = s, b;
         while ((b = a.replaceFirst("[0-9]+\\.[0-9]+", "1e" + (cnt++))) != a) {
             a = b;
@@ -32,17 +31,14 @@ public class Main2_HKJ {
         return a.replaceAll("xxxxxxxxxxx", "parseFloat").replaceAll("parseInt", "0*");
     }
 
-    public static String convert(String s) {
-        return "function "
-            + convertStatement(s.replaceFirst("=", "{ return "))
-            + ";}";
+    String convert(String s) {
+        return "function " + convertStatement(s.replaceFirst("=", "{ return ")) + ";}";
     }
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
         int T = 1;
 //        int T = input.nextInt();
         while (T-- > 0) {
-            cnt = 31;
             int n = in.nextInt();
             ScriptEngine engine = new ScriptEngineManager().getEngineByName("ECMAScript");
             Bindings bind = engine.createBindings();

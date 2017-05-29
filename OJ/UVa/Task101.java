@@ -12,12 +12,12 @@ import java.util.LinkedList;
  * Github : https://github.com/scruel
  */
 public class Task101 {
-    static int n;
-    static LinkedList<Integer>[] blocksWorld;
-    static int[] index;
+    int n;
+    LinkedList<Integer>[] blocksWorld;
+    int[] index;
 
     //将top之前的所有木块归位，并将顶部的这个元素删除，但不归位
-    public static void reSize(LinkedList<Integer> blocks, int top) {
+    void reSize(LinkedList<Integer> blocks, int top) {
         boolean flag = false;
         for (Iterator<Integer> iter = blocks.iterator(); iter.hasNext(); ) {
             int temp = iter.next();
@@ -34,7 +34,7 @@ public class Task101 {
     }
 
 
-    public static void move(String opt, int a, int b) {
+    void move(String opt, int a, int b) {
         if (a == b) return;
         //index标记不统一会导致错误，一定要检查
         LinkedList<Integer> blocksA = blocksWorld[index[a]];
@@ -49,7 +49,7 @@ public class Task101 {
         blocksB.add(a);
     }
 
-    static void pile(String opt, int a, int b) {
+    void pile(String opt, int a, int b) {
         if (a == b) return;
         LinkedList<Integer> blocksA = blocksWorld[index[a]];
         LinkedList<Integer> blocksB = blocksWorld[index[b]];
@@ -98,7 +98,6 @@ public class Task101 {
 
             for (int temp : blocksWorld[i])
                 out.write(" " + temp);
-//                out.write(" " + temp);
             out.writeln();
         }
     }

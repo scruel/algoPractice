@@ -10,9 +10,9 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 public class Main2 {
-    static StringBuilder sb = null;
-    static HashMap<String, String[]> eMap = null;
-    static boolean isF;
+    StringBuilder sb = null;
+    HashMap<String, String[]> eMap = null;
+    boolean isF;
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
         String result, exp;
@@ -65,7 +65,7 @@ public class Main2 {
     // 2		* / %	从左至右
     // 3		+ -		从左至右
     // 4		=		从右至左
-    static int rank(char ch) {
+    int rank(char ch) {
         if (ch == '+' || ch == '-') {
             return 1;
         } else if (ch == '*' || ch == '/' || ch == '%') {
@@ -77,31 +77,27 @@ public class Main2 {
         }
     }
 
-    static String getPairS(String exp, int srt) {
+    String getPairS(String exp, int srt) {
         int cntS = 1;
         int cntE = 0;
         int end;
         for (end = srt + 1; ; end++) {
-            if (exp.charAt(end) == '(')
-                cntS++;
-            else if (exp.charAt(end) == ')')
-                cntE++;
+            if (exp.charAt(end) == '(') cntS++;
+            else if (exp.charAt(end) == ')') cntE++;
             if (cntS == cntE) break;
         }
         return exp.substring(srt + 1, end);
     }
 
-    static BigDecimal getRes(String exp, boolean fChange) throws Exception {
-        if (exp.startsWith("-"))
-            exp = "0" + exp;
+    BigDecimal getRes(String exp, boolean fChange) throws Exception {
+        if (exp.startsWith("-")) exp = "0" + exp;
         Stack<BigDecimal> nS = new Stack<BigDecimal>();
         Stack<Character> opS = new Stack<Character>();
         LinkedList<String> pList = new LinkedList<String>();
         for (int i = 0; i < exp.length(); i++) {
             char ch = exp.charAt(i);
-            if (((ch >= 48 && ch <= 57) || ch == '.')) {
-                if (fChange && ch == '.')
-                    isF = true;
+            if ((ch != '+' && ch != '-' && ch != '(' && ch != ')')) {
+                if (fChange && ch == '.') isF = true;
                 if (exp.indexOf("int", i) == i) {
                     int srt = exp.indexOf("(", i);
                     String ps = getPairS(exp, srt);
@@ -117,10 +113,8 @@ public class Main2 {
                     String ps = getPairS(exp, srt);
                     i = srt + ps.length() + 1;
                     String s = getRes(ps, false).toString();
-                    if (fChange)
-                        isF = true;
-                    if (!s.contains("."))
-                        s += ".0";
+                    if (fChange) isF = true;
+                    if (!s.contains(".")) s += ".0";
                     sb.append(s);
 //                    while (ch != ')') {
 //                        sb.append(ch);
@@ -139,8 +133,7 @@ public class Main2 {
                     opS.push(ch);
                 } else if (ch == ')') {
 //                    if (opS.peek() != '(') {
-                    while (opS.peek() != '(')
-                        pList.add(String.valueOf(opS.pop()));
+                    while (opS.peek() != '(') pList.add(String.valueOf(opS.pop()));
                     opS.pop();
 //                        if (opS.peek() != '(')
 //                            pList.add(String.valueOf(opS.pop()));
@@ -159,8 +152,7 @@ public class Main2 {
             pList.add(sb.toString());
             sb.delete(0, sb.length());
         }
-        while (!opS.isEmpty())
-            pList.add(String.valueOf(opS.pop()));
+        while (!opS.isEmpty()) pList.add(String.valueOf(opS.pop()));
         for (int i = 0; i < pList.size(); i++) {
             String s = pList.get(i);
             if ("−".equals(s) || "-".equals(s)) {

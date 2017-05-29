@@ -4,12 +4,12 @@ import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
 
 public class TaskB {
-    static int n;
-    static int[] nums;
-    static boolean[] mrks;
-    static int[] tmp;
-    static int[] nC = new int[3000 + 5];
-    static int cnt;
+    int n;
+    int[] nums;
+    boolean[] mrks;
+    int[] tmp;
+    int[] nC = new int[3000 + 5];
+    int cnt;
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
         n = in.nextInt();
@@ -20,16 +20,15 @@ public class TaskB {
         out.write(cnt);
     }
 
-    static boolean check() {
+    boolean check() {
 
         for (int i = 1; i < n; i++) {
-            if (Math.abs(tmp[i] - tmp[i - 1]) > 1)
-                return false;
+            if (Math.abs(tmp[i] - tmp[i - 1]) > 1) return false;
         }
         return true;
     }
 
-    static void dfs(int index) {
+    void dfs(int index) {
         if (index == n) {
             if (check()) {
                 cnt++;

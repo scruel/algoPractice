@@ -7,9 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TaskB {
-    static HashMap<Pair, Integer> map = new HashMap<Pair, Integer>();
+    HashMap<Pair, Integer> map = null;
 
-    static class Pair implements Comparable<Pair> {
+    class Pair implements Comparable<Pair> {
         String s;
         int x;
         int y;
@@ -32,6 +32,7 @@ public class TaskB {
 
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
+        map = new HashMap<Pair, Integer>();
         int n = in.nextInt();
         int dx = 0, dy = 0;
         boolean flag = false;

@@ -17,7 +17,7 @@ move 2 over 1
 move 4 over 9
 quit
 
-50 0: 0
+49 0: 0
 1: 1 9 2 4
 2:
 3: 3
@@ -27,7 +27,6 @@ quit
 7:
 8:
 9:
-
 1
 23 src/algsPractice/OJ/UVa
 16 -Xmx256m -Xss64m

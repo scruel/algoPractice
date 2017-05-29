@@ -8,7 +8,7 @@ import java.io.*;
  * Github : https://github.com/scruel
  * #ipAddress #binary #string
  */
-public class UVa1590 {
+public class Task1590 {
 
     static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
     static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);

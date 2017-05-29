@@ -6,12 +6,12 @@ import algsPractice.lib.OutputWriter;
 import java.util.HashMap;
 
 public class TaskC {
-    static HashMap<Pair, Integer> map = new HashMap<Pair, Integer>();
-    static double EPS = 1e-6;
-    static int n;
-    static double[][] nums;
+    HashMap<Pair, Integer> map = new HashMap<Pair, Integer>();
+    double EPS = 1e-6;
+    int n;
+    double[][] nums;
 
-    static class Pair implements Comparable<Pair> {
+    class Pair implements Comparable<Pair> {
         double x;
         double y;
         double scale;
@@ -44,7 +44,7 @@ public class TaskC {
         }
     }
 
-    static boolean check(double dx, double dy, double scale, double t) {
+    boolean check(double dx, double dy, double scale, double t) {
         int cnt = 0;
         for (int i = 0; i < n; i++) {
             double x = nums[i][0];
@@ -60,7 +60,7 @@ public class TaskC {
         return false;
     }
 
-    static double C(double x, double y, double xp, double yp, double dx, double dy, double scale, double t) {
+    double C(double x, double y, double xp, double yp, double dx, double dy, double scale, double t) {
         double xpp = scale * (x * Math.cos(t) - y * Math.sin(t)) + dx;
         double ypp = scale * (x * Math.sin(t) - y * Math.cos(t)) + dy;
         return (xpp - xp) * (ypp - yp);

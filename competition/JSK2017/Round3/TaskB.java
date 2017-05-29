@@ -9,16 +9,16 @@ import java.util.PriorityQueue;
 
 @SuppressWarnings("unchecked")
 public class TaskB {
-    static int n, m, cCnt;
-    static boolean[] b;
-    static double[] distTo;
-    static Edge[] edgeTo;
-    static PriorityQueue<Pair> queue = new PriorityQueue<Pair>();
-    static double res = -1;
-    static boolean can = false;
-    static LinkedList<Edge>[] adj;
+    int n, m, cCnt;
+    boolean[] b;
+    double[] distTo;
+    Edge[] edgeTo;
+    PriorityQueue<Pair> queue = new PriorityQueue<Pair>();
+    double res = -1;
+    boolean can = false;
+    LinkedList<Edge>[] adj;
 
-    static class Edge implements Comparable<Edge> {
+    class Edge implements Comparable<Edge> {
         int from;
         int to;
         double weight;
@@ -40,7 +40,7 @@ public class TaskB {
         }
     }
 
-    static class Pair implements Comparable<Pair> {
+    class Pair implements Comparable<Pair> {
         int index;
         double weight;
 
@@ -56,7 +56,7 @@ public class TaskB {
         }
     }
 
-    static void init() {
+    void init() {
         distTo = new double[n];
         adj = (LinkedList<Edge>[]) new LinkedList[n];
         for (int i = 0; i < n; i++) {
@@ -65,12 +65,12 @@ public class TaskB {
         edgeTo = new Edge[n];
     }
 
-    static void addEdge(int v, int w, double weight) {
+    void addEdge(int v, int w, double weight) {
         Edge e = new Edge(v, w, weight);
         adj[v].add(e);
     }
 
-    static void dijkstra() {
+    void dijkstra() {
         for (int i = 0; i < n; i++) {
             Arrays.fill(distTo, Double.POSITIVE_INFINITY);
             distTo[i] = 0.0;
