@@ -2,6 +2,7 @@ package algsPractice.lib;
 
 
 import java.io.*;
+import java.util.Arrays;
 
 /**
  * Created by Scruel on 2017/5/26.
@@ -14,6 +15,10 @@ public class OutputWriter {
     //    private BufferedWriter bfw;
     private StringBuilder stringBuilder = null;
     private int cnt = 0;
+
+    public static void debug(Object... os) {
+        System.err.println(Arrays.deepToString(os));
+    }
 
     public static void main(String[] args) {
         OutputWriter writer = new OutputWriter(System.out);
@@ -44,8 +49,7 @@ public class OutputWriter {
 //                }
 //                stringBuilder.append(Arrays.toString(objects[i].toString().getBytes("UTF-8")));
             stringBuilder.append(objects[i].toString());
-            if (psOut == null)
-                flush();
+            if (psOut == null) flush();
 //            if (stringBuilder.length())
         }
 //        return this;

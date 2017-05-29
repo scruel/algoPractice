@@ -33,7 +33,7 @@ public class Lydsy_2751 {
 
     public static void main(String[] args) throws IOException {
 
-//                Scanner input = new Scanner(new FileInputStream("K:\\Program\\Programing\\javaDev\\myProjects\\javaWorkSpace\\algorithm\\src\\algs4_new\\data.txt"));
+//                Scanner input = new Scanner(new FileInputStream("K:\\Program\\Programing\\javaDev\\myProjects\\javaWorkSpace\\algorithm\\src\\algs4\\data.txt"));
 //                N = input.nextInt();
 //                M = input.nextInt();
 //                K = input.nextInt();

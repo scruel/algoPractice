@@ -1,6 +1,6 @@
 package algsPractice.dpExercise;
 
-import algs4_new.MyTools;
+import algs4.MyTools;
 
 import java.util.Scanner;
 

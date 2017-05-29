@@ -1,0 +1,41 @@
+5 TaskC
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+2
+0
+44 5
+0 0 -1 1
+0 1 -2 1
+1 0 -1 2
+1 1 0 0
+2 1 1 0
+19 1.5707963268
+1
+-1 1
+1
+1
+42 5
+0 1 0 1
+0 0 0 0
+1 1 1 1
+5 5 5 5
+1 1 1 13
+-1
+1
+43 src/algsPractice/competition/JSK2017/Round4
+16 -Xmx256m -Xss64m
+4 Main
+45 algsPractice.competition.JSK2017.Round4.TaskC
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2017.05.28
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

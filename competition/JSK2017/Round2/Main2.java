@@ -99,8 +99,7 @@ public class Main2 {
         LinkedList<String> pList = new LinkedList<String>();
         for (int i = 0; i < exp.length(); i++) {
             char ch = exp.charAt(i);
-            if ((ch >= 48 || ch == '.') && ch != '^') {
-//            if (ch >= 48 || ch == '.') {
+            if (((ch >= 48 && ch <= 57) || ch == '.')) {
                 if (fChange && ch == '.')
                     isF = true;
                 if (exp.indexOf("int", i) == i) {

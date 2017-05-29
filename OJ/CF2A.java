@@ -24,7 +24,7 @@ public class CF2A {
 //            String[] rts = in.readLine().split("\\s+");
 //            String name = rts[0];
 //            int score = Integer.parseInt(rts[1]);
-            String name = in.nextToken();
+            String name = in.nextString();
             int score = in.nextInt();
             if (map.get(name) == null)
                 map.put(name, score);

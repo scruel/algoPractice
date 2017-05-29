@@ -1,335 +1,325 @@
 package algsPractice.lib;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigDecimal;
-import java.util.StringTokenizer;
+import java.math.BigInteger;
+import java.util.InputMismatchException;
 
 /**
- * Created by Scruel on 2017/5/26.
+ * Created by Scruel on 2017/5/29.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  */
 public class InputReader {
-    private final BufferedReader bfr;
-    StringTokenizer st;
-//    private final InputStream stream;
-//    private byte[] buf = new byte[1024];
-//    private int curChar;
-//    private int numChars;
+    private final InputStream stream;
+    //    private final InputStream stream= new FileInputStream(new File("dec.in"));
+    private final String charsetName = "UTF-8";
+    private byte[] buf = new byte[32768];
+    //    private byte[] buf = new byte[1024];
+    private int curChar;
+    private int numChars;
 
     public InputReader(InputStream stream) {
-//        this.stream = stream;
-        bfr = new BufferedReader(new InputStreamReader(stream), 1 << 16);
+        this.stream = stream;
     }
 
-    public String nextToken() {
-        try {
-            while (st == null || !st.hasMoreElements())
-                st = new StringTokenizer(bfr.readLine());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+    public int read() {
+        if (numChars == -1) {
+            throw new InputMismatchException();
         }
-        return st.nextToken();
-    }
-
-    public int nextInt() {
-        return Integer.parseInt(nextToken());
-    }
-
-    public long nextLong() {
-        return Long.parseLong(nextToken());
-    }
-
-    public double nextDouble() {
-        return Double.parseDouble(nextToken());
-    }
-
-    public float nextFloat() {
-        return Float.parseFloat(nextToken());
-    }
-
-    public BigDecimal nextBigDecimal() {
-        return new BigDecimal(nextToken());
-    }
-
-    public String nextLineSet() {
-        String str = null;
-        try {
-            str = bfr.readLine();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if (curChar >= numChars) {
+            curChar = 0;
+            try {
+                numChars = stream.read(buf);
+            } catch (IOException var1) {
+                throw new InputMismatchException();
+            }
+            if (numChars <= 0) {
+                return -1;
+            }
         }
-        st = new StringTokenizer(str);
-        return str;
+        return buf[curChar++];
     }
 
-    public String readLine() {
-        return nextLine();
-    }
-    public String nextLine() {
-        try {
-            return bfr.readLine();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public int[] nextIntArray(int size) {
-        int[] array = new int[size];
-        for (int i = 0; i < size; i++) {
-            array[i] = nextInt();
-        }
-        return array;
-    }
-
-    public void nextIntArray(int[] array, int size) {
-        for (int i = 0; i < size; i++) {
-            array[i] = nextInt();
-        }
-//        return array;
-    }
-
-    public double[] nextDoubleArray(int size) {
-        double[] array = new double[size];
-        for (int i = 0; i < size; i++) {
-            array[i] = nextDouble();
-        }
-        return array;
-    }
-
-    public void nextDoubleArray(double[] array, int size) {
-        for (int i = 0; i < size; i++) {
-            array[i] = nextDouble();
-        }
-//        return array;
-    }
-
-
-//
-//    public int read() {
-//        if (this.numChars == -1) {
-//            throw new InputMismatchException();
-//        } else {
-//            if (this.curChar >= this.numChars) {
-//                this.curChar = 0;
-//
-//                try {
-//                    this.numChars = this.stream.read(this.buf);
-//                } catch (IOException var2) {
-//                    throw new InputMismatchException();
-//                }
-//
-//                if (this.numChars <= 0) {
-//                    return -1;
-//                }
-//            }
-//
-//            return this.buf[this.curChar++];
-//        }
-//    }
-//
-//    public int peek() {
-//        if (this.numChars == -1) {
-//            return -1;
-//        } else {
-//            if (this.curChar >= this.numChars) {
-//                this.curChar = 0;
-//
-//                try {
-//                    this.numChars = this.stream.read(this.buf);
-//                } catch (IOException var2) {
-//                    return -1;
-//                }
-//
-//                if (this.numChars <= 0) {
-//                    return -1;
-//                }
-//            }
-//
-//            return this.buf[this.curChar];
-//        }
-//    }
-//
-//    public int readInt() {
-//        int c;
-//        for (c = this.read(); isSpaceChar(c); c = this.read()) {
-//            ;
-//        }
-//
-//        int sgn = 1;
-//        if (c == 45) {
-//            sgn = -1;
-//            c = this.read();
-//        }
-//
-//        int res = 0;
-//
-//        while (c >= 48 && c <= 57) {
-//            res *= 10;
-//            res += c - 48;
-//            c = this.read();
-//            if (isSpaceChar(c)) {
-//                return res * sgn;
-//            }
-//        }
-//
-//        throw new InputMismatchException();
-//    }
-//
-//    public long readLong() {
-//        int c;
-//        for (c = this.read(); isSpaceChar(c); c = this.read()) {
-//            ;
-//        }
-//
-//        int sgn = 1;
-//        if (c == 45) {
-//            sgn = -1;
-//            c = this.read();
-//        }
-//
-//        long res = 0L;
-//
-//        while (c >= 48 && c <= 57) {
-//            res *= 10L;
-//            res += (long) (c - 48);
-//            c = this.read();
-//            if (isSpaceChar(c)) {
-//                return res * (long) sgn;
-//            }
-//        }
-//
-//        throw new InputMismatchException();
-//    }
-//
-//    public String readString() {
-//        int length = this.readInt();
+    //     String readString() {
+//        int length = nextInt();
 //        if (length < 0) {
 //            return null;
 //        } else {
 //            byte[] bytes = new byte[length];
 //
 //            for (int i = 0; i < length; ++i) {
-//                bytes[i] = (byte) this.read();
+//                bytes[i] = (byte) nextString();
 //            }
 //
 //            try {
-//                return new String(bytes, "UTF-8");
+//                return new String(bytes, charsetName);
 //            } catch (UnsupportedEncodingException var4) {
 //                return new String(bytes);
 //            }
 //        }
 //    }
-//
-//    public String readToken() {
-//        int c;
-//        while (isSpaceChar(c = this.read())) {
-//            ;
-//        }
-//
-//        StringBuilder result = new StringBuilder();
-//        result.appendCodePoint(c);
-//
-//        while (!isSpaceChar(c = this.read())) {
-//            result.appendCodePoint(c);
-//        }
-//
-//        return result.toString();
-//    }
-//
-//    public static boolean isSpaceChar(int c) {
-//        return c == 32 || c == 10 || c == 13 || c == 9 || c == -1;
-//    }
-//
-//    public char readCharacter() {
-//        int c;
-//        for (c = this.read(); isSpaceChar(c); c = this.read()) {
-//            ;
-//        }
-//
-//        return (char) c;
-//    }
-//
-//    public double readDouble() {
-//        int c;
-//        for (c = this.read(); isSpaceChar(c); c = this.read()) {
-//            ;
-//        }
-//
-//        int sgn = 1;
-//        if (c == 45) {
-//            sgn = -1;
-//            c = this.read();
-//        }
-//
-//        double res = 0.0D;
-//
-//        while (true) {
-//            if (!isSpaceChar(c) && c != 46) {
-//                if (c != 101 && c != 69) {
-//                    if (c >= 48 && c <= 57) {
-//                        res *= 10.0D;
-//                        res += (double) (c - 48);
-//                        c = this.read();
-//                        continue;
-//                    }
-//
-//                    throw new InputMismatchException();
-//                }
-//
-//                return res * Math.pow(10.0D, (double) this.readInt());
-//            }
-//
-//            if (c == 46) {
-//                c = this.read();
-//
-//                for (double m = 1.0D; !isSpaceChar(c); c = this.read()) {
-//                    if (c == 101 || c == 69) {
-//                        return res * Math.pow(10.0D, (double) this.readInt());
-//                    }
-//
-//                    if (c < 48 || c > 57) {
-//                        throw new InputMismatchException();
-//                    }
-//
-//                    m /= 10.0D;
-//                    res += (double) (c - 48) * m;
-//                }
-//            }
-//
-//            return res * (double) sgn;
-//        }
-//    }
-//
-//    public boolean isExhausted() {
-//        int value;
-//        while (isSpaceChar(value = this.peek()) && value != -1) {
-//            this.read();
-//        }
-//
-//        return value == -1;
-//    }
-//
-//    public boolean readBoolean() {
-//        return this.readInt() == 1;
-//    }
-//
-//    public <E extends Enum<E>> Enum readEnum(Class<E> c) {
-//        String name = this.readString();
-//        if (name == null) {
-//            return null;
-//        } else {
-//            Enum[] var3 = (Enum[]) c.getEnumConstants();
-//            int var4 = var3.length;
-//
-//            for (int var5 = 0; var5 < var4; ++var5) {
-//                E e = (E) var3[var5];
-//                if (e.name().equals(name)) {
-//                    return e;
-//                }
-//            }
-//
-//            throw new EnumConstantNotPresentException(c, name);
-//        }
-//    }
+
+    public String nextLine() {
+        int c;
+        while (isEndline(c = read())) {
+        }
+
+        StringBuilder res = new StringBuilder();
+        do {
+            res.appendCodePoint(c);
+        } while (!isEndline(c = read()));
+
+        return res.toString();
+    }
+
+    public String readLine() {return nextLine();}
+
+    public String nextString() {
+        int c;
+        while (isSpaceChar(c = read())) {;}
+
+        StringBuilder res = new StringBuilder();
+        do {
+            res.appendCodePoint(c);
+        } while (!isSpaceChar(c = read()));
+
+        return res.toString();
+    }
+
+    public int nextInt() {
+//        return Integer.parseInt(nextString());
+        int c;
+        while (isSpaceChar(c = read())) {;}
+        int sgn = 1;
+        if (c == 45) {
+            sgn = -1;
+            c = read();
+        }
+        int res = 0;
+        while (c >= 48 && c <= 57) {
+            res *= 10;
+            res += c - 48;
+            c = read();
+            if (isSpaceChar(c)) {
+                return res * sgn;
+            }
+        }
+
+        throw new InputMismatchException();
+    }
+
+    public long nextLong() {
+//            return Long.parseLong(nextString());
+        int c;
+        while (isSpaceChar(c = read())) {;}
+        int sgn = 1;
+        if (c == 45) {
+            sgn = -1;
+            c = read();
+        }
+        long res = 0L;
+        while (c >= 48 && c <= 57) {
+            res *= 10L;
+            res += (long) (c - 48);
+            c = read();
+            if (isSpaceChar(c)) {
+                return res * (long) sgn;
+            }
+        }
+
+        throw new InputMismatchException();
+    }
+
+    public double nextDouble() {
+//        return Double.parseDouble(nextString());
+        int c;
+        while (isSpaceChar(c = read())) {;}
+
+        int sgn = 1;
+        if (c == 45) {
+            sgn = -1;
+            c = read();
+        }
+
+        double res = 0.0D;
+
+        while (true) {
+            if (!isSpaceChar(c) && c != 46) {
+                //101='e' 69='E'
+                if (c != 101 && c != 69) {
+                    if (c >= 48 && c <= 57) {
+                        res *= 10.0D;
+                        res += (double) (c - 48);
+                        c = read();
+                        continue;
+                    }
+
+                    throw new InputMismatchException();
+                }
+
+                return res * Math.pow(10.0D, (double) nextInt());
+            }
+            //46='.'
+            if (c == 46) {
+                c = read();
+
+                for (double m = 1.0D; !isSpaceChar(c); c = read()) {
+                    if (c == 101 || c == 69) {
+                        return res * Math.pow(10.0D, (double) nextInt());
+                    }
+
+                    if (c < 48 || c > 57) {
+                        throw new InputMismatchException();
+                    }
+
+                    m /= 10.0D;
+                    res += (double) (c - 48) * m;
+                }
+            }
+
+            return res * (double) sgn;
+        }
+    }
+
+    public BigDecimal nextBigDecimal() {
+        return new BigDecimal(nextString());
+    }
+
+    public BigInteger nextBigInteger() {
+        return new BigInteger(nextString());
+    }
+
+    public BigInteger nextBigInteger(int radix) {
+        return new BigInteger(nextString(), radix);
+    }
+
+    public int[] nextIntArray(int size) {
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) array[i] = nextInt();
+        return array;
+    }
+
+    public void nextIntArray(int[] array, int size) {
+        for (int i = 0; i < size; i++) array[i] = nextInt();
+//        return array;
+    }
+
+    public int[][] nextIntMap(int n, int m) {
+        int[][] map = new int[n][m];
+        for (int i = 0; i < n; i++) map[i] = nextIntArray(m);
+        return map;
+    }
+
+    public void nextIntMap(int[][] map, int n, int m) {
+        for (int i = 0; i < n; i++) map[i] = nextIntArray(m);
+    }
+
+    public long[] nextLongArray(int size) {
+        long[] array = new long[size];
+        for (int i = 0; i < size; i++) array[i] = nextLong();
+        return array;
+    }
+
+    public void nextLongArray(long[] array, int size) {
+        for (int i = 0; i < size; i++) array[i] = nextLong();
+//        return array;
+    }
+
+    public long[][] nextLongMap(int n, int m) {
+        long[][] map = new long[n][m];
+        for (int i = 0; i < n; i++) map[i] = nextLongArray(m);
+        return map;
+    }
+
+    public void nextLongMap(long[][] map, int n, int m) {
+        for (int i = 0; i < n; i++) map[i] = nextLongArray(m);
+    }
+
+    public double[] nextDoubleArray(int size) {
+        double[] array = new double[size];
+        for (int i = 0; i < size; i++) array[i] = nextDouble();
+        return array;
+    }
+
+    public void nextDoubleArray(double[] array, int size) {
+        for (int i = 0; i < size; i++) array[i] = nextDouble();
+//        return array;
+    }
+
+    public double[][] nextDoubleMap(int n, int m) {
+        double[][] map = new double[n][m];
+        for (int i = 0; i < n; i++) map[i] = nextDoubleArray(m);
+        return map;
+    }
+
+    public void nextDoubleMap(double[][] map, int n, int m) {
+        for (int i = 0; i < n; i++) map[i] = nextDoubleArray(m);
+    }
+
+    public String[] nextStringArray(int n) {
+        String[] array = new String[n];
+        for (int i = 0; i < n; i++) array[i] = nextString();
+        return array;
+    }
+
+    public void nextStringArray(String[] array, int n) {
+        for (int i = 0; i < n; i++) array[i] = nextString();
+    }
+
+    public int peek() {
+        if (numChars == -1) return -1;
+        if (curChar >= numChars) {
+            curChar = 0;
+            try {
+                numChars = stream.read(buf);
+            } catch (IOException var2) {
+                return -1;
+            }
+            if (numChars <= 0) {return -1;}
+        }
+        return buf[curChar];
+    }
+
+    public char readCharacter() {
+        int c;
+        while (isSpaceChar(c = read())) {;}
+        return (char) c;
+    }
+
+    public boolean readBoolean() {return nextInt() == 1;}
+
+    public <E extends Enum<E>> Enum readEnum(Class<E> c) {
+        String name = nextString();
+        if (name == null) {
+            return null;
+        } else {
+            Enum[] var3 = (Enum[]) c.getEnumConstants();
+            int var4 = var3.length;
+
+            for (int var5 = 0; var5 < var4; ++var5) {
+                E e = (E) var3[var5];
+                if (e.name().equals(name)) return e;
+            }
+
+            throw new EnumConstantNotPresentException(c, name);
+        }
+    }
+
+    public boolean isExhausted() {
+        int c;
+        while (isSpaceChar(c = peek()) && c != -1) {read();}
+        return c == -1;
+    }
+
+    private boolean isSpaceChar(int c) {
+        return c == 32 || c == 10 || c == 13 || c == 9 || c == -1;
+//      return c ==' ' || c =='\n'|| c =='\r'|| c =='\t'||c == -1;
+    }
+
+    private boolean isEndline(int c) {
+        return c == 10 || c == 13 || c == -1;
+//        return c == '\n' || c == '\r' || c == -1;
+    }
 }

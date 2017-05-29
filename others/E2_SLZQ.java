@@ -13,7 +13,7 @@ public class E2_SLZQ {
                         if ((m - p) % 23 == 0)
                                 if ((m - e) % 28 == 0)
                                         if ((m - i) % 33 == 0) {
-                                                System.out.println("the next in ... " + (m - d) + " days");
+                                            System.out.println("the nextString in ... " + (m - d) + " days");
                                                 break;
                                         }
 

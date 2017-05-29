@@ -1,7 +1,7 @@
 package algsPractice.OJ;
 
 
-import algs4_new.MyTools;
+import algs4.MyTools;
 
 import java.io.BufferedReader;
 import java.io.IOException;

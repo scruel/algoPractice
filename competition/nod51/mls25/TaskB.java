@@ -1,6 +1,5 @@
 package algsPractice.competition.nod51.mls25;
 
-import algs4_new.MyTools;
 import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
 
@@ -33,7 +32,6 @@ public class TaskB {
     static void dfs(int index) {
         if (index == n) {
             if (check()) {
-                MyTools.print_r(tmp);
                 cnt++;
             }
             return;
