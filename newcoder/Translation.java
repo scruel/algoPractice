@@ -14,29 +14,29 @@ package algsPractice.newcoder;
  * 返回："DEABC"
  */
 public class Translation {
-        public static void main(String[] args) {
-                Translation tr = new Translation();
-                System.out.println(tr.stringTranslation("RJXJYA", 6, 1));
-        }
+    public static void main(String[] args) {
+        Translation tr = new Translation();
+        System.out.println(tr.stringTranslation("RJXJYA", 6, 1));
+    }
 
-        public String stringTranslation(String A, int n, int len) {
-                // write code here
-                A = reverseString(A, 0, len - 1) + reverseString(A, len, n - 1);
-                return reverseString(A, 0, n - 1);
+    public String stringTranslation(String A, int n, int len) {
+        // write code here
+        A = reverseString(A, 0, len - 1) + reverseString(A, len, n - 1);
+        return reverseString(A, 0, n - 1);
 
-        }
+    }
 
-        private String reverseString(String A, int lo, int hi) {
-                char[] array = A.toCharArray();
-                int i = lo, j = hi;
-                System.out.println(lo);
-                System.out.println(hi);
-                while (i < j) {
-                        char temp = array[i];
-                        array[i++] = array[j];
-                        array[j--] = temp;
-                }
-                System.out.println(array);
-                return String.valueOf(array, lo, hi - lo + 1);
+    private String reverseString(String A, int lo, int hi) {
+        char[] array = A.toCharArray();
+        int i = lo, j = hi;
+        System.out.println(lo);
+        System.out.println(hi);
+        while (i < j) {
+            char temp = array[i];
+            array[i++] = array[j];
+            array[j--] = temp;
         }
+        System.out.println(array);
+        return String.valueOf(array, lo, hi - lo + 1);
+    }
 }

@@ -203,7 +203,6 @@ public class InputReader {
 
     public void nextIntArray(int[] array, int size) {
         for (int i = 0; i < size; i++) array[i] = nextInt();
-//        return array;
     }
 
     public int[][] nextIntMap(int n, int m) {
@@ -245,7 +244,6 @@ public class InputReader {
 
     public void nextDoubleArray(double[] array, int size) {
         for (int i = 0; i < size; i++) array[i] = nextDouble();
-//        return array;
     }
 
     public double[][] nextDoubleMap(int n, int m) {
@@ -295,7 +293,7 @@ public class InputReader {
         if (name == null) {
             return null;
         } else {
-            Enum[] var3 = (Enum[]) c.getEnumConstants();
+            Enum[] var3 = c.getEnumConstants();
             int var4 = var3.length;
 
             for (int var5 = 0; var5 < var4; ++var5) {
@@ -315,11 +313,10 @@ public class InputReader {
 
     private boolean isSpaceChar(int c) {
         return c == 32 || c == 10 || c == 13 || c == 9 || c == -1;
-//      return c ==' ' || c =='\n'|| c =='\r'|| c =='\t'||c == -1;
+//' ','\n','\r','\t'
     }
 
     private boolean isEndline(int c) {
         return c == 10 || c == 13 || c == -1;
-//        return c == '\n' || c == '\r' || c == -1;
     }
 }

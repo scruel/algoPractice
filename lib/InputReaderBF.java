@@ -15,17 +15,13 @@ import java.util.StringTokenizer;
 public class InputReaderBF {
     private final BufferedReader bfr;
     StringTokenizer st;
-//    private final InputStream stream;
-//    private byte[] buf = new byte[1024];
-//    private int curChar;
-//    private int numChars;
 
     public InputReaderBF(InputStream stream) {
 //        this.stream = stream;
         bfr = new BufferedReader(new InputStreamReader(stream), 32768);
     }
 
-    public String nextToken() {
+    public String nextString() {
         try {
             while (st == null || !st.hasMoreElements()) st = new StringTokenizer(bfr.readLine());
         } catch (IOException e) {
@@ -35,21 +31,21 @@ public class InputReaderBF {
     }
 
     public int nextInt() {
-        return Integer.parseInt(nextToken());
+        return Integer.parseInt(nextString());
     }
 
-    public long nextLong() {return Long.parseLong(nextToken());}
+    public long nextLong() {return Long.parseLong(nextString());}
 
     public double nextDouble() {
-        return Double.parseDouble(nextToken());
+        return Double.parseDouble(nextString());
     }
 
     public float nextFloat() {
-        return Float.parseFloat(nextToken());
+        return Float.parseFloat(nextString());
     }
 
     public BigDecimal nextBigDecimal() {
-        return new BigDecimal(nextToken());
+        return new BigDecimal(nextString());
     }
 
     public String nextLineSet() {

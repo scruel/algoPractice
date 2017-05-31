@@ -18,7 +18,7 @@ public class TaskB {
     boolean can = false;
     LinkedList<Edge>[] adj;
 
-    class Edge implements Comparable<Edge> {
+    static class Edge implements Comparable<Edge> {
         int from;
         int to;
         double weight;
@@ -34,13 +34,13 @@ public class TaskB {
         }
 
         public int compareTo(Edge edge) {
-            if (this.weight < edge.weight) return -1;
-            if (this.weight > edge.weight) return 1;
+            if (Double.compare(this.weight, edge.weight) < 0) return -1;
+            if (Double.compare(this.weight, edge.weight) > 0) return 1;
             return 0;
         }
     }
 
-    class Pair implements Comparable<Pair> {
+    static class Pair implements Comparable<Pair> {
         int index;
         double weight;
 
@@ -50,8 +50,8 @@ public class TaskB {
         }
 
         public int compareTo(Pair pair) {
-            if (this.weight < pair.weight) return -1;
-            if (this.weight > pair.weight) return 1;
+            if (Double.compare(this.weight, pair.weight) < 0) return -1;
+            if (Double.compare(this.weight, pair.weight) > 0) return 1;
             return 0;
         }
     }

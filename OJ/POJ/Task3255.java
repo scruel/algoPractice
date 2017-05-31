@@ -20,7 +20,7 @@ public class Task3255 {
     int[] distKTo;
     Edge[] edgeTo;
     Edge[] edgeKTo;
-    int V, E;
+    int V;
     boolean[] marked;
 
     public static void main(String[] args) throws IOException {

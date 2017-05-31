@@ -66,8 +66,7 @@ public class JSK_BoomUnion {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                if (puzzle[i][j] == 1)
-                    res++;
+                if (puzzle[i][j] == 1) res++;
             }
         }
         for (int i = 0; i < n; i++) {
@@ -129,8 +128,7 @@ public class JSK_BoomUnion {
         Point ri = find(i);
         Point rj = find(j);
 
-        if (ri == rj)
-            return;
+        if (ri == rj) return;
         //一直连接，发现可以连接的对象
         res--;
         j.father = ri;

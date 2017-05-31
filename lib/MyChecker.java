@@ -12,15 +12,15 @@ import net.egork.chelper.tester.Verdict;
 
 public class MyChecker implements Checker {
     //    public static final Verdict RTE;
-    public static final Verdict PE;
+    private static final Verdict PE;
     //    public static final Verdict PELF;
-    public static final Verdict LFOK;
-    public static TokenChecker tk;
+    private static final Verdict LFOK;
+    private TokenChecker tk;
 
     static {
 //        RTE = new Verdict(Verdict.VerdictType.RTE, null);
         PE = new Verdict(Verdict.VerdictType.PE, null);
-        LFOK = new Verdict(Verdict.VerdictType.PE, "LF Cause");
+        LFOK = new Verdict(Verdict.VerdictType.OK, "LF may cause WA/PE");
     }
 
     public MyChecker(String parameters) {

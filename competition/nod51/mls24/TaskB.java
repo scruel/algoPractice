@@ -17,10 +17,10 @@ public class TaskB {
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
                 String[] rts = bfr.readLine().split("\\s+");
-                n = new Integer(rts[0]);
-                m = new Integer(rts[1]);
+                n = Integer.parseInt(rts[0]);
+                m = Integer.parseInt(rts[1]);
                 for (int i = 0; i < m; i++) {
-                        int tmp = new Integer(bfr.readLine());
+                        int tmp = Integer.parseInt(bfr.readLine());
                         nums[tmp - 1][++nums[tmp - 1][0]] = i + 1;
                 }
 

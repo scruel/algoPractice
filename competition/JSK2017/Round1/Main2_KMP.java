@@ -57,15 +57,11 @@ public class Main2_KMP {
 
     static char getChar(int w) {
         if (L <= w && w <= R) {
-            if ((w & 1) == 0)
-                return 'A';
-            else
-                return 'T';
+            if ((w & 1) == 0) return 'A';
+            else return 'T';
         } else {
-            if ((w & 1) == 0)
-                return 'G';
-            else
-                return 'C';
+            if ((w & 1) == 0) return 'G';
+            else return 'C';
         }
     }
 

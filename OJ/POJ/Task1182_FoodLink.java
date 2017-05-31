@@ -3,7 +3,6 @@ package algsPractice.OJ.POJ;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -72,8 +71,8 @@ public class Task1182_FoodLink {
 //                                return true;
 //                        if (findEat(j, i))
 //                                return false;
-            int ri = findSelf(i);
-            int rj = findSelf(j);
+//            int ri = findSelf(i);
+//            int rj = findSelf(j);
             eatUf[i] = j;
         }
         return true;
@@ -154,7 +153,6 @@ public class Task1182_FoodLink {
         X = new int[k];
         Y = new int[k];
         init(3 * n);
-        Random rm = new Random();
         for (int i = 0; i < k; i++) {
             s = bfr.readLine().split(" ");
             T[i] = Integer.parseInt(s[0]);

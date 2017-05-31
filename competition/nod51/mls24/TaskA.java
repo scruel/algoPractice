@@ -13,7 +13,7 @@ public class TaskA {
         public static void main(String[] args) throws IOException {
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
-                int n = new Integer(bfr.readLine());
+            int n = Integer.parseInt(bfr.readLine());
                 /**
                  * 这题的结论是这样的：
                  1、很容易得出每个三角形的和应为3n/2，故n为奇数时无解；

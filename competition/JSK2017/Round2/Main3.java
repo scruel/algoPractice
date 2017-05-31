@@ -27,8 +27,7 @@ public class Main3 {
                     x = x * 10 + ch - '0';
                     isInt = true;
                 } else {
-                    if (isInt)
-                        queue.add((Integer) x);
+                    if (isInt) queue.add((Integer) x);
                     x = 0;
                     isInt = false;
                     if (ch == '(') {

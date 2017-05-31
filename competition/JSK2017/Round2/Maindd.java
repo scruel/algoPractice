@@ -3,9 +3,7 @@ package algsPractice.competition.JSK2017.Round2;
 import java.io.*;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Stack;
 
@@ -104,18 +102,15 @@ public class Maindd {
         int cntE = 0;
         int end;
         for (end = srt + 1; ; end++) {
-            if (exp.charAt(end) == '(')
-                cntS++;
-            else if (exp.charAt(end) == ')')
-                cntE++;
+            if (exp.charAt(end) == '(') cntS++;
+            else if (exp.charAt(end) == ')') cntE++;
             if (cntS == cntE) break;
         }
         return exp.substring(srt + 1, end);
     }
 
     static BigDecimal getRes(String exp, boolean fChange) throws Exception {
-        if (exp.startsWith("-"))
-            exp = "0" + exp;
+        if (exp.startsWith("-")) exp = "0" + exp;
         Stack<BigDecimal> nS = new Stack<BigDecimal>();
         Stack<Character> opS = new Stack<Character>();
         LinkedList<String> pList = new LinkedList<String>();
@@ -123,8 +118,7 @@ public class Maindd {
             char ch = exp.charAt(i);
             if ((ch >= 48 || ch == '.') && ch != '^') {
 //            if (ch >= 48 || ch == '.') {
-                if (fChange && ch == '.')
-                    isF = true;
+                if (fChange && ch == '.') isF = true;
                 if (exp.indexOf("int", i) == i) {
                     int srt = exp.indexOf("(", i);
                     String ps = getPairS(exp, srt);
@@ -146,10 +140,8 @@ public class Maindd {
                     String ps = getPairS(exp, srt);
                     i = srt + ps.length() + 1;
                     String s = getRes(ps, false).toString();
-                    if (fChange)
-                        isF = true;
-                    if (!s.contains("."))
-                        s += ".0";
+                    if (fChange) isF = true;
+                    if (!s.contains(".")) s += ".0";
                     sb.append(s);
 //                    while (ch != ')') {
 //                        sb.append(ch);
@@ -168,8 +160,7 @@ public class Maindd {
                     opS.push(ch);
                 } else if (ch == ')') {
 //                    if (opS.peek() != '(') {
-                    while (opS.peek() != '(')
-                        pList.add(String.valueOf(opS.pop()));
+                    while (opS.peek() != '(') pList.add(String.valueOf(opS.pop()));
                     opS.pop();
 //                        if (opS.peek() != '(')
 //                            pList.add(String.valueOf(opS.pop()));
@@ -188,8 +179,7 @@ public class Maindd {
             pList.add(sb.toString());
             sb.delete(0, sb.length());
         }
-        while (!opS.isEmpty())
-            pList.add(String.valueOf(opS.pop()));
+        while (!opS.isEmpty()) pList.add(String.valueOf(opS.pop()));
         for (int i = 0; i < pList.size(); i++) {
             String s = pList.get(i);
             if ("−".equals(s) || "-".equals(s)) {

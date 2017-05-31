@@ -26,55 +26,53 @@ import java.util.Scanner;
  * 3
  */
 public class CombineTriangles {
-        public static void main(String[] args) {
-                Scanner input = new Scanner(System.in);
-                int n = input.nextInt();
-                int[] arr = new int[n];
-                for (int i = 0; i < n; i++) {
-                        arr[i] = input.nextInt();
-                }
-                System.out.println(solve(arr));
-                System.out.println(solve2(arr));
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = input.nextInt();
         }
+        System.out.println(solve(arr));
+        System.out.println(solve2(arr));
+    }
 
-        private static int solve(int[] arr) {
-                int cnt = 0;
-                Arrays.sort(arr);
-                int n = arr.length;
-                //二分查找降低复杂度到O(n^2logn)
-                for (int i = 0; i < arr.length; i++) {
-                        for (int j = i + 1; j < arr.length; j++) {
-                                int num = Arrays.binarySearch(arr, arr[i] + arr[j]);
-                                if (num < 0) num = -(num + 2);
-                                if (arr[num] == arr[i] + arr[j]) {
-                                        cnt += num - j - 1;
-                                        //去除binarySearch返回的index值不是相等情况中第一个出现的位置的错误统计
-                                        for (int k = num - 1; k >= j; k--) {
-                                                if (arr[num] == arr[k]) cnt--;
-                                                else break;
-                                        }
-                                } else if (arr[num] < arr[i] + arr[j])
-                                        cnt += num - j;
-                        }
-                }
-                return cnt;
+    private static int solve(int[] arr) {
+        int cnt = 0;
+        Arrays.sort(arr);
+        //二分查找降低复杂度到O(n^2logn)
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                int num = Arrays.binarySearch(arr, arr[i] + arr[j]);
+                if (num < 0) num = -(num + 2);
+                if (arr[num] == arr[i] + arr[j]) {
+                    cnt += num - j - 1;
+                    //去除binarySearch返回的index值不是相等情况中第一个出现的位置的错误统计
+                    for (int k = num - 1; k >= j; k--) {
+                        if (arr[num] == arr[k]) cnt--;
+                        else break;
+                    }
+                } else if (arr[num] < arr[i] + arr[j]) cnt += num - j;
+            }
         }
+        return cnt;
+    }
 
-        private static int solve2(int[] arr) {
-                int cnt = 0;
-                Arrays.sort(arr);
-                for (int i = 0; i < arr.length; i++) {
-                        for (int j = i + 1; j < arr.length; j++) {
-                                for (int k = j + 1; k < arr.length; k++) {
-                                        if (arr[i] + arr[j] > arr[k]) {
+    private static int solve2(int[] arr) {
+        int cnt = 0;
+        Arrays.sort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                for (int k = j + 1; k < arr.length; k++) {
+                    if (arr[i] + arr[j] > arr[k]) {
 //                                                System.out.println(arr[i] + " "+ arr[j]+ " "+arr[k]);
-                                                cnt++;
-                                        } else {
-                                                break;
-                                        }
-                                }
-                        }
+                        cnt++;
+                    } else {
+                        break;
+                    }
                 }
-                return cnt;
+            }
         }
+        return cnt;
+    }
 }

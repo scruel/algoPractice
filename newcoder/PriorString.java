@@ -11,21 +11,21 @@ import java.util.Comparator;
  * **字符串**
  */
 public class PriorString {
-        public String findSmallest(String[] strs, int n) {
-                // write code here
-                Arrays.sort(strs, new Comparator<String>() {
-                        @Override
-                        public int compare(String o1, String o2) {
-                                String s1 = o1 + o2;
-                                String s2 = o2 + o1;
-                                return s1.compareTo(s2);
-                        }
-                });
+    public String findSmallest(String[] strs, int n) {
+        // write code here
+        Arrays.sort(strs, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                String s1 = o1 + o2;
+                String s2 = o2 + o1;
+                return s1.compareTo(s2);
+            }
+        });
 
-                String res = "";
-                for (int i = 0; i < n; i++) {
-                        res += strs[i];
-                }
-                return res;
+        String res = "";
+        for (int i = 0; i < n; i++) {
+            res += strs[i];
         }
+        return res;
+    }
 }

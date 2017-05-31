@@ -1,7 +1,6 @@
 package algsPractice.OJ.POJ;
 
 import java.util.PriorityQueue;
-import java.util.Scanner;
 
 /**
  * Created by Scruel on 2016/4/9.
@@ -10,7 +9,6 @@ import java.util.Scanner;
 public class Task2431_expedition {
     public static void main(String[] args) {
         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
-        Scanner input = new Scanner(System.in);
         int n = 4;
         int l = 25;
         int p = 10;

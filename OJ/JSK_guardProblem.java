@@ -35,8 +35,7 @@ public class JSK_guardProblem {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 //是否可以放置守卫
-                if (puzzle[i][j] == 1)
-                    dfs(i, j);
+                if (puzzle[i][j] == 1) dfs(i, j);
             }
         }
         System.out.println(res);
@@ -131,12 +130,9 @@ public class JSK_guardProblem {
             guard[i][j] = true;
             guarSum[i][j]++;
             res += RightRes;
-            if (ok(i - 1, j))
-                guarSum[i - 1][j]++;
-            if (ok(i, j - 1))
-                guarSum[i][j - 1]++;
-            if (ok(i, j + 1))
-                guarSum[i][j + 1]++;
+            if (ok(i - 1, j)) guarSum[i - 1][j]++;
+            if (ok(i, j - 1)) guarSum[i][j - 1]++;
+            if (ok(i, j + 1)) guarSum[i][j + 1]++;
         } else {
             res += NoRes;
         }
@@ -147,22 +143,18 @@ public class JSK_guardProblem {
         //当前的守卫是否可以被替换
         if (!guard[i][j]) return false;
         if (ok(i, j)) {
-            if (guarSum[i][j] - 1 < 0)
-                return false;
+            if (guarSum[i][j] - 1 < 0) return false;
         }
         if (ok(i - 1, j)) {
-            if (guarSum[i - 1][j] - 1 < 0)
-                return false;
+            if (guarSum[i - 1][j] - 1 < 0) return false;
         }
         //i, j - 1
         if (ok(i, j - 1)) {
-            if (guarSum[i][j - 1] - 1 < 0)
-                return false;
+            if (guarSum[i][j - 1] - 1 < 0) return false;
         }
         //i, j + 1
         if (ok(i, j + 1)) {
-            if (guarSum[i][j + 1] - 1 < 0)
-                return false;
+            if (guarSum[i][j + 1] - 1 < 0) return false;
         }
         //当前位置的守卫被取消
         guard[i][j] = false;

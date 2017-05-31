@@ -67,7 +67,7 @@ public class Task1590 {
             int index = 0;
             for (int i = 0; i < n; i++) {
                 String[] rts = bfr.readLine().split("\\.");
-                long tmp = new Long(rts[0]) * (1 << 24) + new Long(rts[1]) * (1 << 16) + new Long(rts[2]) * (1 << 8) + new Long(rts[3]);
+                long tmp = Long.parseLong(rts[0]) * (1 << 24) + Long.parseLong(rts[1]) * (1 << 16) + Long.parseLong(rts[2]) * (1 << 8) + Long.parseLong(rts[3]);
                 if (tmp < min) {
                     min = tmp;
                     maxrtS = rts;
@@ -128,7 +128,7 @@ public class Task1590 {
             long max = 0;
             for (int i = 0; i < n; i++) {
                 String[] rts = bfr.readLine().split("\\.");
-                long cur = (new Long(rts[0]) << 24) | (new Long(rts[1]) << 16) | (new Long(rts[2]) << 8) | new Long(rts[3]);
+                long cur = (Long.parseLong(rts[0]) << 24) | (Long.parseLong(rts[1]) << 16) | (new Long(rts[2]) << 8) | new Long(rts[3]);
                 max = cur > max ? cur : max;
                 min = cur < min ? cur : min;
             }

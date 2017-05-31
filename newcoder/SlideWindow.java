@@ -16,43 +16,43 @@ import java.util.LinkedList;
  * 返回：[5,5,5,4,6,7]
  */
 public class SlideWindow {
-        public static int[] slide(int[] arr, int n, int w) {
-                // write code here
-                LinkedList<Integer> indexList = new LinkedList<Integer>();
-                LinkedList<Integer> prelist = new LinkedList<Integer>();
-                int sumW = 0;
-                int num = 0;
-                int[] result = new int[n - w + 1];
-                for (int i = 0; i < n; i++) {
-                        sumW++;
+    public static int[] slide(int[] arr, int n, int w) {
+        // write code here
+        LinkedList<Integer> indexList = new LinkedList<Integer>();
+        LinkedList<Integer> prelist = new LinkedList<Integer>();
+        int sumW = 0;
+        int num = 0;
+        int[] result = new int[n - w + 1];
+        for (int i = 0; i < n; i++) {
+            sumW++;
 
 
-                        while (!prelist.isEmpty() && arr[i] >= prelist.getLast()) {
-                                prelist.removeLast();
-                                indexList.removeLast();
-                        }
-                        prelist.add(arr[i]);
-                        indexList.add(i);
+            while (!prelist.isEmpty() && arr[i] >= prelist.getLast()) {
+                prelist.removeLast();
+                indexList.removeLast();
+            }
+            prelist.add(arr[i]);
+            indexList.add(i);
 
-                        if (sumW == w) {
-                                sumW--;
-                                //失效了，移除
-                                if (i - indexList.getFirst() >= w) {
-                                        prelist.removeFirst();
-                                        indexList.removeFirst();
-                                }
-                                result[num++] = prelist.getFirst();
-                        }
+            if (sumW == w) {
+                sumW--;
+                //失效了，移除
+                if (i - indexList.getFirst() >= w) {
+                    prelist.removeFirst();
+                    indexList.removeFirst();
                 }
-
-                //先将窗口滑动滑动固定到第一个
-                return result;
+                result[num++] = prelist.getFirst();
+            }
         }
 
-        public static void main(String[] args) {
-                int[] arr = new int[]{4, 3, 5, 4, 3, 3, 6, 7};
-                for (int i : slide(arr, 8, 3)) {
-                        System.out.printf("%2d", i);
-                }
+        //先将窗口滑动滑动固定到第一个
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{4, 3, 5, 4, 3, 3, 6, 7};
+        for (int i : slide(arr, 8, 3)) {
+            System.out.printf("%2d", i);
         }
+    }
 }

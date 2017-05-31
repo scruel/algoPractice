@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
  */
 public class Main2_HKJ {
 
-    public static int cnt = 31;
+    private static int cnt = 31;
     public static Pattern floatPattern = Pattern.compile("[0-9]+\\.[0-9]*|parseFloat\\(.*\\)");
 
     String convertStatement(String s) {
@@ -75,6 +75,7 @@ public class Main2_HKJ {
                 } else if (Double.isNaN((Double) ret)) {
                     out.write("No Answer");
                 } else {
+//                    out.write("No Answer");
                     out.write(String.format("%0.f\n", ret));
                 }
             } catch (Exception e) {

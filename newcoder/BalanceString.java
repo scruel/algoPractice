@@ -29,66 +29,64 @@ import java.util.Scanner;
  * **模式匹配** **dfs枚举**
  */
 public class BalanceString {
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-                Scanner input = new Scanner(System.in);
-                int n = input.nextInt();
-                String s = String.valueOf(n);
-                if (s.length() < 2) {
-                        System.out.println("NO");
-                        return;
-                }
-                char[] chars = s.toCharArray();
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        String s = String.valueOf(n);
+        if (s.length() < 2) {
+            System.out.println("NO");
+            return;
+        }
+        char[] chars = s.toCharArray();
 //                System.out.println(s);
 
-                int[] sum1 = new int[chars.length];
-                sum1[0] = chars[0] - 48;
-                for (int i = 1; i < chars.length; i++) {
-                        sum1[i] = (chars[i] - 48) * sum1[i - 1];
-                }
-                int[] sum2 = new int[chars.length];
-                sum2[0] = chars[chars.length - 1] - 48;
-                for (int i = 1; i < chars.length; i++) {
-                        sum2[i] = (chars[chars.length - i - 1] - 48) * sum2[i - 1];
-                }
-                // 1没考虑到后面都是0的情况，于是输出no，后面两个while循环解决了长度单数的问题
-                // 2是没考虑到808这种数还没读完所有的数就输出yes的情况
-                int p = chars.length - 1, q = chars.length - 1;
-                while (p >= 0 && q >= 0) {
-                        if (sum1[p] < sum2[q]) {
-                                q--;
-                        } else if (sum1[p] > sum2[q]) {
-                                p--;
-                        } else if (p + q == chars.length - 2) {
-                                System.out.println("YES");
-                                return;
-                        } else {
-                                int tempP = p;
-                                int tempQ = q;
-                                while (tempP >= 0) {
-                                        if (sum1[tempP] != sum2[q])
-                                                break;
-                                        else if (tempP + q == chars.length - 2) {
-                                                System.out.println("YES");
-                                                return;
-                                        } else {
-                                                tempP--;
-                                        }
-                                }
-                                while (tempQ >= 0) {
-                                        if (sum1[p] != sum2[tempQ])
-                                                break;
-                                        else if (p + tempQ == chars.length - 2) {
-                                                System.out.println("YES");
-                                                return;
-                                        } else {
-                                                tempQ--;
-                                        }
-                                }
-                                q--;
-                                p--;
-                        }
-                }
-                System.out.println("NO");
+        int[] sum1 = new int[chars.length];
+        sum1[0] = chars[0] - 48;
+        for (int i = 1; i < chars.length; i++) {
+            sum1[i] = (chars[i] - 48) * sum1[i - 1];
         }
+        int[] sum2 = new int[chars.length];
+        sum2[0] = chars[chars.length - 1] - 48;
+        for (int i = 1; i < chars.length; i++) {
+            sum2[i] = (chars[chars.length - i - 1] - 48) * sum2[i - 1];
+        }
+        // 1没考虑到后面都是0的情况，于是输出no，后面两个while循环解决了长度单数的问题
+        // 2是没考虑到808这种数还没读完所有的数就输出yes的情况
+        int p = chars.length - 1, q = chars.length - 1;
+        while (p >= 0 && q >= 0) {
+            if (sum1[p] < sum2[q]) {
+                q--;
+            } else if (sum1[p] > sum2[q]) {
+                p--;
+            } else if (p + q == chars.length - 2) {
+                System.out.println("YES");
+                return;
+            } else {
+                int tempP = p;
+                int tempQ = q;
+                while (tempP >= 0) {
+                    if (sum1[tempP] != sum2[q]) break;
+                    else if (tempP + q == chars.length - 2) {
+                        System.out.println("YES");
+                        return;
+                    } else {
+                        tempP--;
+                    }
+                }
+                while (tempQ >= 0) {
+                    if (sum1[p] != sum2[tempQ]) break;
+                    else if (p + tempQ == chars.length - 2) {
+                        System.out.println("YES");
+                        return;
+                    } else {
+                        tempQ--;
+                    }
+                }
+                q--;
+                p--;
+            }
+        }
+        System.out.println("NO");
+    }
 }

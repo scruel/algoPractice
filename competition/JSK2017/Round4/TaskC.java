@@ -3,10 +3,7 @@ package algsPractice.competition.JSK2017.Round4;
 import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
 
-import java.util.HashMap;
-
 public class TaskC {
-    HashMap<Pair, Integer> map = new HashMap<Pair, Integer>();
     double EPS = 1e-6;
     int n;
     double[][] nums;

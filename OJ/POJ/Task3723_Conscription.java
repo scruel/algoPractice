@@ -15,7 +15,6 @@ public class Task3723_Conscription {
     static int V, E;
     //        static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out));
-    static String[] rTs;
 
     static void init(int m, int n, int r) {
         V = n + m;

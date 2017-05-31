@@ -23,7 +23,6 @@ public class Task1852_ants {
         int l = input.nextInt();
         int n = input.nextInt();
         int[] x = new int[n];
-        int[] xRe = new int[n];
         int min = Integer.MIN_VALUE;
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {

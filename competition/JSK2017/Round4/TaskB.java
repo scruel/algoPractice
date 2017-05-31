@@ -9,7 +9,7 @@ import java.util.Map;
 public class TaskB {
     HashMap<Pair, Integer> map = null;
 
-    class Pair implements Comparable<Pair> {
+    static class Pair implements Comparable<Pair> {
         String s;
         int x;
         int y;

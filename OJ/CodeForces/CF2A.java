@@ -4,8 +4,7 @@ import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
 
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.Map;
 
 public class CF2A {
     public void solve(int testNumber, InputReader in, OutputWriter out) {
@@ -26,10 +25,8 @@ public class CF2A {
 //            int score = Integer.parseInt(rts[1]);
             String name = in.nextString();
             int score = in.nextInt();
-            if (map.get(name) == null)
-                map.put(name, score);
-            else
-                map.put(name, score + map.get(name));
+            if (map.get(name) == null) map.put(name, score);
+            else map.put(name, score + map.get(name));
             if (realMax < map.get(name))//得到第一个最大值的人
             {
                 scoreList[count] = map.get(name);
@@ -37,11 +34,8 @@ public class CF2A {
             }
         }
 
-        Set<String> set = map.keySet();
-        for (Iterator<String> iter = set.iterator(); iter.hasNext(); ) {
-            String key = iter.next();
-            if (map.get(key) > max)
-                max = map.get(key);
+        for (Map.Entry<String, Integer> e : map.entrySet()) {
+            if (e.getValue() > max) max = e.getValue();
         }
 
 

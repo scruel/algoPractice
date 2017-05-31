@@ -43,8 +43,8 @@ public class Task2718_SmallestDifference {
             if (chars.length > 2 && chars[m] == '0') {
                 return INF;
             } else {
-                int left = Integer.valueOf(String.valueOf(chars, 0, m));
-                int right = Integer.valueOf(String.valueOf(chars, m, m));
+                int left = Integer.parseInt(String.valueOf(chars, 0, m));
+                int right = Integer.parseInt(String.valueOf(chars, m, m));
                 return Math.abs(left - right);
             }
         } else {
@@ -52,15 +52,15 @@ public class Task2718_SmallestDifference {
             //判断长度
             int min = INF;
             if (chars[m] != '0') {
-                int left = Integer.valueOf(String.valueOf(chars, 0, m));
+                int left = Integer.parseInt(String.valueOf(chars, 0, m));
 //                                System.out.println(String.valueOf(puzzle, m, m + 1));
                 int right = Integer.valueOf(String.valueOf(chars, m, m + 1));
                 min = Math.abs(left - right);
             }
             //m放在左边
             if (chars[m + 1] != '0') {
-                int left = Integer.valueOf(String.valueOf(chars, 0, m + 1));
-                int right = Integer.valueOf(String.valueOf(chars, m + 1, m));
+                int left = Integer.parseInt(String.valueOf(chars, 0, m + 1));
+                int right = Integer.parseInt(String.valueOf(chars, m + 1, m));
                 min = min > Math.abs(left - right) ? Math.abs(left - right) : min;
             }
             return min;

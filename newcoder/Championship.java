@@ -19,45 +19,44 @@ package algsPractice.newcoder;
  * **排列组合**
  */
 public class Championship {
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 //                System.out.println(new Championship().calc(2));
-                System.out.println(new Championship().calc(3)[0]);
-                System.out.println(new Championship().calc(3)[1]);
-        }
+        System.out.println(new Championship().calc(3)[0]);
+        System.out.println(new Championship().calc(3)[1]);
+    }
 
-        public int[] calc(int k) {
-                // write code here
-                int fz = calcC(k + 1, k - 1) * factorial(k - 1);
-                System.out.println(calcC(k + 1, k - 1));
-                int fm = 1;
-                for (int i = 1; i < 2 * k; i += 2)
-                        fm *= i;
-                int part = gcd(fz, fm);
-                return new int[]{fm / part - fz / part, fm / part};
-        }
+    public int[] calc(int k) {
+        // write code here
+        int fz = calcC(k + 1, k - 1) * factorial(k - 1);
+        System.out.println(calcC(k + 1, k - 1));
+        int fm = 1;
+        for (int i = 1; i < 2 * k; i += 2)
+            fm *= i;
+        int part = gcd(fz, fm);
+        return new int[]{fm / part - fz / part, fm / part};
+    }
 
-        public int gcd(int m, int n) {
-                if (m % n == 0)
-                        return n;
-                m %= n;
-                return gcd(n, m);
-        }
+    public int gcd(int m, int n) {
+        if (m % n == 0) return n;
+        m %= n;
+        return gcd(n, m);
+    }
 
-        public int factorial(int n) {
-                int sum = 1;
-                for (int i = 1; i <= n; i++) {
-                        sum *= i;
-                }
-                return sum;
+    public int factorial(int n) {
+        int sum = 1;
+        for (int i = 1; i <= n; i++) {
+            sum *= i;
         }
+        return sum;
+    }
 
-        public int calcC(int m, int n) {
-                int fz = 1;
-                int fm = 1;
-                for (int i = 1; i <= n; i++) {
-                        fz *= (m - i + 1);
-                        fm *= i;
-                }
-                return fz / fm;
+    public int calcC(int m, int n) {
+        int fz = 1;
+        int fm = 1;
+        for (int i = 1; i <= n; i++) {
+            fz *= (m - i + 1);
+            fm *= i;
         }
+        return fz / fm;
+    }
 }
