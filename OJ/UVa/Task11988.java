@@ -1,24 +1,22 @@
 package algsPractice.OJ.UVa;
 
-import java.io.*;
+import algsPractice.lib.InputReader;
+import algsPractice.lib.OutputWriter;
 
 /**
- * Created by Scruel on 2017/5/17.
+ * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * #simulate
  */
 public class Task11988 {
-    static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
-    static BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
     static StringBuilder sb;
     static char[] words;
     static int[] next;
     static int cur, tail;
 
-    public static void main(String[] args) throws IOException {
+    public void solve(int testNumber, InputReader in, OutputWriter out) {
         String ts;
-        while ((ts = bfr.readLine()) != null && !ts.isEmpty()) {
+        while ((ts = in.readLine()) != null && !ts.isEmpty()) {
             words = new char[100005];
             next = new int[100005];
             cur = tail = 0;
@@ -30,19 +28,20 @@ public class Task11988 {
                 } else if (ch == ']') {
                     cur = tail;
                 } else {
+                    //当前字符右边的字符即为光标右边的字符
                     next[i] = next[cur];
+                    //光标右边的字符为当前字符
+                    //上一个字符的右边为i（不一定要在当前循环中保存下一个值，可以在下一个循环中保存上一个值）
                     next[cur] = i;
                     if (cur == tail) tail = i;
-                    cur = i;
+                    cur = i;//移动光标
                 }
             }
             sb = new StringBuilder(1 << 16);
             for (int i = next[0]; i != 0; i = next[i]) {
                 sb.append(ts.charAt(i - 1));
             }
-            bfw.write(sb.toString() + "\n");
+            out.write(sb.toString() + "\n");
         }
-        bfr.close();
-        bfw.close();
     }
 }

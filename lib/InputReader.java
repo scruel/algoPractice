@@ -26,14 +26,15 @@ public class InputReader {
 
     public int read() {
         if (numChars == -1) {
-            throw new InputMismatchException();
+//            throw new InputMismatchException();
+            return -1;
         }
         if (curChar >= numChars) {
             curChar = 0;
             try {
                 numChars = stream.read(buf);
             } catch (IOException var1) {
-                throw new InputMismatchException();
+                return -1;
             }
             if (numChars <= 0) {
                 return -1;
@@ -63,8 +64,9 @@ public class InputReader {
 
     public String nextLine() {
         int c;
-        while (isEndline(c = read())) {
+        while (isEndline(c = read()) && c != -1) {
         }
+        if (c == -1) return null;
 
         StringBuilder res = new StringBuilder();
         do {
@@ -78,7 +80,8 @@ public class InputReader {
 
     public String nextString() {
         int c;
-        while (isSpaceChar(c = read())) {;}
+        while (isSpaceChar(c = read()) && c != -1) {;}
+        if (c == -1) return null;
 
         StringBuilder res = new StringBuilder();
         do {

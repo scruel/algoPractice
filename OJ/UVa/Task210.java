@@ -21,19 +21,6 @@ public class Task210 {
     static boolean isLock = false;
     static int[] eTime;
 
-    static int getType(String s) {
-        if ("lock".equals(s))
-            return 3;
-        if ("unlock".equals(s))
-            return 4;
-        if ("end".equals(s))
-            return 5;
-        if (s.startsWith("print"))
-            return 2;
-//                else if (s.contains("="))
-//                        return 1;
-        return 1;
-    }
 
     static Order getOrder(String s) {
         Order order = new Order();
@@ -46,10 +33,8 @@ public class Task210 {
     static void execute() throws IOException {
         while (!waitList.isEmpty() || !blockList.isEmpty()) {
             int id;
-            if (!waitList.isEmpty())
-                id = waitList.removeFirst();
-            else
-                id = blockList.removeFirst();
+            if (!waitList.isEmpty()) id = waitList.removeFirst();
+            else id = blockList.removeFirst();
             LinkedList<Order> programList = programMap.get(id);
             int remain = eTime[6];
             boolean flag = false;
@@ -60,20 +45,27 @@ public class Task210 {
                 //执行语句
                 if (!executeOrder(id, order.type, order.order)) {
                     //lock处理
-                    if (order.type == 4)
-                        programList.remove(order);
+                    if (order.type == 4) programList.remove(order);
                     flag = true;
                     break;
                 }
                 remain -= orderTime;
                 programList.remove(order);
-                if (remain <= 0)
-                    break;
+                if (remain <= 0) break;
             }
             //程序指令还未执行完毕，重新加入等待队列
-            if (!flag && !programList.isEmpty())
-                waitList.add(id);
+            if (!flag && !programList.isEmpty()) waitList.add(id);
         }
+    }
+
+    static int getType(String s) {
+        if ("lock".equals(s)) return 3;
+        if ("unlock".equals(s)) return 4;
+        if ("end".equals(s)) return 5;
+        if (s.startsWith("print")) return 2;
+//                else if (s.contains("="))
+//                        return 1;
+        return 1;
     }
 
     static boolean executeOrder(int id, int type, String order) throws IOException {
@@ -92,8 +84,7 @@ public class Task210 {
             }
         } else if (type == 4) {
             isLock = false;
-            if (!blockList.isEmpty())
-                waitList.addFirst(blockList.removeFirst());
+            if (!blockList.isEmpty()) waitList.addFirst(blockList.removeFirst());
         }
         return true;
 
@@ -120,14 +111,12 @@ public class Task210 {
                 programMap.put(i, proList);
                 while ((tmpS = bfr.readLine()) != null && !tmpS.isEmpty()) {
                     proList.add(getOrder(tmpS));
-                    if ("end".equals(tmpS))
-                        break;
+                    if ("end".equals(tmpS)) break;
                 }
                 waitList.add(i);
             }
             execute();
-            if (t >= 1)
-                bfw.write("\n");
+            if (t >= 1) bfw.write("\n");
         }
 
         bfr.close();

@@ -57,7 +57,7 @@ public class Task133 {
     static int go(int p, int d, int t) {
         while (t-- > 0) {
             do {
-                //对于有负数的情况，(+n)\n方式可以控制数在0~n-1范围内
+                //对于有负数的情况，(+n)%n方式可以控制数在0~n-1范围内
                 p = (p + d + n) % n;
             } while (list[p] == 0);
         }
