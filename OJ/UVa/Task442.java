@@ -7,6 +7,7 @@ import java.util.Stack;
  * Created by Scruel on 2017/5/16.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #simulate #martix
  */
 public class Task442 {
     static Martix[] martixes = new Martix[256];

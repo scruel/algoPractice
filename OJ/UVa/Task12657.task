@@ -1,0 +1,71 @@
+9 Task12657
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+7
+0
+57 6 4
+1 1 4
+2 3 5
+3 1 6
+4
+6 3
+1 1 4
+2 3 5
+3 1 6
+100000 1
+4
+
+40 Case 1: 12
+Case 2: 9
+Case 3: 2500050000
+
+1
+1
+9 6 1
+1 1 4
+9 Case 1: 8
+1
+2
+5 6 1
+4
+10 Case 1: 12
+1
+3
+9 6 1
+2 1 4
+10 Case 1: 11
+1
+4
+9 6 1
+3 1 4
+10 Case 1: 12
+1
+5
+10 100000 1
+4
+18 Case 1: 2500050000
+1
+6
+21 6 3
+1 1 4
+2 3 5
+3 1 6
+9 Case 1: 9
+1
+23 src/algsPractice/OJ/UVa
+16 -Xmx256m -Xss64m
+4 Main
+29 algsPractice.OJ.UVa.Task12657
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2017.06.01
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

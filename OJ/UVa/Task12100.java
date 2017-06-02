@@ -10,29 +10,9 @@ import java.util.PriorityQueue;
  * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #simulate #queue
  */
 public class Task12100 {
-    static class Pair implements Comparable<Pair> {
-        int id;
-        int pr;
-
-        public Pair(int id, int pr) {
-            this.id = id;
-            this.pr = pr;
-        }
-
-//        @Override public boolean equals(Object obj) {
-//            return this.id == ((Pair) obj).id;
-//        }
-
-        @Override
-        public int compareTo(Pair o) {
-            if (this.pr < o.pr) return 1;
-            else if (this.pr > o.pr) return -1;
-            return 0;
-        }
-    }
-
     public void solve1(int testNumber, InputReader in, OutputWriter out) {
         int T = in.nextInt();
         while (T-- > 0) {
@@ -90,6 +70,27 @@ public class Task12100 {
                 }
             }
             out.writeln(res);
+        }
+    }
+
+    static class Pair implements Comparable<Pair> {
+        int id;
+        int pr;
+
+        public Pair(int id, int pr) {
+            this.id = id;
+            this.pr = pr;
+        }
+
+//        @Override public boolean equals(Object obj) {
+//            return this.id == ((Pair) obj).id;
+//        }
+
+        @Override
+        public int compareTo(Pair o) {
+            if (this.pr < o.pr) return 1;
+            else if (this.pr > o.pr) return -1;
+            return 0;
         }
     }
 

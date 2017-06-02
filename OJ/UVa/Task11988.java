@@ -7,11 +7,12 @@ import algsPractice.lib.OutputWriter;
  * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #simulate #string #queue
  */
 public class Task11988 {
     static StringBuilder sb;
     static char[] words;
-    static int[] next;
+    static int[] next;//next[i]表示字符s[i]右边的字符为s[next[i]]
     static int cur, tail;
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
@@ -39,6 +40,7 @@ public class Task11988 {
             }
             sb = new StringBuilder(1 << 16);
             for (int i = next[0]; i != 0; i = next[i]) {
+                //需要为i-1，因为存入的时候下标是[1,n]
                 sb.append(ts.charAt(i - 1));
             }
             out.write(sb.toString() + "\n");

@@ -37,10 +37,33 @@ public class InputReader {
                 return -1;
             }
             if (numChars <= 0) {
+//                throw new InputMismatchException();
                 return -1;
             }
         }
         return buf[curChar++];
+    }
+
+    public int peek() {
+        if (numChars == -1) {
+            return -1;
+        } else {
+            if (curChar >= numChars) {
+                curChar = 0;
+
+                try {
+                    numChars = stream.read(buf);
+                } catch (IOException var2) {
+                    return -1;
+                }
+
+                if (numChars <= 0) {
+                    return -1;
+                }
+            }
+
+            return buf[curChar];
+        }
     }
 
     //     String readString() {
@@ -63,6 +86,7 @@ public class InputReader {
 //    }
 
     public String nextLine() {
+
         int c;
         while (isEndline(c = read()) && c != -1) {
         }
@@ -139,7 +163,6 @@ public class InputReader {
 //        return Double.parseDouble(nextString());
         int c;
         while (isSpaceChar(c = read())) {;}
-
         int sgn = 1;
         if (c == 45) {
             sgn = -1;
@@ -158,7 +181,6 @@ public class InputReader {
                         c = read();
                         continue;
                     }
-
                     throw new InputMismatchException();
                 }
 
@@ -269,19 +291,6 @@ public class InputReader {
         for (int i = 0; i < n; i++) array[i] = nextString();
     }
 
-    public int peek() {
-        if (numChars == -1) return -1;
-        if (curChar >= numChars) {
-            curChar = 0;
-            try {
-                numChars = stream.read(buf);
-            } catch (IOException var2) {
-                return -1;
-            }
-            if (numChars <= 0) {return -1;}
-        }
-        return buf[curChar];
-    }
 
     public char readCharacter() {
         int c;

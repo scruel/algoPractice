@@ -9,7 +9,7 @@ import java.util.Arrays;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  * 可排序--即忽略顺序
- * #string #sort #static
+ * #string #sort
  */
 public class Task1339 {
     public static void main(String[] args) throws IOException {

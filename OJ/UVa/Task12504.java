@@ -11,6 +11,7 @@ import java.util.LinkedList;
  * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #simulate
  */
 public class Task12504 {
     public void solve(int testNumber, InputReader in, OutputWriter out) {

@@ -7,7 +7,7 @@ import java.io.*;
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  * http://blog.csdn.net/crazysillynerd/article/details/43339157
- * #binary math big --> log
+ * #binary #math big --> log
  */
 public class Task11809 {
     static final double EPSINON = 1e-4;

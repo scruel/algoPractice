@@ -9,7 +9,7 @@ import static java.lang.Math.max;
  * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * #TLE #Trie TODO
+ * #TLE #Trie #bigInteger TODO
  */
 public class Task12333 {
     String[] bgs = new String[100000 + 5];

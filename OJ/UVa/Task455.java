@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Created by Scruel on 2017/4/3.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * #string 可行性判断
+ * #string
  */
 public class Task455 {
     static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);

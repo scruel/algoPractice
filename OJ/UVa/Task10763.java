@@ -11,39 +11,10 @@ import java.util.Map;
  * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #graph #simulate #matching
  */
 public class Task10763 {
-    static class Pair implements Comparable<Pair> {
-        int x, t;
-
-        public Pair(int x, int t) {
-            this.x = x;
-            this.t = t;
-        }
-
-        @Override
-        public int compareTo(Pair o) {
-            if (this.x > o.x) return 1;
-            else if (this.x < o.x) return -1;
-            else if (this.t > o.t) return 1;
-            else if (this.t < o.t) return -1;
-            return 0;
-        }
-
-        @Override
-        public int hashCode() {
-            int res = 1;
-            res = res * 31 + x;
-            res = res * 31 + t;
-            return res;
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            Pair p = (Pair) obj;
-            return p.x == x && p.t == t;
-        }
-    }
+    int[] num;
 
     public void solve1(int testNumber, InputReader in, OutputWriter out) {
         int n;
@@ -104,8 +75,6 @@ public class Task10763 {
         }
     }
 
-    int[] num;
-
     public void solve(int testNumber, InputReader in, OutputWriter out) {
         int n;
         while ((n = in.nextInt()) != 0) {
@@ -125,6 +94,38 @@ public class Task10763 {
             }
             if (flag) out.writeln("YES");
             else out.writeln("NO");
+        }
+    }
+
+    static class Pair implements Comparable<Pair> {
+        int x, t;
+
+        public Pair(int x, int t) {
+            this.x = x;
+            this.t = t;
+        }
+
+        @Override
+        public int compareTo(Pair o) {
+            if (this.x > o.x) return 1;
+            else if (this.x < o.x) return -1;
+            else if (this.t > o.t) return 1;
+            else if (this.t < o.t) return -1;
+            return 0;
+        }
+
+        @Override
+        public int hashCode() {
+            int res = 1;
+            res = res * 31 + x;
+            res = res * 31 + t;
+            return res;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            Pair p = (Pair) obj;
+            return p.x == x && p.t == t;
         }
     }
 }

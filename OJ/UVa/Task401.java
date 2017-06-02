@@ -6,6 +6,7 @@ import java.io.*;
  * Created by Scruel on 2017/5/17.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #string #code-behaviour
  */
 public class Task401 {
 

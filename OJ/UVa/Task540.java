@@ -10,6 +10,7 @@ import java.util.LinkedList;
  * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #queue #datastruct
  */
 @SuppressWarnings("Unchecked")
 public class Task540 {
@@ -18,9 +19,6 @@ public class Task540 {
     static final long INFL = 0x3f3f3f3f3f3f3f3fL;
     static final int MOD = 1000000007;
     int n = 0, kase = 0;
-
-    static class IntegerList extends LinkedList<Integer> {
-    }
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
         while ((n = in.nextInt()) != 0) {
@@ -54,5 +52,8 @@ public class Task540 {
             }
             out.writeln();
         }
+    }
+
+    static class IntegerList extends LinkedList<Integer> {
     }
 }

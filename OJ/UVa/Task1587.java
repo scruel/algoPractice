@@ -7,7 +7,7 @@ import java.util.Arrays;
  * Created by Scruel on 2017/5/17.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * #easy sort
+ * #easy #sort
  */
 public class Task1587 {
     static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in), 1 << 16);

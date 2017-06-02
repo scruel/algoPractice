@@ -18,6 +18,7 @@ public class Task133 {
     static BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
 
     //这里将list开成MAX_N，然后用1...n来表示可以更加清晰
+    //make list size to MAX_N, represent with 1...n can be more clear.
     static int[] list;
     static int n;
 
@@ -58,6 +59,7 @@ public class Task133 {
         while (t-- > 0) {
             do {
                 //对于有负数的情况，(+n)%n方式可以控制数在0~n-1范围内
+                //for negative situation, (+n)%n will make sure the number of [0-n-1] range.
                 p = (p + d + n) % n;
             } while (list[p] == 0);
         }

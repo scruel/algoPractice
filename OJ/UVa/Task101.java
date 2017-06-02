@@ -10,14 +10,15 @@ import java.util.LinkedList;
  * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #simulate
  */
 public class Task101 {
     int n;
     LinkedList<Integer>[] blocksWorld;
     int[] index;
 
-    //将top之前的所有木块归位，并将顶部的这个元素删除，但不归位
-    void reSize(LinkedList<Integer> blocks, int top) {
+    //reset all blocks before top, and delete the top elements, but not reset
+    void reSet(LinkedList<Integer> blocks, int top) {
         boolean flag = false;
         for (Iterator<Integer> iter = blocks.iterator(); iter.hasNext(); ) {
             int temp = iter.next();
@@ -36,15 +37,16 @@ public class Task101 {
 
     void move(String opt, int a, int b) {
         if (a == b) return;
-        //index标记不统一会导致错误，一定要检查
+        //The not uniform mark index will cause errors, be sure to check
+        //(not uniform)
         LinkedList<Integer> blocksA = blocksWorld[index[a]];
         LinkedList<Integer> blocksB = blocksWorld[index[b]];
         if (blocksA.contains(b) || blocksB.contains(a)) return;
         if ("onto".equals(opt)) {
-            reSize(blocksB, b);
+            reSet(blocksB, b);
             blocksB.add(b);
         }
-        reSize(blocksA, a);
+        reSet(blocksA, a);
         index[a] = index[b];
         blocksB.add(a);
     }
@@ -56,7 +58,7 @@ public class Task101 {
         if (blocksA.contains(b) || blocksB.contains(a)) return;
 
         if ("onto".equals(opt)) {
-            reSize(blocksB, b);
+            reSet(blocksB, b);
             blocksB.add(b);
         }
 

@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
  * Created by Scruel on 2017/4/21.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * #thinking priorityQueue
+ * #thinking #priorityQueue
  */
 public class Task815 {
     //        static int[][] arr;

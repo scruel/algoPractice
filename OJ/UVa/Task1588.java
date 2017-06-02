@@ -6,6 +6,7 @@ import java.io.*;
  * Created by Scruel on 2017/5/19.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #simulate #datail
  */
 public class Task1588 {
 
