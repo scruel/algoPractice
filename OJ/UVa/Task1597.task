@@ -4,7 +4,7 @@
 9 input.txt
 8 STANDARD
 10 output.txt
-7
+8
 0
 1112 4
 A manufacturer, importer, or seller of
@@ -76,7 +76,7 @@ I am very very very happy!
 Sorry, I found nothing.
 ==========
 
-1
+0
 1
 2080 4
 one   repeat  repeat  repeat
@@ -590,7 +590,7 @@ one two three   repeat   repeat  repeat  repeat   repeat
 one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
 ==========
 
-1
+0
 2
 7 0
 1
@@ -598,9 +598,9 @@ res
 35 Sorry, I found nothing.
 ==========
 
-1
+0
 3
-51 1
+52 1
 xxdas--xxd x
 **********
 4
@@ -608,6 +608,7 @@ xxdasxxd
 xxdas
 sxxd
 xxd
+
 118 Sorry, I found nothing.
 ==========
 xxdas--xxd x
@@ -617,7 +618,7 @@ Sorry, I found nothing.
 xxdas--xxd x
 ==========
 
-1
+0
 4
 59 1
 com com com
@@ -636,7 +637,7 @@ com com com
 Sorry, I found nothing.
 ==========
 
-1
+0
 5
 110 1
 xxdas-xxd x
@@ -670,7 +671,7 @@ xxdas-xxd x
 xxdas-xxd x
 ==========
 
-1
+0
 6
 1253 4
 one   repeat  repeat  repeat
@@ -716,6 +717,65 @@ two AND one
 one two three   repeat   repeat  repeat  repeat   repeat
 ----------
 one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+
+0
+7
+209 2
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxas x
+**********
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxas x
+**********
+6
+xxdas OR xxdas
+xxdas AND xxdas
+NOT xxdas
+xxdasxxd
+xxdas
+sxxd
+xxd
+
+525 xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxas x
+----------
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxas x
+==========
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxas x
+----------
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxas x
+==========
+Sorry, I found nothing.
+==========
+Sorry, I found nothing.
+==========
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxas x
+----------
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxdas x
+xxdas--xxas x
+==========
+Sorry, I found nothing.
 ==========
 
 1

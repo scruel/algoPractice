@@ -193,11 +193,11 @@ public class Task1597 {
                 docs[did][lid] = s;
                 s = s.toLowerCase().replaceAll("[^a-z ]", " ");
                 String[] rts = s.split("\\s+");
+                Pair p = new Pair();
+                p.did = did;
+                p.lid = lid;
                 //word in one line
                 for (int j = 0; j < rts.length; j++) {
-                    Pair p = new Pair();
-                    p.did = did;
-                    p.lid = lid;
                     if (dMap2.containsKey(rts[j])) {
                         dMap2.get(rts[j]).add(p);
                     } else {
@@ -210,8 +210,6 @@ public class Task1597 {
                 lid++;
             }
         }
-
-
         //parse commands
         int cn = in.nextInt();
         for (int i = 0; i < cn; i++) {
@@ -258,7 +256,10 @@ public class Task1597 {
                     flag = true;
                     int pd = ts1.first().did;
                     for (Pair p : ts1) {
-                        if (pd != p.did) out.writeln(cl);
+                        if (pd != p.did) {
+                            pd = p.did;
+                            out.writeln(cl);
+                        }
                         out.writeln(docs[p.did][p.lid]);
                     }
                 }
