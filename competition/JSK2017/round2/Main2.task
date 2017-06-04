@@ -185,10 +185,10 @@ func1(1.0)
 
 9 No Answer
 1
-43 src/algsPractice/competition/JSK2017/Round2
+43 src/algsPractice/competition/JSK2017/round2
 7 -Xmx64m
 4 Main
-45 algsPractice.competition.JSK2017.Round2.Main2
+45 algsPractice.competition.JSK2017.round2.Main2
 39 net.egork.chelper.checkers.TokenChecker
 0 
 0

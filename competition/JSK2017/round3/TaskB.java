@@ -1,4 +1,4 @@
-package algsPractice.competition.JSK2017.Round3;
+package algsPractice.competition.JSK2017.round3;
 
 import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
@@ -17,44 +17,6 @@ public class TaskB {
     double res = -1;
     boolean can = false;
     LinkedList<Edge>[] adj;
-
-    static class Edge implements Comparable<Edge> {
-        int from;
-        int to;
-        double weight;
-
-        int other(int vv) {
-            return vv == from ? to : from;
-        }
-
-        public Edge(int from, int to, double weight) {
-            this.from = from;
-            this.to = to;
-            this.weight = weight;
-        }
-
-        public int compareTo(Edge edge) {
-            if (Double.compare(this.weight, edge.weight) < 0) return -1;
-            if (Double.compare(this.weight, edge.weight) > 0) return 1;
-            return 0;
-        }
-    }
-
-    static class Pair implements Comparable<Pair> {
-        int index;
-        double weight;
-
-        public Pair(int index, double weight) {
-            this.index = index;
-            this.weight = weight;
-        }
-
-        public int compareTo(Pair pair) {
-            if (Double.compare(this.weight, pair.weight) < 0) return -1;
-            if (Double.compare(this.weight, pair.weight) > 0) return 1;
-            return 0;
-        }
-    }
 
     void init() {
         distTo = new double[n];
@@ -122,5 +84,43 @@ public class TaskB {
         }
         dijkstra();
         out.write(String.format("%.4f", res));
+    }
+
+    static class Edge implements Comparable<Edge> {
+        int from;
+        int to;
+        double weight;
+
+        public Edge(int from, int to, double weight) {
+            this.from = from;
+            this.to = to;
+            this.weight = weight;
+        }
+
+        int other(int vv) {
+            return vv == from ? to : from;
+        }
+
+        public int compareTo(Edge edge) {
+            if (Double.compare(this.weight, edge.weight) < 0) return -1;
+            if (Double.compare(this.weight, edge.weight) > 0) return 1;
+            return 0;
+        }
+    }
+
+    static class Pair implements Comparable<Pair> {
+        int index;
+        double weight;
+
+        public Pair(int index, double weight) {
+            this.index = index;
+            this.weight = weight;
+        }
+
+        public int compareTo(Pair pair) {
+            if (Double.compare(this.weight, pair.weight) < 0) return -1;
+            if (Double.compare(this.weight, pair.weight) > 0) return 1;
+            return 0;
+        }
     }
 }

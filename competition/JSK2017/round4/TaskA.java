@@ -1,4 +1,4 @@
-package algsPractice.competition.JSK2017.Round4;
+package algsPractice.competition.JSK2017.round4;
 
 import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;

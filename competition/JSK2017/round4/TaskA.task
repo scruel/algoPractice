@@ -4,23 +4,21 @@
 9 input.txt
 8 STANDARD
 10 output.txt
-2
+1
 0
-6 10 4 7
-1 0
-1
-1
-5 8 3 9
+13 4 5 2
+0 3
+1 4
 1 5
 1
-43 src/algsPractice/competition/JSK2017/Round3
+43 src/algsPractice/competition/JSK2017/round4
 16 -Xmx256m -Xss64m
 4 Main
-45 algsPractice.competition.JSK2017.Round3.TaskA
+45 algsPractice.competition.JSK2017.round4.TaskA
 39 net.egork.chelper.checkers.TokenChecker
 0 
 0
-10 2017.05.27
+10 2017.05.28
 0 
 1
 28 algsPractice.lib.InputReader

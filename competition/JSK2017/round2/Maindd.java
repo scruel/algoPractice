@@ -1,4 +1,4 @@
-package algsPractice.competition.JSK2017.Round2;
+package algsPractice.competition.JSK2017.round2;
 
 import java.io.*;
 import java.math.BigDecimal;

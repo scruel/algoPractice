@@ -1,4 +1,4 @@
-package algsPractice.competition.JSK2017.Round1;
+package algsPractice.competition.JSK2017.round1;
 
 import java.io.*;
 import java.util.Scanner;

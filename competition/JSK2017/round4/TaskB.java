@@ -1,4 +1,4 @@
-package algsPractice.competition.JSK2017.Round4;
+package algsPractice.competition.JSK2017.round4;
 
 import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
@@ -8,28 +8,6 @@ import java.util.Map;
 
 public class TaskB {
     HashMap<Pair, Integer> map = null;
-
-    static class Pair implements Comparable<Pair> {
-        String s;
-        int x;
-        int y;
-
-        @Override public int hashCode() {
-            return s.hashCode();
-        }
-
-        @Override public boolean equals(Object obj) {
-            Pair tm = (Pair) obj;
-            return s.equals(tm.s);
-        }
-
-        @Override public int compareTo(Pair o) {
-            if (this.hashCode() < o.hashCode()) return -1;
-            else if (this.hashCode() > o.hashCode()) return 1;
-            return 0;
-        }
-    }
-
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
         map = new HashMap<Pair, Integer>();
@@ -72,6 +50,30 @@ public class TaskB {
             }
             out.write(mp.x + " " + mp.y);
 
+        }
+    }
+
+    static class Pair implements Comparable<Pair> {
+        String s;
+        int x;
+        int y;
+
+        @Override
+        public int hashCode() {
+            return s.hashCode();
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            Pair tm = (Pair) obj;
+            return s.equals(tm.s);
+        }
+
+        @Override
+        public int compareTo(Pair o) {
+            if (this.hashCode() < o.hashCode()) return -1;
+            else if (this.hashCode() > o.hashCode()) return 1;
+            return 0;
         }
     }
 }

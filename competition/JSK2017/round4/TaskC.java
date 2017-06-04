@@ -1,4 +1,4 @@
-package algsPractice.competition.JSK2017.Round4;
+package algsPractice.competition.JSK2017.round4;
 
 import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
@@ -7,39 +7,6 @@ public class TaskC {
     double EPS = 1e-6;
     int n;
     double[][] nums;
-
-    class Pair implements Comparable<Pair> {
-        double x;
-        double y;
-        double scale;
-        double theta;
-
-        @Override public int hashCode() {
-            final int prime = 31;
-            int result = 1;
-            result = prime * result + Double.valueOf(x).hashCode();
-            result = prime * result + Double.valueOf(y).hashCode();
-            result = prime * result + Double.valueOf(scale).hashCode();
-            result = prime * result + Double.valueOf(theta).hashCode();
-//          result = prime * result + ((name == null) ? 0 : name.hashCode());
-            return result;
-        }
-
-        @Override public boolean equals(Object obj) {
-            Pair tm = (Pair) obj;
-            if (Math.abs(this.x - tm.x) >= EPS) return false;
-            if (Math.abs(this.y - tm.y) >= EPS) return false;
-            if (Math.abs(this.scale - tm.scale) >= EPS) return false;
-            if (Math.abs(this.theta - tm.theta) >= EPS) return false;
-            return true;
-        }
-
-        @Override public int compareTo(Pair o) {
-            if (this.hashCode() < o.hashCode()) return -1;
-            else if (this.hashCode() > o.hashCode()) return 1;
-            return 0;
-        }
-    }
 
     boolean check(double dx, double dy, double scale, double t) {
         int cnt = 0;
@@ -64,7 +31,6 @@ public class TaskC {
 //        return (xp - xpp) + (yp - ypp);
 
     }
-
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
 
@@ -131,5 +97,41 @@ public class TaskC {
 //            out.write(mp.x + " " + mp.y);
 //
 //        }
+    }
+
+    class Pair implements Comparable<Pair> {
+        double x;
+        double y;
+        double scale;
+        double theta;
+
+        @Override
+        public int hashCode() {
+            final int prime = 31;
+            int result = 1;
+            result = prime * result + Double.valueOf(x).hashCode();
+            result = prime * result + Double.valueOf(y).hashCode();
+            result = prime * result + Double.valueOf(scale).hashCode();
+            result = prime * result + Double.valueOf(theta).hashCode();
+//          result = prime * result + ((name == null) ? 0 : name.hashCode());
+            return result;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            Pair tm = (Pair) obj;
+            if (Math.abs(this.x - tm.x) >= EPS) return false;
+            if (Math.abs(this.y - tm.y) >= EPS) return false;
+            if (Math.abs(this.scale - tm.scale) >= EPS) return false;
+            if (Math.abs(this.theta - tm.theta) >= EPS) return false;
+            return true;
+        }
+
+        @Override
+        public int compareTo(Pair o) {
+            if (this.hashCode() < o.hashCode()) return -1;
+            else if (this.hashCode() > o.hashCode()) return 1;
+            return 0;
+        }
     }
 }

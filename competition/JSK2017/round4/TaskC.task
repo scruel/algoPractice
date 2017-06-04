@@ -25,10 +25,10 @@
 1 1 2 13
 -1
 1
-43 src/algsPractice/competition/JSK2017/Round4
+43 src/algsPractice/competition/JSK2017/round4
 16 -Xmx256m -Xss64m
 4 Main
-45 algsPractice.competition.JSK2017.Round4.TaskC
+45 algsPractice.competition.JSK2017.round4.TaskC
 39 net.egork.chelper.checkers.TokenChecker
 6 a 1e-4
 0
