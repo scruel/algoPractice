@@ -7,7 +7,7 @@ import algsPractice.lib.OutputWriter;
  * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * #tree #simulate
+ * #tree #binary-tree #simulate
  */
 public class Task679 {
     boolean[] s;

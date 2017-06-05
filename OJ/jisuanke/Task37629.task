@@ -1,0 +1,53 @@
+9 Task37629
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+3
+0
+7 2 12345
+158      --   --        --
+  |    |    | |  | |
+  |    |    | |  | |
+     --   --   --   --
+  | |       |    |    |
+  | |       |    |    |
+     --   --        --
+0
+1
+7 3 67890
+260  ---   ---   ---   ---   ---
+|         | |   | |   | |   |
+|         | |   | |   | |   |
+|         | |   | |   | |   |
+ ---         ---   ---
+|   |     | |   |     | |   |
+|   |     | |   |     | |   |
+|   |     | |   |     | |   |
+ ---         ---   ---   ---
+0
+2
+10 2 13587576
+279       --   --   --   --   --   --   -- 
+   |    | |    |  |    | |       | |   
+   |    | |    |  |    | |       | |   
+      --   --   --        --        -- 
+   |    |    | |  |    |    |    | |  |
+   |    |    | |  |    |    |    | |  |
+      --   --   --        --        -- 
+1
+28 src/algsPractice/OJ/jisuanke
+16 -Xmx256m -Xss64m
+4 Main
+34 algsPractice.OJ.jisuanke.Task37629
+26 algsPractice.lib.MyChecker
+0 
+0
+10 2017.06.05
+45 https://www.jisuanke.com/minicourse/733/37629
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

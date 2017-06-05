@@ -15,6 +15,7 @@ public class Main2 {
     boolean isF;
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
+
         String result, exp;
         sb = new StringBuilder();
         eMap = new HashMap<String, String[]>();

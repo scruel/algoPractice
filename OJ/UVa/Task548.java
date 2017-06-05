@@ -7,6 +7,7 @@ import algsPractice.lib.OutputWriter;
  * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #tree #binary-tree
  */
 public class Task548 {
     int maxv = 10000 + 10;

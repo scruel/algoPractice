@@ -24,6 +24,12 @@ public class InputReader {
         this.stream = stream;
     }
 
+    public static void main(String[] args) {
+        InputReader in = new InputReader(System.in);
+        int n = in.nextInt();
+        System.out.println(n);
+    }
+
     public int read() {
         if (numChars == -1) {
 //            throw new InputMismatchException();
@@ -43,6 +49,25 @@ public class InputReader {
         }
         return buf[curChar++];
     }
+
+    //     String readString() {
+//        int length = nextInt();
+//        if (length < 0) {
+//            return null;
+//        } else {
+//            byte[] bytes = new byte[length];
+//
+//            for (int i = 0; i < length; ++i) {
+//                bytes[i] = (byte) nextString();
+//            }
+//
+//            try {
+//                return new String(bytes, charsetName);
+//            } catch (UnsupportedEncodingException var4) {
+//                return new String(bytes);
+//            }
+//        }
+//    }
 
     public int peek() {
         if (numChars == -1) {
@@ -65,25 +90,6 @@ public class InputReader {
             return buf[curChar];
         }
     }
-
-    //     String readString() {
-//        int length = nextInt();
-//        if (length < 0) {
-//            return null;
-//        } else {
-//            byte[] bytes = new byte[length];
-//
-//            for (int i = 0; i < length; ++i) {
-//                bytes[i] = (byte) nextString();
-//            }
-//
-//            try {
-//                return new String(bytes, charsetName);
-//            } catch (UnsupportedEncodingException var4) {
-//                return new String(bytes);
-//            }
-//        }
-//    }
 
     public String nextLine() {
 
@@ -115,6 +121,10 @@ public class InputReader {
         return res.toString();
     }
 
+    public char[] nextStringChars() {
+        return nextString().toCharArray();
+    }
+
     public int nextInt() {
 //        return Integer.parseInt(nextString());
         int c;
@@ -128,12 +138,12 @@ public class InputReader {
         while (c >= 48 && c <= 57) {
             res *= 10;
             res += c - 48;
-            c = read();
-            if (isSpaceChar(c)) {
+            c = peek();
+            if (!isNumber(c)) {
                 return res * sgn;
             }
+            read();
         }
-
         throw new InputMismatchException();
     }
 
@@ -150,12 +160,12 @@ public class InputReader {
         while (c >= 48 && c <= 57) {
             res *= 10L;
             res += (long) (c - 48);
-            c = read();
-            if (isSpaceChar(c)) {
+            c = peek();
+            if (!isNumber(c)) {
                 return res * (long) sgn;
             }
+            read();
         }
-
         throw new InputMismatchException();
     }
 
@@ -188,9 +198,8 @@ public class InputReader {
             }
             //46='.'
             if (c == 46) {
-                c = read();
-
-                for (double m = 1.0D; !isSpaceChar(c); c = read()) {
+                c = peek();
+                for (double m = 1.0D; isNumber(c); c = peek()) {
                     if (c == 101 || c == 69) {
                         return res * Math.pow(10.0D, (double) nextInt());
                     }
@@ -201,6 +210,7 @@ public class InputReader {
 
                     m /= 10.0D;
                     res += (double) (c - 48) * m;
+                    read();
                 }
             }
 
@@ -291,7 +301,6 @@ public class InputReader {
         for (int i = 0; i < n; i++) array[i] = nextString();
     }
 
-
     public char readCharacter() {
         int c;
         while (isSpaceChar(c = read())) {;}
@@ -315,6 +324,10 @@ public class InputReader {
 
             throw new EnumConstantNotPresentException(c, name);
         }
+    }
+
+    private boolean isNumber(int c) {
+        return c >= 48 && c <= 57;
     }
 
     public boolean isExhausted() {

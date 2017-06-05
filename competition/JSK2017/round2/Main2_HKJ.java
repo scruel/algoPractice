@@ -64,14 +64,18 @@ public class Main2_HKJ {
                     if ((Double) ret2 > 1e30 || (Double) ret2 < -1e30) {
                         out.write(String.format("%.6f\n", ret));
                     } else if (ret instanceof Integer) {
-                        out.write(String.format("%d\n", ret));
-                    } else if (Double.isNaN((Double) ret)) {
-                        out.write("No Answer");
+                        String s = String.format("%d\n", ret);
+                        out.write(s);
                     } else {
-                        out.write(String.format("%.0f\n", ret));
+                        if (Double.isNaN((Double) ret)) {
+                            out.write("No Answer");
+                        } else {
+                            out.write(String.format("%.0f\n", ret));
+                        }
                     }
                 } else if (ret instanceof Integer) {
-                    out.write(String.format("%d\n", ret));
+                    String s = String.format("%d\n", ret);
+                    out.write(s);
                 } else if (Double.isNaN((Double) ret)) {
                     out.write("No Answer");
                 } else {

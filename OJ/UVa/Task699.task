@@ -1,4 +1,4 @@
-7 Task839
+7 Task699
 6 SINGLE
 8 STANDARD
 9 input.txt
@@ -6,37 +6,21 @@
 10 output.txt
 1
 0
-125 3
+70 5 7 -1 6 -1 -1 3 -1 -1
+8 2 9 -1 -1 6 5 -1 -1 12 -1
+-1 3 7 -1 -1 -1
+-1
 
-0 2 0 4
-0 3 0 1
-1 1 1 1
-2 4 4 2
-1 6 3 2
+33 Case 1:
+7 11 3
 
-0 2 0 4
-0 3 0 1
-1 1 1 1
-2 4 4 2
-1 6 3 2
-
-
-0 2 0 4
-0 3 0 1
-1 1 1 1
-2 4 4 2
-2 6 3 2
-13 YES
-
-YES
-
-NO
-
+Case 2:
+9 7 21 15
 1
 23 src/algsPractice/OJ/UVa
 16 -Xmx256m -Xss64m
 4 Main
-27 algsPractice.OJ.UVa.Task839
+27 algsPractice.OJ.UVa.Task699
 26 algsPractice.lib.MyChecker
 0 
 0
