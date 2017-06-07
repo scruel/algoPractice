@@ -50,6 +50,12 @@ public class InputReader {
         return buf[curChar++];
     }
 
+    public char nextChar() {
+        int c;
+        while (isSpaceChar(c = read())) ;
+        return (char) c;
+    }
+
     //     String readString() {
 //        int length = nextInt();
 //        if (length < 0) {

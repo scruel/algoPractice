@@ -9,7 +9,7 @@ package algsPractice.OJ.jisuanke;
 
 import java.util.Scanner;
 
-public class TAK_guardProblem {
+public class Task_guardProblem {
     static int n;
     static int m;
     static int[][] puzzle;

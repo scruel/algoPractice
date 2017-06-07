@@ -1,4 +1,4 @@
-package algsPractice.OJ.jisuanke;
+package algsPractice.OJ.jisuanke.minicourse733;
 
 import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;

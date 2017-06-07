@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 计蒜客模拟赛5第9题
  * #union
  */
-public class TASK_BoomUnion {
+public class Task_BoomUnion {
 
     static int n;
     static int m;
