@@ -55,7 +55,7 @@ public class Task1103 {
 
 
     boolean out(int x, int y) {
-        return (x >= 0 && x <= n + 1 && y >= 0 && y <= m * 4 + 1);
+        return (x >= 0 && x <= n + 1 && y >= 0 && y <= m + 1);
     }
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
@@ -65,12 +65,13 @@ public class Task1103 {
         while (true) {
             ress = "";
             n = in.nextInt();
-            m = in.nextInt();
+            //有压缩转化的最好先计算，以免出错
+            m = in.nextInt() * 4;
             if (n == 0 && m == 0) return;
-            pixels = new int[n + 2][m * 4 + 2];
+            pixels = new int[n + 2][m + 2];
 
             for (int i = 1; i <= n; i++) {
-                for (int j = 0; j < m; j++) {
+                for (int j = 0; j < m / 4; j++) {
                     char ch = in.nextChar();
                     int[] tmp;
                     if (Character.isDigit(ch)) tmp = num[ch - 48];
@@ -84,7 +85,7 @@ public class Task1103 {
 
             //检测黑色联通块
             for (int i = 1; i <= n; i++) {
-                for (int j = 1; j <= m * 4 + 1; j++) {
+                for (int j = 1; j <= m + 1; j++) {
                     if (pixels[i][j] == 1) {
                         cnt = 0;
                         dfsBlack(i, j);
