@@ -55,7 +55,6 @@ public class InputReader {
         while (isSpaceChar(c = read())) ;
         return (char) c;
     }
-
     //     String readString() {
 //        int length = nextInt();
 //        if (length < 0) {
@@ -235,6 +234,12 @@ public class InputReader {
     public BigInteger nextBigInteger(int radix) {
         return new BigInteger(nextString(), radix);
     }
+
+//    public char[] nextCharArray(int size) {
+//        char[] array = new char[size];
+//        for (int i = 0; i < size; i++) array[i] = nextChar();
+//        return array;
+//    }
 
     public int[] nextIntArray(int size) {
         int[] array = new int[size];

@@ -3,6 +3,7 @@ package algsPractice.competition.nod51.mls24;
 
 /**
  * Created by Scruel on 2017/4/26.
+ * #math
  */
 
 import java.io.*;

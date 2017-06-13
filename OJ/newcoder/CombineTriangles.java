@@ -44,10 +44,13 @@ public class CombineTriangles {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 int num = Arrays.binarySearch(arr, arr[i] + arr[j]);
-                if (num < 0) num = -(num + 2);
+                //比key大的数有多少
+                if (num == -1) continue;
+                if (num < 0) { num = -(num + 2);}
                 if (arr[num] == arr[i] + arr[j]) {
                     cnt += num - j - 1;
                     //去除binarySearch返回的index值不是相等情况中第一个出现的位置的错误统计
+                    //等于第三边的情况去除
                     for (int k = num - 1; k >= j; k--) {
                         if (arr[num] == arr[k]) cnt--;
                         else break;

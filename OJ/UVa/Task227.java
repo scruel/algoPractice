@@ -211,7 +211,7 @@ public class Task227 {
 
         while (init()) {
             boolean flag = false;
-//                        while (scanf("%s%*c", bf)) { 读入一个字符串并忽略其后的一个字符
+//                        while (scanf("%s%*mk", bf)) { 读入一个字符串并忽略其后的一个字符
             String s;
             while ((s = bfr.readLine()).length() != 0) {
                 for (int i = 0; i < s.length(); i++) {

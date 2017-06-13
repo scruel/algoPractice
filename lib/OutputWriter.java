@@ -11,21 +11,11 @@ import java.util.Arrays;
  */
 public class OutputWriter {
     protected Writer out = null;
+    boolean debug = false;
     private PrintStream psOut = null;
     //    private BufferedWriter bfw;
     private StringBuilder stringBuilder = null;
 //    private int cnt = 0;
-
-    public static void debug(Object... os) {
-        System.err.println(Arrays.deepToString(os));
-    }
-
-    public static void main(String[] args) {
-        OutputWriter writer = new OutputWriter(System.out);
-        writer.write("100");
-        writer.close();
-    }
-
 
     public OutputWriter(Writer out) {
         this.out = out;
@@ -39,9 +29,20 @@ public class OutputWriter {
         }
     }
 
+    public static void debug(Object... os) {
+        System.err.println(Arrays.deepToString(os));
+    }
+
+    public static void main(String[] args) {
+        OutputWriter writer = new OutputWriter(System.out);
+        writer.write("100");
+        writer.close();
+    }
+
     public void write(Object... objects) {
         for (int i = 0; i < objects.length; ++i) {
             stringBuilder.append(objects[i].toString());
+            if (debug) System.out.print(objects[i]);
             if (psOut == null) flush();
         }
     }

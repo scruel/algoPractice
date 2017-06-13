@@ -1,0 +1,56 @@
+5 TaskB
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+7
+0
+9 4
+4 1 2 3
+1 2
+1
+1
+9 4
+1 1 2 3
+1 1
+1
+2
+12 4
+-100 1 2 3
+1 0
+1
+3
+9 4
+3 3 3 5
+1 1
+1
+4
+9 4
+3 3 3 3
+1 2
+1
+5
+5 2
+1 2
+1 0
+1
+6
+5 2
+2 1
+1 1
+1
+34 src/algsPractice/competition/codem
+16 -Xmx256m -Xss64m
+4 Main
+36 algsPractice.competition.codem.TaskB
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2017.06.11
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

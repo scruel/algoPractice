@@ -10,6 +10,7 @@ import java.util.Stack;
  * Created by Scruel.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
+ * #graph
  */
 public class Task816 {
     int[][][][] mz;
