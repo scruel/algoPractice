@@ -16,46 +16,45 @@ import algsPractice.lib.OutputWriter;
  * 如果能在图中找到一个环，则可以无限循环拼接正方形。
  */
 public class Task1572 {
-    static final double EPS = 1e-10;
-    static final int INF = 0x3f3f3f3f;
-    static final long INFL = 0x3f3f3f3f3f3f3f3fL;
-    static final int MOD = 1000000007;
-    int MAXN = 40000 + 10;
     int n;
     int[][] G;
     int[] mk;
 
-    int ID(char a1, char a2) {
-        //编号转换
-        return (a1 - 'A') * 2 + (a2 == '+' ? 0 : 1);
+    //编号转换十分精妙
+    int getID(char a, char b) {
+        return (a - 'A') * 2 + (b == '+' ? 0 : 1);
     }
 
-    // connect(A+, B-) means a border labeled with A- can be transformed to B-
     void connect(char a1, char a2, char b1, char b2) {
         if (a1 == '0' || b1 == '0') return;
-        //转换边与起始边建立有向边
-        int u = ID(a1, a2) ^ 1, v = ID(b1, b2);
-        G[u][v] = 1;
+        //出口，与1异或后A+会变为A-
+        int u = getID(a1, a2) ^ 1;
+        //入口
+        int v = getID(b1, b2);
+        G[v][u] = 1;
     }
 
-
     boolean dfs(int u) {
+        //访问中的状态
         mk[u] = -1;
-        for (int v = 0; v < 52; v++)
-            if (G[u][v] != 0) {
+        for (int v = 0; v < 52; v++) {
+            if (G[u][v] == 1) {
                 if (mk[v] < 0) return true;
-                else if (mk[v] == 0 && dfs(v)) return true;
+                if (mk[v] == 0 && dfs(v)) return true;
             }
+        }
+        //访问完毕的状态
         mk[u] = 1;
         return false;
     }
 
-    // returns true if there is a cycle reachable from u
     boolean find_cycle() {
-        for (int i = 0; i < 52; i++)
-            if (mk[i] == 0) if (dfs(i)) return true;
+        for (int i = 0; i < 52; i++) {
+            if (mk[i] == 0 && dfs(i)) return true;
+        }
         return false;
     }
+
 
     public void solve(int testNumber, InputReader in, OutputWriter out) {
         while (!in.isExhausted()) {
@@ -66,11 +65,11 @@ public class Task1572 {
                 char[] s = in.nextString().toCharArray();
                 for (int i = 0; i < 4; i++) {
                     for (int j = 0; j < 4; j++) {
-                        if (i != j) {
-                            connect(s[i * 2], s[i * 2 + 1], s[j * 2], s[j * 2 + 1]);
-                        }
+                        //自己不能和自己连
+                        if (i != j) connect(s[i * 2], s[i * 2 + 1], s[j * 2], s[j * 2 + 1]);
                     }
                 }
+
             }
             if (find_cycle()) out.write("unbounded\n");
             else out.write("bounded\n");

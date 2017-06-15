@@ -37,7 +37,7 @@ public class Task101 {
 
     void move(String opt, int a, int b) {
         if (a == b) return;
-        //The not uniform mark index will cause errors, be sure to check
+        //The not uniform mark v will cause errors, be sure to check
         //(not uniform)
         LinkedList<Integer> blocksA = blocksWorld[index[a]];
         LinkedList<Integer> blocksB = blocksWorld[index[b]];

@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * Created by Scruel on 2017/3/28.
  * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
- * #bfs
+ * #bfs #graph
  */
 public class Task3984_maze {
     static int[][] maze;

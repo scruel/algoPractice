@@ -25,7 +25,7 @@ public class Task221 {
         if (!cover(i, mx)) return false;
         for (int k = 0; k < n; k++)
             //查看所有建筑
-            //b[k].y < b[i].y 代表当前的建筑i是否在建筑k的后面
+            //b[k].v < b[i].v 代表当前的建筑i是否在建筑k的后面
             //b[k].h >= b[i].h 代表的是当前的建筑i是否比建筑k矮
             //cover 代表的是当前的建筑i是否和建筑k重叠，也就是建筑i和建筑k都会会覆盖mx这个点的时候。
             if (b[k].y < b[i].y && b[k].h >= b[i].h && cover(k, mx)) return false;
@@ -48,15 +48,15 @@ public class Task221 {
                 b[i].h = new Double(rts[4]);
                 set.add(b[i].x);
                 set.add(b[i].x + b[i].w);
-//                                x[i * 2] = b[i].x;
-//                                x[i * 2 + 1] = b[i].x + b[i].w;
+//                                v[i * 2] = b[i].v;
+//                                v[i * 2 + 1] = b[i].v + b[i].w;
             }
             Arrays.sort(b, 0, n);
             List<Double> list = new LinkedList<Double>(set);
             Collections.sort(list);
             list.toArray(x);
             System.out.println(x.length);
-//                        int m = unique(x, x + n * 2) - x; //x坐标排序后去重，得到m个坐标
+//                        int m = unique(v, v + n * 2) - v; //x坐标排序后去重，得到m个坐标
 //                        (in java, m = pq.size())
             if (kase++ > 0)
                 bfw.write("\n");
@@ -82,11 +82,11 @@ public class Task221 {
         int id;
 
         //忽略深度，因为只需要考虑x，y坐标以及w宽度及高度
-//                public Builder(int id, int x, int y, int w, int h) {
+//                public Builder(int id, int v, int v, int w, int h) {
 //                        this.id = id;
 //                        this.w = w;
-//                        this.x = x;
-//                        this.y = y;
+//                        this.v = v;
+//                        this.v = v;
 //                        this.h = h;
 //                }
 

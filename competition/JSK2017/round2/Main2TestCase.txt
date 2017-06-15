@@ -1,42 +1,42 @@
 3
-func1(x)=x+5
-func2(y)=y+float(-10)
+func1(v)=v+5
+func2(v)=v+float(-10)
 func3(z)=z+int(1.9)
 func1(1)-func2(1)+func3(1)+float(100)
 117.000000
 
 2
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1-int(100.999)+z
 func1(1)-int(100)-func2(2)
 3
 
 2
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1-int(100.999)+z
 func1(1)-int(100.123)-func2(2)
 3
 
 2
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1-int(100.999)+z
 func1(1)-float(100.00)-func2(2)
 3.000000
 
 2
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1-int(100.999)+z
 func1(1)-float(100.1111)-func2(2)
 2.888900
 
 2
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1-int(100.999)+z
 func1(1)-int(100.1111)-func2(2)
 3
 
 1
-func1(x)=x+float(5.999)
+func1(v)=v+float(5.999)
 int(func1(1))
 6
 //int(((1)+float(5.999)))
@@ -50,67 +50,67 @@ int(1+1.7)
 1
 
 3
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1-int(100.999)+z
 func3(g)=1
 func1(1)-(int(100.1111)-func2(2)+func3(1)+func3(1))
 -193
 
 3
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1-int(100.999)+z
 func3(g)=1
 func1(1)-(float(100.1111)-func2(2)+func3(1)+func3(1))
 -193.111100
 
 3
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1-int(100.999)+z
 func3(g)=1
 func1(1)-(int(100.1111)-func2(2)+func3(1)+func3(1))+193
 0
 
 3
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1.000000-int(100.999)+z
 func3(g)=1
 func1(1)-(int(100.1111)-func2(2)+func3(1)+func3(1))+193
 0.000000
 
 2
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1-int(100.999)+z
 func1(1)-float(100)-func2(2)
 3.000000
 
 2
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func2(z)=1-int(100.999)
 func1(1)-float(100)-func2(2)
 5.000000
 
 1
-func1(x)=x+int(5.999)
+func1(v)=v+int(5.999)
 func1(1)+float(100)
 106.000000
 
 1
-func1(x)=x+int(5)
+func1(v)=v+int(5)
 func1(1)+float(100)
 106.000000
 
 1
-func1(x)=x+float(5.999)
+func1(v)=v+float(5.999)
 func1(1)+float(100)
 106.999000
 
 1
-func1(x)=x+float(5.999)
+func1(v)=v+float(5.999)
 func1(1)+float(100.123456)
 107.122456
 
 1
-func1(x)=x+float(5.999)
+func1(v)=v+float(5.999)
 func1(1)-float(100.123456)
 -93.124456
 //1+5.999-100.123456
@@ -120,15 +120,15 @@ func1(1)-float(100.123456)
 3.001953
 
 3
-func6(x)=x+5
-func2(y)=y+float(-10)
+func6(v)=v+5
+func2(v)=v+float(-10)
 func3(z)=z+int(1.9)
 func1(1)-func2(1)+func3(1)+float(100)
 No Answer
 
 3
-func1(x)=x+5
-func2(y)=y+float(-10)
+func1(v)=v+5
+func2(v)=v+float(-10)
 func3(z)=z+int(1.9)
 func1()-func2(1)+func3(1)+float(100)
 No Answer

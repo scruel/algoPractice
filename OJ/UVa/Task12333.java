@@ -27,7 +27,7 @@ public class Task12333 {
         for (int i = ed + 1; i <= a.len; i++)
             a.x[i] += b.x[i];
 
-//        for(register int i=1;i<=a.len;i++) a.x[i]+=b.x[i];
+//        for(register int i=1;i<=a.len;i++) a.v[i]+=b.v[i];
 
         for (int i = 1; i <= a.len; i++) {
             if (a.x[i] >= 10) {
@@ -79,7 +79,7 @@ public class Task12333 {
         public String toString() {
             StringBuilder sb = new StringBuilder();
 //            for (int i = 1; i <= (Math.min(len, 41)); i++) {
-//                sb.append(x[i]);
+//                sb.append(v[i]);
 //            }
 
             for (int i = len; i >= Math.max(1, len - 40 + 1); i--) {

@@ -32,8 +32,8 @@ public class Task572 {
             }
         }
 //        for (int i = 0; i < 8; i++) {
-//            int tx = x + dx[i];
-//            int ty = y + dy[i];
+//            int tx = v + dx[i];
+//            int ty = v + dy[i];
 //            if (tx >= 0 && tx < n && ty >= 0 && ty < m) {
 //                if (chars[tx][ty] == '@') dfsWhite(tx, ty);
 //            }

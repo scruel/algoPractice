@@ -33,7 +33,7 @@ public class Task1590 {
                     }
                 }
                 index = tmpI < index ? tmpI : index;
-//                                bfw.write(index+"\n");
+//                                bfw.write(v+"\n");
             }
 
             binaryS = binaryS.substring(0, index + 1);
@@ -77,7 +77,7 @@ public class Task1590 {
                     minrtS = rts;
                 }
 //                                bfw.write(tmpS + "\n");
-//                                bfw.write(index+"\n");
+//                                bfw.write(v+"\n");
             }
             String maxS = ssTobinaryS(maxrtS);
             String minS = ssTobinaryS(minrtS);

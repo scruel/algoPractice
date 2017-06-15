@@ -601,7 +601,7 @@ res
 0
 3
 52 1
-xxdas--xxd x
+xxdas--xxd v
 **********
 4
 xxdasxxd
@@ -611,11 +611,11 @@ xxd
 
 118 Sorry, I found nothing.
 ==========
-xxdas--xxd x
+xxdas--xxd v
 ==========
 Sorry, I found nothing.
 ==========
-xxdas--xxd x
+xxdas--xxd v
 ==========
 
 0
@@ -640,12 +640,12 @@ Sorry, I found nothing.
 0
 5
 110 1
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
 **********
 4
 xxdasxxd
@@ -654,21 +654,21 @@ sxxd
 xxd
 236 Sorry, I found nothing.
 ==========
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
 ==========
 Sorry, I found nothing.
 ==========
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
-xxdas-xxd x
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
 ==========
 
 0
@@ -722,15 +722,15 @@ one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
 0
 7
 209 2
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxas x
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
 **********
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxas x
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
 **********
 6
 xxdas OR xxdas
@@ -741,39 +741,39 @@ xxdas
 sxxd
 xxd
 
-525 xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxas x
+525 xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
 ----------
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxas x
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
 ==========
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxas x
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
 ----------
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxas x
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
 ==========
 Sorry, I found nothing.
 ==========
 Sorry, I found nothing.
 ==========
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxas x
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
 ----------
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxdas x
-xxdas--xxas x
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
 ==========
 Sorry, I found nothing.
 ==========
