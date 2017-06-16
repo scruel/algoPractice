@@ -1,0 +1,21 @@
+5 TaskB
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+0
+37 src/algsPractice/competition/nowCoder
+16 -Xmx256m -Xss64m
+4 Main
+39 algsPractice.competition.nowCoder.TaskB
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2017.06.16
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0
