@@ -97,7 +97,6 @@ public class InputReader {
     }
 
     public String nextLine() {
-
         int c;
         while (isEndline(c = read()) && c != -1) {
         }
