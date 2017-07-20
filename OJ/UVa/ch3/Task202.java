@@ -75,7 +75,7 @@ public class Task202 {
         }
         bfw.write(tempM + "/" + tempN + " = " + preStr + "\n");
         bfw.write("   0 = number of digits in repeating cycle\n");
-        //输出细节 TODO 到底怎么确定最后要输出多少行空行？
+        //输出细节
         bfw.write("\n");
 
 //                System.out.println(result);
