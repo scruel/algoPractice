@@ -27,7 +27,7 @@ public class Task1368 {
                     tb[j][s.charAt(j)]++;
                 }
             }
-            String result = "";
+            StringBuilder result = new StringBuilder();
             int sum = 0;
             for (int i = 0; i < n; i++) {
                 int a = tb[i][chars[0]];
@@ -44,7 +44,7 @@ public class Task1368 {
                     ch = chars[1];
                 if (max == a)
                     ch = chars[0];
-                result += ch;
+                result.append(ch);
             }
             bfw.write(result + "\n" + sum + "\n");
         }

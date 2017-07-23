@@ -8,6 +8,7 @@ import java.io.*;
  * Github : https://github.com/scruel
  * http://blog.csdn.net/crazysillynerd/article/details/43339157
  * #binary #math big --> log
+ * 大数2^n转lg2^n
  */
 public class Task11809 {
     static final double EPSINON = 1e-4;

@@ -13,9 +13,9 @@ package algsPractice.OJ.newcoder;
  * "ABCDE",5,3
  * 返回："DEABC"
  */
-public class Translation {
+public class TranslationReverseString {
     public static void main(String[] args) {
-        Translation tr = new Translation();
+        TranslationReverseString tr = new TranslationReverseString();
         System.out.println(tr.stringTranslation("RJXJYA", 6, 1));
     }
 
