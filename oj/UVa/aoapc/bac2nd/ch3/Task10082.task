@@ -1,0 +1,27 @@
+9 Task10082
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+17 O S, GOMR YPFSU/
+
+17 I AM FINE TODAY.
+
+1
+40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch3
+16 -Xmx256m -Xss64m
+4 Main
+46 algsPractice.oj.UVa.aoapc.bac2nd.ch3.Task10082
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2017.07.20
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

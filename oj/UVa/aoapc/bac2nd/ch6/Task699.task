@@ -1,0 +1,33 @@
+7 Task699
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+70 5 7 -1 6 -1 -1 3 -1 -1
+8 2 9 -1 -1 6 5 -1 -1 12 -1
+-1 3 7 -1 -1 -1
+-1
+
+33 Case 1:
+7 11 3
+
+Case 2:
+9 7 21 15
+1
+63 src/algsPractice/oj/UVa/aoapc/BeginningAlgorithmContests2nd/ch6
+16 -Xmx256m -Xss64m
+4 Main
+67 algsPractice.oj.UVa.aoapc.BeginningAlgorithmContests2nd.ch6.Task699
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2017.06.04
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

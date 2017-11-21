@@ -1,4 +1,4 @@
-package algsPractice.oj_t.UVa.aoapc.bac2nd.ch5;
+package algsPractice.oj.UVa.aoapc.bac2nd.ch5;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
