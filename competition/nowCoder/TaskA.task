@@ -4,20 +4,7 @@
 9 input.txt
 8 STANDARD
 10 output.txt
-3
 0
-16 4 100 103 98 105
-1 5
-1
-1
-35 10
-80 40 230 23 68 04 302 20 124 40
-3 178
-1
-2
-7 3 1 2 3
-1 2
-1
 37 src/algsPractice/competition/nowCoder
 16 -Xmx256m -Xss64m
 4 Main
@@ -25,7 +12,7 @@
 39 net.egork.chelper.checkers.TokenChecker
 0 
 0
-10 2017.06.16
+10 2017.09.04
 0 
 1
 28 algsPractice.lib.InputReader

@@ -19,10 +19,10 @@
 0 1
 2 16
 1
-34 src/algsPractice/competition/codem
+36 src/algsPractice/competition/codem/p
 16 -Xmx256m -Xss64m
 4 Main
-36 algsPractice.competition.codem.TaskA
+38 algsPractice.competition.codem.p.TaskA
 39 net.egork.chelper.checkers.TokenChecker
 0 
 0

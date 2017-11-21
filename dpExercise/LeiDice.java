@@ -29,95 +29,104 @@ import java.util.Scanner;
  * **递归** **矩阵快速幂**
  */
 public class LeiDice {
-    public static final long MOD = 1000000007;
-    // turn[i]=j代表 点数为i的面 的对立面点数为j
-    static int turn[] = {0, 4, 5, 6, 1, 2, 3};
-    // 冲突记录: Conflict[i][j]=0代表点数为i的面与点数为j的面存在冲突
-    static long conflict[][] = new long[7][7];
+  public static final long MOD = 1000000007;
+  // turn[i]=j代表 点数为i的面 的对立面点数为j
+  static int turn[] = {0, 4, 5, 6, 1, 2, 3};
+  // 冲突记录: Conflict[i][j]=0代表点数为i的面与点数为j的面存在冲突
+  static long conflict[][] = new long[7][7];
 
-    // 获得一个单位矩阵
-    static long[][] getIdentity(long[][] a) {
-        for (int i = 1; i < a.length; i++) {
-            for (int j = 0; j < a[i].length; j++) {
-                a[i][j] = 1;
-            }
-        }
-        return a;
+  // 获得一个单位矩阵
+  static long[][] getIdentity(long[][] a) {
+    for (int i = 1; i < a.length; i++) {
+      for (int j = 0; j < a[i].length; j++) {
+        a[i][j] = 1;
+      }
     }
+    return a;
+  }
 
 
-    // 矩阵乘法
-    static long[][] Multiply_Matrix(long[][] a, long[][] b) {
-        long[][] c = new long[a.length][b[0].length];
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < b[0].length; j++) {
-                long temp = 0;
-                for (int k = 0; k < b.length; k++) {
-                    temp = (temp + ((a[i][k] % MOD) * (b[k][j] % MOD)) % MOD) % MOD;
-                }
-                c[i][j] = temp;
-            }
+  // 矩阵乘法
+  static long[][] Multiply_Matrix(long[][] a, long[][] b) {
+    long[][] c = new long[a.length][b[0].length];
+    for (int i = 0; i < a.length; i++) {
+      for (int j = 0; j < b[0].length; j++) {
+        long temp = 0;
+        for (int k = 0; k < b.length; k++) {
+          temp = (temp + ((a[i][k] % MOD) * (b[k][j] % MOD)) % MOD) % MOD;
         }
-        return c;
+        c[i][j] = temp;
+      }
     }
+    return c;
+  }
 
-    // 常数快速幂
-    static long exp_mod(long a, long n) {
-        long t;
-        if (n == 0) return 1 % MOD;
-        if (n == 1) return a % MOD;
-        t = exp_mod(a, n / 2);// 注意这里n/2会带来奇偶性问题
-        t = t * t % MOD;// 乘上另一半再求模
-        if ((n & 1) == 1) t = t * a % MOD;// n是奇数，因为n/2还少乘了一次a
-        return t;
+  // 常数快速幂
+  static long exp_mod(long a, long n) {
+    long t;
+    if (n == 0) {
+      return 1 % MOD;
     }
-
-    // 矩阵快速幂
-    static long[][] Multiply_ksm(long[][] a, long k) {
-        long[][] d = new long[a.length][a[0].length];
-        if (k == 1) {
-            return a;
-        } else if (k == 2) {
-            return Multiply_Matrix(a, a);
-        } else if (k % 2 == 0) {
-            d = Multiply_ksm(Multiply_Matrix(a, a), k / 2);
-            return d;
-        } else {
-            d = Multiply_ksm(Multiply_Matrix(a, a), k / 2);
-            return Multiply_Matrix(d, a);
-        }
+    if (n == 1) {
+      return a % MOD;
     }
-
-
-    public static void main(String[] args) {
-
-
-        getIdentity(conflict);
-        Scanner sc = new Scanner(System.in);
-        long n = sc.nextLong();
-        int m = sc.nextInt();
-        for (int i = 0; i < m; i++) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            conflict[turn[a]][b] = conflict[turn[b]][a] = 0;
-            // 如果1和2存在冲突, 那么Compact[4][2] 和 Compact[5][1] 都为0 , 因为4的反面是1,5的反面是2.
-        }
-        // 单列矩阵dp[j][1]来记录高度为N时, 顶面为j的总方案数.
-        long dp[][] = new long[7][1];
-        getIdentity(dp);
-        // 矩阵dp记录了当前某高度下的各个面的总方案数, 而矩阵Conflict的行向量则作为"选择"的依据.
-        // Conflict * dp = newdp;
-        // 如果 dp 记录了高度为N的各个面的总方案数;
-        // 那么 newdp 记录了高度为N+1的各个面的总方案数;
-        dp = Multiply_Matrix(Multiply_ksm(conflict, n - 1), dp);
-        long sum = 0;
-        for (int i = 0; i < dp.length; i++) {
-            sum = (sum + dp[i][0]) % MOD;// 将dp里面的所有方案数累加, 即得到总方案数.
-        }
-        sum = (sum * exp_mod(4, n)) % MOD;// 采用常数快速幂的形式,乘上每个骰子可以四面转向的情况.
-        System.out.println(sum);
-        sc.close();
+    t = exp_mod(a, n / 2);// 注意这里n/2会带来奇偶性问题
+    t = t * t % MOD;// 乘上另一半再求模
+    if ((n & 1) == 1) {
+      t = t * a % MOD;// n是奇数，因为n/2还少乘了一次a
     }
+    return t;
+  }
+
+  // 矩阵快速幂
+  static long[][] Multiply_ksm(long[][] a, long k) {
+    long[][] d = new long[a.length][a[0].length];
+    if (k == 1) {
+      return a;
+    }
+    else if (k == 2) {
+      return Multiply_Matrix(a, a);
+    }
+    else if (k % 2 == 0) {
+      d = Multiply_ksm(Multiply_Matrix(a, a), k / 2);
+      return d;
+    }
+    else {
+      d = Multiply_ksm(Multiply_Matrix(a, a), k / 2);
+      return Multiply_Matrix(d, a);
+    }
+  }
+
+
+  public static void main(String[] args) {
+
+
+    getIdentity(conflict);
+    Scanner sc = new Scanner(System.in);
+    long n = sc.nextLong();
+    int m = sc.nextInt();
+    for (int i = 0; i < m; i++) {
+      int a = sc.nextInt();
+      int b = sc.nextInt();
+      conflict[turn[a]][b] = conflict[turn[b]][a] = 0;
+      // 如果1和2存在冲突, 那么Compact[4][2] 和 Compact[5][1] 都为0 , 因为4的反面是1,5的反面是2.
+    }
+    // 单列矩阵dp[j][1]来记录高度为N时, 顶面为j的总方案数.
+    long dp[][] = new long[7][1];
+    getIdentity(dp);
+    // 矩阵dp记录了当前某高度下的各个面的总方案数, 而矩阵Conflict的行向量则作为"选择"的依据.
+    // Conflict * dp = newdp;
+    // 如果 dp 记录了高度为N的各个面的总方案数;
+    // 那么 newdp 记录了高度为N+1的各个面的总方案数;
+    dp = Multiply_Matrix(Multiply_ksm(conflict, n - 1), dp);
+    long sum = 0;
+    for (int i = 0; i < dp.length; i++) {
+      sum = (sum + dp[i][0]) % MOD;// 将dp里面的所有方案数累加, 即得到总方案数.
+    }
+    sum = (sum * exp_mod(4, n)) % MOD;// 采用常数快速幂的形式,乘上每个骰子可以四面转向的情况.
+    System.out.println(sum);
+    sc.close();
+  }
 
 
 }

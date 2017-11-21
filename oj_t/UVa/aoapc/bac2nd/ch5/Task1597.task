@@ -1,0 +1,795 @@
+8 Task1597
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+8
+0
+1112 4
+A manufacturer, importer, or seller of
+digital media devices may not (1) sell,
+or offer for sale, in interstate commerce,
+or (2) cause to be transported in, or in a
+manner affecting, interstate commerce,
+a digital media device unless the device
+includes and utilizes standard security
+technologies that adhere to the security
+system standards.
+**********
+Of course, Lisa did not necessarily
+intend to read his books. She might
+want the computer only to write her
+midterm. But Dan knew she came from
+a middle-class family and could hardly
+afford the tuition, let alone her reading
+fees. Books might be the only way she
+could graduate
+**********
+Research in analysis (i.e., the evaluation
+of the strengths and weaknesses of
+computer system) is essential to the
+development of effective security, both
+for works protected by copyright law
+and for information in general. Such
+research can progress only through the
+open publication and exchange of
+complete scientific results
+**********
+I am very very very happy!
+What about you?
+**********
+6
+computer
+books AND computer
+books OR protected
+NOT security
+very
+slick
+765 want the computer only to write her
+----------
+computer system) is essential to the
+==========
+intend to read his books. She might
+want the computer only to write her
+fees. Books might be the only way she
+==========
+intend to read his books. She might
+fees. Books might be the only way she
+----------
+for works protected by copyright law
+==========
+Of course, Lisa did not necessarily
+intend to read his books. She might
+want the computer only to write her
+midterm. But Dan knew she came from
+a middle-class family and could hardly
+afford the tuition, let alone her reading
+fees. Books might be the only way she
+could graduate
+----------
+I am very very very happy!
+What about you?
+==========
+I am very very very happy!
+==========
+Sorry, I found nothing.
+==========
+
+0
+1
+2080 4
+one   repeat  repeat  repeat
+A manufacturer, importer, or seller of
+digital media devices may not (1) sell,
+or offer for sale, in interstate commerce,
+or (2) cause to be transported in, or in a
+manner affecting, interstate commerce,
+a digital media device unless the device
+includes and utilizes standard security
+technologies that adhere to the security
+system standards.
+**********
+one two   repeat  repeat  repeat   repeat
+Of course, Lisa did not necessarily
+intend to read his books. She might
+want the computer only to write her
+midterm. But Dan knew she came from
+a middle-class family and could hardly
+afford the tuition, let alone her reading
+fees. Books might be the only way she
+could graduate
+**********
+one two three   repeat   repeat  repeat  repeat   repeat
+Research in analysis (i.e., the evaluation
+of the strengths and weaknesses of
+computer system) is essential to the
+development of effective security, both
+for works protected by copyright law
+and for information in general. Such
+research can progress only through the
+open publication and exchange of
+complete scientific results
+**********
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+I am very very very happy!
+What about you?
+**********
+66
+computer
+books AND computer
+books OR protected
+NOT security
+very
+slick
+one
+two
+three
+four
+repeat
+NOT one
+NOT two
+NOT three
+NOT four
+NOT repeat
+one AND one
+one AND two
+one AND three
+one AND four
+one AND repeat
+two AND one
+two AND two
+two AND three
+two AND four
+two AND repeat
+three AND one
+three AND two
+three AND three
+three AND four
+three AND repeat
+four AND one
+four AND two
+four AND three
+four AND four
+four AND repeat
+repeat AND one
+repeat AND two
+repeat AND three
+repeat AND four
+repeat AND repeat
+one OR one
+one OR two
+one OR three
+one OR four
+one OR repeat
+two OR one
+two OR two
+two OR three
+two OR four
+two OR repeat
+three OR one
+three OR two
+three OR three
+three OR four
+three OR repeat
+four OR one
+four OR two
+four OR three
+four OR four
+four OR repeat
+repeat OR one
+repeat OR two
+repeat OR three
+repeat OR four
+repeat OR repeat
+13346 want the computer only to write her
+----------
+computer system) is essential to the
+==========
+intend to read his books. She might
+want the computer only to write her
+fees. Books might be the only way she
+==========
+intend to read his books. She might
+fees. Books might be the only way she
+----------
+for works protected by copyright law
+==========
+one two   repeat  repeat  repeat   repeat
+Of course, Lisa did not necessarily
+intend to read his books. She might
+want the computer only to write her
+midterm. But Dan knew she came from
+a middle-class family and could hardly
+afford the tuition, let alone her reading
+fees. Books might be the only way she
+could graduate
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+I am very very very happy!
+What about you?
+==========
+I am very very very happy!
+==========
+Sorry, I found nothing.
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+Sorry, I found nothing.
+==========
+one   repeat  repeat  repeat
+A manufacturer, importer, or seller of
+digital media devices may not (1) sell,
+or offer for sale, in interstate commerce,
+or (2) cause to be transported in, or in a
+manner affecting, interstate commerce,
+a digital media device unless the device
+includes and utilizes standard security
+technologies that adhere to the security
+system standards.
+==========
+one   repeat  repeat  repeat
+A manufacturer, importer, or seller of
+digital media devices may not (1) sell,
+or offer for sale, in interstate commerce,
+or (2) cause to be transported in, or in a
+manner affecting, interstate commerce,
+a digital media device unless the device
+includes and utilizes standard security
+technologies that adhere to the security
+system standards.
+----------
+one two   repeat  repeat  repeat   repeat
+Of course, Lisa did not necessarily
+intend to read his books. She might
+want the computer only to write her
+midterm. But Dan knew she came from
+a middle-class family and could hardly
+afford the tuition, let alone her reading
+fees. Books might be the only way she
+could graduate
+==========
+one   repeat  repeat  repeat
+A manufacturer, importer, or seller of
+digital media devices may not (1) sell,
+or offer for sale, in interstate commerce,
+or (2) cause to be transported in, or in a
+manner affecting, interstate commerce,
+a digital media device unless the device
+includes and utilizes standard security
+technologies that adhere to the security
+system standards.
+----------
+one two   repeat  repeat  repeat   repeat
+Of course, Lisa did not necessarily
+intend to read his books. She might
+want the computer only to write her
+midterm. But Dan knew she came from
+a middle-class family and could hardly
+afford the tuition, let alone her reading
+fees. Books might be the only way she
+could graduate
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+Research in analysis (i.e., the evaluation
+of the strengths and weaknesses of
+computer system) is essential to the
+development of effective security, both
+for works protected by copyright law
+and for information in general. Such
+research can progress only through the
+open publication and exchange of
+complete scientific results
+==========
+Sorry, I found nothing.
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+one   repeat  repeat  repeat
+----------
+one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+
+0
+2
+7 0
+1
+res
+35 Sorry, I found nothing.
+==========
+
+0
+3
+52 1
+xxdas--xxd v
+**********
+4
+xxdasxxd
+xxdas
+sxxd
+xxd
+
+118 Sorry, I found nothing.
+==========
+xxdas--xxd v
+==========
+Sorry, I found nothing.
+==========
+xxdas--xxd v
+==========
+
+0
+4
+59 1
+com com com
+**********
+4
+com
+com AND xx
+com OR xx
+NOT com
+116 com com com
+==========
+Sorry, I found nothing.
+==========
+com com com
+==========
+Sorry, I found nothing.
+==========
+
+0
+5
+110 1
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+**********
+4
+xxdasxxd
+xxdas
+sxxd
+xxd
+236 Sorry, I found nothing.
+==========
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+==========
+Sorry, I found nothing.
+==========
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+xxdas-xxd v
+==========
+
+0
+6
+1253 4
+one   repeat  repeat  repeat
+A manufacturer, importer, or seller of
+digital media devices may not (1) sell,
+or offer for sale, in interstate commerce,
+or (2) cause to be transported in, or in a
+manner affecting, interstate commerce,
+a digital media device unless the device
+includes and utilizes standard security
+technologies that adhere to the security
+system standards.
+**********
+one two   repeat  repeat  repeat   repeat
+Of course, Lisa did not necessarily
+intend to read his books. She might
+want the computer only to write her
+midterm. But Dan knew she came from
+a middle-class family and could hardly
+afford the tuition, let alone her reading
+fees. Books might be the only way she
+could graduate
+**********
+one two three   repeat   repeat  repeat  repeat   repeat
+Research in analysis (i.e., the evaluation
+of the strengths and weaknesses of
+computer system) is essential to the
+development of effective security, both
+for works protected by copyright law
+and for information in general. Such
+research can progress only through the
+open publication and exchange of
+complete scientific results
+**********
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+I am very very very happy!
+What about you?
+**********
+1
+two AND one
+204 one two   repeat  repeat  repeat   repeat
+----------
+one two three   repeat   repeat  repeat  repeat   repeat
+----------
+one two three   four   repeat  repeat   repeat  repeat  repeat   repeat
+==========
+
+0
+7
+209 2
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
+**********
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
+**********
+6
+xxdas OR xxdas
+xxdas AND xxdas
+NOT xxdas
+xxdasxxd
+xxdas
+sxxd
+xxd
+
+525 xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
+----------
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
+==========
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
+----------
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
+==========
+Sorry, I found nothing.
+==========
+Sorry, I found nothing.
+==========
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
+----------
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxdas v
+xxdas--xxas v
+==========
+Sorry, I found nothing.
+==========
+
+1
+63 src/algsPractice/oj/UVa/aoapc/BeginningAlgorithmContests2nd/ch5
+16 -Xmx256m -Xss64m
+4 Main
+68 algsPractice.oj_t.UVa.aoapc.BeginningAlgorithmContests2nd.ch5.Task1597
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2017.05.31
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

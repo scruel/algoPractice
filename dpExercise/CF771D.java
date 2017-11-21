@@ -25,108 +25,113 @@ import java.util.Scanner;
  * 优化后的时间复杂度可降至O(n ^ 3)。
  */
 public class CF771D {
-    static int[][][][] d = new int[76][76][76][2];
-    static char[] a;
-    static char[] ch = new char[4];
-    static boolean[] removed = new boolean[76];
-    static int INF = 0x3F3F3F3F;
-    static int remain;
+  static int[][][][] d = new int[76][76][76][2];
+  static char[] a;
+  static char[] ch = new char[4];
+  static boolean[] removed = new boolean[76];
+  static int INF = 0x3F3F3F3F;
+  static int remain;
 
-    static int dp(int v, int k, int r, int forbid) {
-        int res = d[v][k][r][forbid];
-//                if (res != INF) {
-//                        return res;
-//                }
-        if (remain == 0) {
-            return 0;
+  static int dp(int v, int k, int r, int forbid) {
+    int res = d[v][k][r][forbid];
+    //                if (res != INF) {
+    //                        return res;
+    //                }
+    if (remain == 0) {
+      return 0;
+    }
+    for (int i = 0; i < 3; ++i) {
+      if (ch[i] == 'K' && forbid != 0) {
+        continue;
+      }
+      int cnt = 0;
+      for (int j = 0; j < a.length; ++j) {
+        if (!removed[j]) {
+          if (a[j] == ch[i]) {
+            removed[j] = true;
+            --remain;
+            res = Math.min(res, dp(v + ((ch[i] == 'V') ? 1 : 0), k + ((ch[i] == 'K') ? 1 : 0), r + ((ch[i] == '?') ? 1 : 0), ((ch[i] == 'V') ? 1 : 0)) + cnt);
+            ++remain;
+            removed[j] = false;
+            break;
+          }
+          ++cnt;
         }
-        for (int i = 0; i < 3; ++i) {
-            if (ch[i] == 'K' && forbid != 0) {
-                continue;
-            }
-            int cnt = 0;
-            for (int j = 0; j < a.length; ++j) {
-                if (!removed[j]) {
-                    if (a[j] == ch[i]) {
-                        removed[j] = true;
-                        --remain;
-                        res = Math.min(res, dp(v + ((ch[i] == 'V') ? 1 : 0), k + ((ch[i] == 'K') ? 1 : 0), r + ((ch[i] == '?') ? 1 : 0), ((ch[i] == 'V') ? 1 : 0)) + cnt);
-                        ++remain;
-                        removed[j] = false;
-                        break;
-                    }
-                    ++cnt;
-                }
-            }
+      }
+    }
+    return res;
+  }
+
+
+  static int solve(int n, String s) {
+    char[] chars = s.toCharArray();
+    int[][] dp = new int[n + 1][n + 1];
+    //                dp[i][j]代表的是旋转代价
+
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n; j++) {
+        if (chars[j] == 'K' && chars[i] == 'V' && j > i) {
+          //将V转移到K位置的旋转代价
+          //                                        dp[i + 1][j + 1] = j - i;
+          dp[i + 1][j + 1] = Math.max(Math.max(dp[i][j + 1], dp[i + 1][j]), j - i);
         }
-        return res;
+        else if (chars[i] == 'K' && chars[j] == 'V' && j < i) {
+          //                                        dp[i + 1][j + 1] = i - j;
+          dp[i + 1][j + 1] = Math.max(Math.max(dp[i][j + 1], dp[i + 1][j]), i - j);
+        }
+        else {
+          if (chars[i] != 'K' && chars[i] != 'V') {
+            if (i > j && chars[j] == 'K') {
+              dp[i + 1][j + 1] = i - j;
+            }
+            else if (i < j && chars[i] == 'V') {
+              dp[i + 1][j + 1] = j - i;
+            }
+            else {
+              dp[i + 1][j + 1] = Math.min(dp[i][j + 1], dp[i + 1][j]);
+            }
+          }
+          else {
+            //无需旋转
+            dp[i + 1][j + 1] = Math.max(dp[i][j + 1], dp[i + 1][j]);
+          }
+          //                                        dp[i + 1][j + 1] = dp[i][j+1];
+        }
+      }
+    }
+    MyTools.print_r(dp);
+    return dp[n][n];
+  }
+
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    input.nextLine();
+    String s = input.nextLine();
+
+    remain = n;
+    a = s.toCharArray();
+    for (int i = 0; i < 76; i++) {
+      for (int j = 0; j < 76; j++) {
+        for (int k = 0; k < 76; k++) {
+          d[i][j][k][0] = 0x3F3F3F3F;
+          d[i][j][k][1] = 0x3F3F3F3F;
+        }
+      }
     }
 
-
-    static int solve(int n, String s) {
-        char[] chars = s.toCharArray();
-        int[][] dp = new int[n + 1][n + 1];
-//                dp[i][j]代表的是旋转代价
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (chars[j] == 'K' && chars[i] == 'V' && j > i) {
-                    //将V转移到K位置的旋转代价
-//                                        dp[i + 1][j + 1] = j - i;
-                    dp[i + 1][j + 1] = Math.max(Math.max(dp[i][j + 1], dp[i + 1][j]), j - i);
-                } else if (chars[i] == 'K' && chars[j] == 'V' && j < i) {
-//                                        dp[i + 1][j + 1] = i - j;
-                    dp[i + 1][j + 1] = Math.max(Math.max(dp[i][j + 1], dp[i + 1][j]), i - j);
-                } else {
-                    if (chars[i] != 'K' && chars[i] != 'V') {
-                        if (i > j && chars[j] == 'K') {
-                            dp[i + 1][j + 1] = i - j;
-                        } else if (i < j && chars[i] == 'V') {
-                            dp[i + 1][j + 1] = j - i;
-                        } else {
-                            dp[i + 1][j + 1] = Math.min(dp[i][j + 1], dp[i + 1][j]);
-                        }
-                    } else {
-                        //无需旋转
-                        dp[i + 1][j + 1] = Math.max(dp[i][j + 1], dp[i + 1][j]);
-                    }
-//                                        dp[i + 1][j + 1] = dp[i][j+1];
-                }
-            }
-        }
-        MyTools.print_r(dp);
-        return dp[n][n];
+    //                memset(d, 0x3F, sizeof(d));
+    for (int i = 0; i < n; ++i) {
+      a[i] = a[i] == 'V' || a[i] == 'K' ? a[i] : '?';
     }
+    //                printf("%d\n", dp(0, 0, 0, 0));
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
-        input.nextLine();
-        String s = input.nextLine();
-
-        remain = n;
-        a = s.toCharArray();
-        for (int i = 0; i < 76; i++) {
-            for (int j = 0; j < 76; j++) {
-                for (int k = 0; k < 76; k++) {
-                    d[i][j][k][0] = 0x3F3F3F3F;
-                    d[i][j][k][1] = 0x3F3F3F3F;
-                }
-            }
-        }
-
-//                memset(d, 0x3F, sizeof(d));
-        for (int i = 0; i < n; ++i) {
-            a[i] = a[i] == 'V' || a[i] == 'K' ? a[i] : '?';
-        }
-//                printf("%d\n", dp(0, 0, 0, 0));
-
-//                if (s.indexOf("VK") == -1) {
-//                        System.out.println(0);
-//                        return;
-//                }
-        ch = "VK?".toCharArray();
-        System.out.println(dp(0, 0, 0, 0));
-//                System.out.println(solve3Dim(n, s));
-    }
+    //                if (s.indexOf("VK") == -1) {
+    //                        System.out.println(0);
+    //                        return;
+    //                }
+    ch = "VK?".toCharArray();
+    System.out.println(dp(0, 0, 0, 0));
+    //                System.out.println(solve3Dim(n, s));
+  }
 }
