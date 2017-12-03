@@ -59,10 +59,10 @@ Scenario #2
 260001
 
 1
-63 src/algsPractice/oj/UVa/aoapc/BeginningAlgorithmContests2nd/ch5
+40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch5
 16 -Xmx256m -Xss64m
 4 Main
-67 algsPractice.oj.UVa.aoapc.BeginningAlgorithmContests2nd.ch5.Task540
+44 algsPractice.oj.UVa.aoapc.bac2nd.ch5.Task540
 42 net.egork.chelper.checkers.PEStrictChecker
 0 
 0

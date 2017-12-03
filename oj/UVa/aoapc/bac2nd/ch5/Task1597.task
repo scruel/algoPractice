@@ -779,10 +779,10 @@ Sorry, I found nothing.
 ==========
 
 1
-63 src/algsPractice/oj/UVa/aoapc/BeginningAlgorithmContests2nd/ch5
+40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch5
 16 -Xmx256m -Xss64m
 4 Main
-68 algsPractice.oj.UVa.aoapc.BeginningAlgorithmContests2nd.ch5.Task1597
+45 algsPractice.oj.UVa.aoapc.bac2nd.ch5.Task1597
 42 net.egork.chelper.checkers.PEStrictChecker
 0 
 0

@@ -11,7 +11,6 @@ import java.util.Scanner;
  * //TODO 高斯消元解法
  */
 public class Task1222 {
-
   int[][] puzzle = new int[5][6];
   int[][] result = new int[5][6];
 

@@ -86,7 +86,6 @@ public class Task202 {
     bfw.write("   0 = number of digits in repeating cycle\n");
     //输出细节
     bfw.write("\n");
-
     //                System.out.println(result);
   }
 }
