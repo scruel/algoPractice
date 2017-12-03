@@ -1,7 +1,9 @@
 package algsPractice.lib;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.nio.CharBuffer;
@@ -13,7 +15,6 @@ import java.util.InputMismatchException;
  * Github : https://github.com/scruel
  */
 public class InputReader {
-  //TODO 中文读写
   private static final int BUFFER_SIZE = 32768; // change to 1024;
   private InputStream stream;
   //    private final InputStream stream= new FileInputStream(new File("dec.in"));
@@ -27,12 +28,6 @@ public class InputReader {
   public InputReader(InputStream stream) {
     charBuffer = CharBuffer.allocate(BUFFER_SIZE);
     this.stream = stream;
-  }
-
-  public static void main(String[] args) {
-    InputReader in = new InputReader(System.in);
-    int n = in.nextInt();
-    System.out.println(n);
   }
 
   public int read() {
@@ -110,12 +105,18 @@ public class InputReader {
     if (c == -1) {
       return null;
     }
-    StringBuilder res = new StringBuilder();
+
+
+    ByteArrayOutputStream res = new ByteArrayOutputStream();
     do {
-      res.append((char) c);
+      res.write(c);
     } while (!isEndline(c = read()));
 
-    return res.toString();
+    try {
+      return res.toString("UTF-8");
+    } catch (UnsupportedEncodingException ignore) {
+      return res.toString();
+    }
   }
 
   public String readLine() {return nextLine();}
@@ -129,12 +130,16 @@ public class InputReader {
       return null;
     }
 
-    StringBuilder res = new StringBuilder();
+    ByteArrayOutputStream res = new ByteArrayOutputStream();
     do {
-      res.appendCodePoint(c);
+      res.write(c);
     } while (!isSpaceChar(c = read()));
 
-    return res.toString();
+    try {
+      return res.toString("UTF-8");
+    } catch (UnsupportedEncodingException ignore) {
+      return res.toString();
+    }
   }
 
   public char[] nextStringChars() {
