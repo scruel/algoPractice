@@ -9,8 +9,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
- * Created by Scruel on 2017/5/5.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/5.  
  * Github : https://github.com/scruel
  * #simulate
  */

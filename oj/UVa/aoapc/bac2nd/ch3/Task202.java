@@ -8,8 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.LinkedList;
 
 /**
- * Created by Scruel on 2017/4/4.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/4.  
  * Github : https://github.com/scruel
  * #大整数除法  #string
  */

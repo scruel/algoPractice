@@ -6,8 +6,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 /**
- * Created by Scruel on 2017/5/25.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/25.  
  * Github : https://github.com/scruel
  */
 public class Main3 {

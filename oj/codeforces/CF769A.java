@@ -5,8 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Created by Scruel on 2017/4/24.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/24.  
  * Github : https://github.com/scruel
  */
 public class CF769A {

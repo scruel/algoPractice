@@ -8,8 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 /**
- * Created by Scruel on 2017/4/9.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/9.  
  * Github : https://github.com/scruel
  * 题目2 : 最大子矩阵
  * 时间限制:10000ms

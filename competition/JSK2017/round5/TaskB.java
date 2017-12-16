@@ -7,8 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * TODO
  */

@@ -1,8 +1,7 @@
 package algsPractice.oj.jisuanke;
 
 /**
- * Created by Scruel on 2017/4/1.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/1.  
  * Github : https://github.com/scruel
  * #unsolve 计蒜客模拟赛5第十题 守卫问题 hit:状态压缩dp 轮廓线dp
  */

@@ -14,8 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by Scruel on 2017/4/25.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/25.  
  * Github : https://github.com/scruel
  * #离散化  中点
  */

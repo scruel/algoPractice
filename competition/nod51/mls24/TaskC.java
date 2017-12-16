@@ -4,8 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/4/30.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/30.  
  * Github : https://github.com/scruel
  */
 public class TaskC {

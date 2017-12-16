@@ -6,8 +6,7 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/3/27.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/27.  
  * Github : https://github.com/scruel
  * #unsolve
  */

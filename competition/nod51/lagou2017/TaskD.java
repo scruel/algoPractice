@@ -6,8 +6,7 @@ import algsPractice.lib.OutputWriter;
 import java.util.Arrays;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  */
 public class TaskD {

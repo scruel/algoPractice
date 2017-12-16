@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Scruel on 2017/3/22.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/22.  
  * Github : https://github.com/scruel
  * //https://www.nowcoder.com/study/vod/1/7/10
  * 折纸问题

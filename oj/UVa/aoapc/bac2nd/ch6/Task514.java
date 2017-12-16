@@ -9,8 +9,7 @@ import java.util.Stack;
 import java.util.StringTokenizer;
 
 /**
- * Created by Scruel on 2017/5/16.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/16.  
  * Github : https://github.com/scruel
  * #simulate
  */

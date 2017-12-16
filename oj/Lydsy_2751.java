@@ -7,8 +7,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
- * Created by Scruel on 2017/4/10.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/10.  
  * Github : https://github.com/scruel
  * #快速幂
  * #unsolved

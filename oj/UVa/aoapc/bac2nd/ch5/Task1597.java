@@ -8,8 +8,7 @@ import java.util.HashSet;
 import java.util.TreeSet;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * #string #datastruct
  */

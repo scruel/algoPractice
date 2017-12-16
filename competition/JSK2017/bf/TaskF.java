@@ -4,8 +4,7 @@ import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * #dp #状态压缩DP
  * http://paste.ubuntu.com/24822276/

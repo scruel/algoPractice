@@ -3,8 +3,7 @@ package algsPractice.oj;
 import java.util.HashMap;
 
 /**
- * Created by Scruel on 2017/4/8.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/8.  
  * Github : https://github.com/scruel
  * 进制转换(从1开始的)
  */

@@ -5,8 +5,7 @@ import algs4.MyTools;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/3/29.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/29.  
  * Github : https://github.com/scruel
  * #unsolve
  * 首先初始化dp数组（d），将每个元素初始化为正无穷，这里我用了一个小技巧就是memset(d, 0x3F, sizeof(d));，这样就将d数组中的每个元素初始化为了一个足够大的数（0x3F3F3F3F）；

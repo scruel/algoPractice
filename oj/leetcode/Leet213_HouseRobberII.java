@@ -1,8 +1,7 @@
 package algsPractice.oj.leetcode;
 
 /**
- * Created by Scruel on 2017/4/16.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/16.  
  * Github : https://github.com/scruel
  * #dp 环形dp--分割两部分解
  */

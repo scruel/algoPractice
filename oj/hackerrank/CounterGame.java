@@ -8,8 +8,7 @@ import java.io.OutputStreamWriter;
 import java.math.BigInteger;
 
 /**
- * Created by Scruel on 2017/5/13.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/13.  
  * Github : https://github.com/scruel
  */
 public class CounterGame {

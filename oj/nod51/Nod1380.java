@@ -7,8 +7,7 @@ import java.util.StringTokenizer;
 import java.util.TreeSet;
 
 /**
- * Created by Scruel on 2017/5/15.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/15.  
  * Github : https://github.com/scruel
  * #TODO
  */

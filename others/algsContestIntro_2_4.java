@@ -1,8 +1,7 @@
 package algsPractice.others;
 
 /**
- * Created by Scruel on 2017/4/13.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/13.  
  * Github : https://github.com/scruel
  */
 public class algsContestIntro_2_4 {

@@ -12,8 +12,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  */
 public class TaskB {

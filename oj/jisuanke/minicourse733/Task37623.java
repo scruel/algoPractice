@@ -7,8 +7,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  */
 public class Task37623 {

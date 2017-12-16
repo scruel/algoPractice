@@ -1,8 +1,7 @@
 package algsPractice.dpExercise;
 
 /**
- * Created by Scruel on 2017/3/23.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/23.  
  * Github : https://github.com/scruel
  * **DP**
  * 有一个矩阵map，它每个格子有一个权值。从左上角的格子开始每次只能向右或者向下走，最后到达右下角的位置，路径上所有的数字累加起来就是路径和，返回所有的路径中最小的路径和。

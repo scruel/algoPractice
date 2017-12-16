@@ -3,8 +3,7 @@ package algsPractice.others;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/3/29.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/29.  
  * Github : https://github.com/scruel
  */
 public class E2_SLZQ {

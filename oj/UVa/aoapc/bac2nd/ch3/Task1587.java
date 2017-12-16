@@ -8,8 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 
 /**
- * Created by Scruel on 2017/5/17.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/17.  
  * Github : https://github.com/scruel
  * #easy #sort 判断长方体成立
  */

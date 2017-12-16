@@ -1,8 +1,7 @@
 package algsPractice.oj;
 
 /**
- * Created by Scruel on 2017/4/8.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/8.  
  * Github : https://github.com/scruel
  * 蓝桥杯2017省赛，BQ2  210
  * #prime

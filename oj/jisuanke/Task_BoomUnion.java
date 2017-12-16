@@ -3,8 +3,7 @@ package algsPractice.oj.jisuanke;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/4/1.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/1.  
  * Github : https://github.com/scruel
  * 计蒜客模拟赛5第9题
  * #union

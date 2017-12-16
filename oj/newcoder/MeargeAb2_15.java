@@ -1,8 +1,7 @@
 package algsPractice.oj.newcoder;
 
 /**
- * Created by Scruel on 2017/3/18.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/18.  
  * Github : https://github.com/scruel
  * <p>
  * 给定两个已经排好序的数组，A中额外给出了B数组的额外长度，将B并入A，空间复杂度需为1。

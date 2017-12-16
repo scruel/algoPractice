@@ -9,8 +9,7 @@ import java.util.Iterator;
 import java.util.Stack;
 
 /**
- * Created by Scruel on 2017/5/11.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/11.  
  * Github : https://github.com/scruel
  * #greedy
  */

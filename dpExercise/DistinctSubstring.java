@@ -3,8 +3,7 @@ package algsPractice.dpExercise;
 import java.util.Arrays;
 
 /**
- * Created by Scruel on 2017/3/19.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/19.  
  * Github : https://github.com/scruel
  * https://www.nowcoder.com/courses/1/3/12
  * **DP**

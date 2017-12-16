@@ -7,8 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 /**
- * Created by Scruel on 2017/4/19.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/19.  
  * Github : https://github.com/scruel
  * #thinking
  */

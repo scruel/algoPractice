@@ -9,8 +9,7 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 
 /**
- * Created by Scruel on 2017/4/5.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/5.  
  * Github : https://github.com/scruel
  * 可排序--即忽略顺序
  * #string #sort

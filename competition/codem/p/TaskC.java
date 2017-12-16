@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * #simulate #unsloved
  */

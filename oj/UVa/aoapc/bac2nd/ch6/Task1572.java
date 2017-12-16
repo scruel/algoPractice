@@ -4,8 +4,7 @@ import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * #graph #TODO
  * 首先因为可以旋转和反转，所以可以保证在拼接的过程中正方形不会自交。

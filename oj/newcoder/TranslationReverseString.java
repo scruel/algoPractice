@@ -1,8 +1,7 @@
 package algsPractice.oj.newcoder;
 
 /**
- * Created by Scruel on 2017/3/18.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/18.  
  * Github : https://github.com/scruel
  * **字符串**
  * 对于一个字符串，请设计一个算法，将字符串的长度为len的前缀平移到字符串的最后。

@@ -7,8 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 /**
- * Created by Scruel on 2017/4/5.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/5.  
  * Github : https://github.com/scruel
  * n(n<20)个人站成一圈，逆时针编号为1～n。有两个官员，A从1开始逆时针数，B从n开
  * 始顺时针数。在每一轮中，官员A数k个就停下来，官员B数m个就停下来（注意有可能两个

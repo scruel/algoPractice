@@ -3,8 +3,7 @@ package algsPractice.dpExercise;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/3/13.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/13.  
  * Github : https://github.com/scruel
  * <p>
  * 赌圣atm晚年迷恋上了垒骰子，就是把骰子一个垒在另一个上边，不能歪歪扭扭，要垒成方柱体。 经过长期观察，atm

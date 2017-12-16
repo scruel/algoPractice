@@ -3,8 +3,7 @@ package algsPractice.oj.codeforces;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/4/14.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/14.  
  * Github : https://github.com/scruel
  * #prime
  */

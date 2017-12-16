@@ -5,8 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Created by Scruel on 2017/4/20.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/20.  
  * Github : https://github.com/scruel
  * #dp 泛化背包
  */

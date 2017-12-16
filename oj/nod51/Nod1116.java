@@ -7,10 +7,17 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 /**
- * Created by Scruel on 2017/4/28.
- * Personal blog : http://blog.csdn.net/scruelt
- * Github : https://github.com/scruel
+ * @author Scruel Tao
+ *
+ * 一个数 A 在 K 进制下，是 K - 1 的倍数。
+ *
  * #math
+ * 进制位拆分
+ *
+ * 因为 K % （K-1）= 1
+ * 假设 A 的所有位 A[0]A[1]...A[n], 则 A = A[0] + A[1] * K + A[2] * K^2 + ... + A[n] * K^n
+ * A % (K - 1) = (A[0] + A[1] * K + A[2] * K^2 + ... + A[n] * K^n) % (K - 1) = 0
+ * 则统计所有位的和 Sn，当 Sn % (k - 1) = 0 时， 即为所求。
  */
 public class Nod1116 {
 

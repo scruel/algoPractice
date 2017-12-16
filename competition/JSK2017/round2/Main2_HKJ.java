@@ -11,8 +11,7 @@ import javax.script.ScriptException;
 import java.util.regex.Pattern;
 
 /**
- * Created by Scruel on 2017/5/26.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/26.  
  * Github : https://github.com/scruel
  */
 public class Main2_HKJ {

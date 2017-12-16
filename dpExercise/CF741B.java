@@ -10,8 +10,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 /**
- * Created by Scruel on 2017/5/11.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/11.  
  * Github : https://github.com/scruel
  * #dp-knapsack
  */

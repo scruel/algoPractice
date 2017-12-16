@@ -1,8 +1,7 @@
 package algsPractice.oj.newcoder;
 
 /**
- * Created by Scruel on 2017/3/19.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/19.  
  * Github : https://github.com/scruel
  * **字符串**
  */

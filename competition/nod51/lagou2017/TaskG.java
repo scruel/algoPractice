@@ -8,8 +8,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * #greedy #priority
  */

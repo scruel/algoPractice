@@ -11,10 +11,10 @@
 17 I AM FINE TODAY.
 
 1
-43 src/algsPractice/oj/UVa/aoapc/bac2nd/backup
+40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch3
 16 -Xmx256m -Xss64m
 4 Main
-49 algsPractice.oj.UVa.aoapc.bac2nd.backup.Task10082
+46 algsPractice.oj.UVa.aoapc.bac2nd.ch3.Task10082
 39 net.egork.chelper.checkers.TokenChecker
 0 
 0

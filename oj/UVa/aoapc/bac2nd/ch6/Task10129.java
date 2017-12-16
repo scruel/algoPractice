@@ -6,8 +6,7 @@ import algsPractice.lib.OutputWriter;
 import java.util.LinkedList;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * 7. 欧拉（道路）回路（一笔画）
  * 对于无向图：

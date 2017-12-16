@@ -3,8 +3,7 @@ package algsPractice.competition.wann9;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/5/6.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/6.  
  * Github : https://github.com/scruel
  */
 public class MainA {

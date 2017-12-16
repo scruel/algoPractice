@@ -8,8 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/5/20.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/20.  
  * Github : https://github.com/scruel
  */
 public class Main1 {

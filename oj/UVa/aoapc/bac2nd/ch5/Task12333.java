@@ -6,8 +6,7 @@ import algsPractice.lib.OutputWriter;
 import static java.lang.Math.max;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * #TLE #Trie #bigInteger TODO
  */

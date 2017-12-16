@@ -6,8 +6,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/3/31.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/31.  
  * Github : https://github.com/scruel
  * #greedy
  */

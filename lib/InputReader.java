@@ -10,8 +10,7 @@ import java.nio.CharBuffer;
 import java.util.InputMismatchException;
 
 /**
- * Created by Scruel on 2017/5/29.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/29.  
  * Github : https://github.com/scruel
  */
 public class InputReader {
@@ -20,13 +19,11 @@ public class InputReader {
   //    private final InputStream stream= new FileInputStream(new File("dec.in"));
   private final String charsetName = "UTF-8";
   private byte[] buf = new byte[BUFFER_SIZE];
-  private CharBuffer charBuffer;
   //    private byte[] buf = new byte[1024];
   private int curChar;
   private int numChars;
 
   public InputReader(InputStream stream) {
-    charBuffer = CharBuffer.allocate(BUFFER_SIZE);
     this.stream = stream;
   }
 
@@ -106,14 +103,13 @@ public class InputReader {
       return null;
     }
 
-
     ByteArrayOutputStream res = new ByteArrayOutputStream();
     do {
       res.write(c);
     } while (!isEndline(c = read()));
 
     try {
-      return res.toString("UTF-8");
+      return res.toString(charsetName);
     } catch (UnsupportedEncodingException ignore) {
       return res.toString();
     }
@@ -136,7 +132,7 @@ public class InputReader {
     } while (!isSpaceChar(c = read()));
 
     try {
-      return res.toString("UTF-8");
+      return res.toString(charsetName);
     } catch (UnsupportedEncodingException ignore) {
       return res.toString();
     }

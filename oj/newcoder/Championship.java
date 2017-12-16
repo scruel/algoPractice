@@ -1,8 +1,7 @@
 package algsPractice.oj.newcoder;
 
 /**
- * Created by Scruel on 2017/3/23.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/23.  
  * Github : https://github.com/scruel
  * 有2k只球队，有k-1个强队，其余都是弱队，随机把它们分成k组比赛，每组两个队，问两强相遇的概率是多大？
  * <p>

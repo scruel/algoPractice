@@ -7,8 +7,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  */
 public class Task506 {

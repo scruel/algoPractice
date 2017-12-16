@@ -6,8 +6,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 /**
- * Created by Scruel on 2017/4/3.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/3.  
  * Github : https://github.com/scruel
  * 生成元（Digit Generator, ACM/ICPC Seoul 2005, UVa1583）
  * <p>

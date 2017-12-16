@@ -6,8 +6,7 @@ import algsPractice.lib.OutputWriter;
 import java.util.LinkedList;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * #simulate
  * 方法1.模拟整个表的移动，直接得到结果

@@ -8,8 +8,7 @@ import java.util.LinkedList;
 import java.util.PriorityQueue;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * #shortest #graph
  * http://paste.ubuntu.com/24822181/

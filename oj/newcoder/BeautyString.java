@@ -3,8 +3,7 @@ package algsPractice.oj.newcoder;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/3/24.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/24.  
  * Github : https://github.com/scruel
  * **dfs** **模式匹配**
  * <p>

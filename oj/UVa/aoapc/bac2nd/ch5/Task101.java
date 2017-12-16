@@ -8,7 +8,6 @@ import java.util.LinkedList;
 
 /**
  * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
  * Github : https://github.com/scruel
  * #simulate
  */

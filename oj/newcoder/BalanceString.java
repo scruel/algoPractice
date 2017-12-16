@@ -3,8 +3,7 @@ package algsPractice.oj.newcoder;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/3/23.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/23.  
  * Github : https://github.com/scruel
  * 平衡数
  * 牛牛在研究他自己独创的平衡数，平衡数的定义是：将一个数分成左右两部分，分别成为两个新的数。

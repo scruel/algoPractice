@@ -4,8 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/3/24.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/24.  
  * Github : https://github.com/scruel
  * 组装三角形
  * 牛牛手里有N根木棒,分别编号为1~N,现在他从N根里想取出三根木棒，使得三根木棒构成一个三角形,你能计算出牛牛有多少种取法吗?(考虑两种取法中使用的木棒编号有一个不一样就认为是不同的取法)。

@@ -9,8 +9,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 
 /**
- * Created by Scruel on 2017/4/20.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/20.  
  * Github : https://github.com/scruel
  * http://codeforces.com/contest/468/problem/B
  * #union

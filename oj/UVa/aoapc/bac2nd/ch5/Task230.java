@@ -11,8 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by Scruel on 2017/4/27.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/27.  
  * Github : https://github.com/scruel
  * #simulate
  */

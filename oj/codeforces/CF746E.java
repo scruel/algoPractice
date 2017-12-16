@@ -9,8 +9,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 /**
- * Created by Scruel on 2017/5/10.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/10.  
  * Github : https://github.com/scruel
  * #structure
  * //REDO

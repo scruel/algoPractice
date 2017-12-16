@@ -4,8 +4,7 @@ import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * #simulate #string #queue
  * 使用链表保存减少数组移动导致的复杂度上升

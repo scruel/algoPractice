@@ -1,8 +1,7 @@
 package algsPractice.oj.newcoder;
 
 /**
- * Created by Scruel on 2017/3/21.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/21.  
  * Github : https://github.com/scruel
  */
 public class LocalMin {

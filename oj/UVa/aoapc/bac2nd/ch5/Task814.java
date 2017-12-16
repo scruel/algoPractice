@@ -10,8 +10,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 
 /**
- * Created by Scruel on 2017/4/21.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/21.  
  * Github : https://github.com/scruel
  * #simulate
  */

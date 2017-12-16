@@ -12,8 +12,7 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 /**
- * Created by Scruel on 2017/5/21.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/21.  
  * Github : https://github.com/scruel
  * #string #表达式解析 #DecimalFormat
  * https://zh.wikipedia.org/zh-sg/%E8%B0%83%E5%BA%A6%E5%9C%BA%E7%AE%97%E6%B3%95

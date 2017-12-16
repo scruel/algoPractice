@@ -3,8 +3,7 @@ package algsPractice.dpExercise;
 import java.util.Scanner;
 
 /**
- * Created by Scruel on 2017/3/29.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/29.  
  * Github : https://github.com/scruel
  * https://www.nowcoder.com/questionTerminal/b8bc8459f0d34aaa8c1af1328cab2432
  */

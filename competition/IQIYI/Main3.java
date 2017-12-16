@@ -9,8 +9,7 @@ import java.util.LinkedList;
 import java.util.PriorityQueue;
 
 /**
- * Created by Scruel on 2017/5/14.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/5/14.  
  * Github : https://github.com/scruel
  */
 public class Main3 {

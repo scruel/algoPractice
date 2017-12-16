@@ -9,8 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 /**
- * Created by Scruel on 2017/4/15.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/15.  
  * Github : https://github.com/scruel
  * #enum #string-preprocessing
  */

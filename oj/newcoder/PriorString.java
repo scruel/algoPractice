@@ -4,8 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * Created by Scruel on 2017/3/18.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/3/18.  
  * Github : https://github.com/scruel
  * 以非字典序方式对字符排序（不考虑长度）
  * **字符串**

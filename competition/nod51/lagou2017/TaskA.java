@@ -4,8 +4,7 @@ import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * http://www.infocool.net/kb/OtherLanguage/201701/281274.html
  * #rule #math

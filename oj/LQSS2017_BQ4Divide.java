@@ -1,8 +1,7 @@
 package algsPractice.oj;
 
 /**
- * Created by Scruel on 2017/4/9.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel on 2017/4/9.  
  * Github : https://github.com/scruel
  * #dfs 点线面分割
  */

@@ -7,8 +7,7 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 /**
- * Created by Scruel.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Created by Scruel.  
  * Github : https://github.com/scruel
  * #graph
  */
