@@ -1,0 +1,49 @@
+7 UVa1368
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+171 3
+5 8
+TATGATAC
+TAAGCTAC
+AAAGATCC
+TGAGATAC
+TAAGATGT
+4 10
+ACGTACGTAC
+CCGTACGTAG
+GCGTACGTAT
+TCGTACGTAA
+6 10
+ATGTTACCAT
+AAGTTACGAT
+AACAAAGCAA
+AAGTTACCTT
+AAGTTACCAA
+TACTTACCAA
+
+37 TAAGATAC
+7
+ACGTACGTAA
+6
+AAGTTACCAA
+12
+1
+40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch3
+16 -Xmx256m -Xss64m
+4 Main
+44 algsPractice.oj.UVa.aoapc.bac2nd.ch3.UVa1368
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.08.05
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

@@ -29,7 +29,7 @@ public class OutputWriter {
     }
   }
 
-  public void write(Object... objects) {
+  public void print(Object... objects) {
     for (int i = 0; i < objects.length; ++i) {
       try {
         out.write(objects[i].toString());
@@ -42,13 +42,13 @@ public class OutputWriter {
     }
   }
 
-  public void writeln(Object... objects) {
-    write(objects);
-    write('\n');
+  public void println(Object... objects) {
+    print(objects);
+    print('\n');
   }
 
-  public void writef(String f, Object... objects) {
-    write(String.format(f, objects));
+  public void printf(String f, Object... objects) {
+    print(String.format(f, objects));
   }
 
   public void close() {

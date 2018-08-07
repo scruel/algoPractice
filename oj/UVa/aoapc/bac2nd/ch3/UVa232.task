@@ -1,0 +1,71 @@
+6 UVa232
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+64 2 2
+AT
+*O
+6 7
+AIM*DEN
+*ME*ONE
+UPON*TO
+SO*ERIN
+*SA*OR*
+IES*DEA
+0
+
+259 puzzle #1:
+Across
+  1.AT
+  3.O
+Down
+  1.A
+  2.TO
+
+puzzle #2:
+Across
+  1.AIM
+  4.DEN
+  7.ME
+  8.ONE
+  9.UPON
+ 11.TO
+ 12.SO
+ 13.ERIN
+ 15.SA
+ 17.OR
+ 18.IES
+ 19.DEA
+Down
+  1.A
+  2.IMPOSE
+  3.MEO
+  4.DO
+  5.ENTIRE
+  6.NEON
+  9.US
+ 10.NE
+ 14.ROD
+ 16.AS
+ 18.I
+ 20.A
+
+1
+40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch3
+16 -Xmx256m -Xss64m
+4 Main
+43 algsPractice.oj.UVa.aoapc.bac2nd.ch3.UVa232
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.08.05
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

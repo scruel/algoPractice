@@ -1,0 +1,31 @@
+8 UVa11809
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+68 5.699141892149156e76
+0.5699141892149156e77
+9.205357638345294e18
+0e0
+
+11 5 8
+5 8
+8 6
+1
+40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch3
+16 -Xmx256m -Xss64m
+4 Main
+45 algsPractice.oj.UVa.aoapc.bac2nd.ch3.UVa11809
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.08.07
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

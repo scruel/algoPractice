@@ -6,11 +6,10 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.nio.CharBuffer;
 import java.util.InputMismatchException;
 
 /**
- * Created by Scruel on 2017/5/29.  
+ * Created by Scruel on 2017/5/29.
  * Github : https://github.com/scruel
  */
 public class InputReader {
@@ -344,14 +343,6 @@ public class InputReader {
       array[i] = nextString();
   }
 
-  public char readCharacter() {
-    int c;
-    while (isSpaceChar(c = read())) {
-      ;
-    }
-    return (char) c;
-  }
-
   public boolean readBoolean() {return nextInt() == 1;}
 
   public <E extends Enum<E>> Enum readEnum(Class<E> c) {
@@ -378,6 +369,11 @@ public class InputReader {
     return c >= 48 && c <= 57;
   }
 
+  /**
+   * 注意不能在需要读取空格时使用
+   *
+   * @return
+   */
   public boolean isExhausted() {
     int c;
     while (isSpaceChar(c = peek()) && c != -1) {

@@ -1,0 +1,32 @@
+8 UVa10082
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+2
+0
+17 O S, GOMR YPFSU/
+
+16 I AM FINE TODAY.
+1
+1
+33 O S, GOMR YPFSU/
+O S, GOMR YPFSU/
+33 I AM FINE TODAY.
+I AM FINE TODAY.
+1
+40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch3
+16 -Xmx256m -Xss64m
+4 Main
+45 algsPractice.oj.UVa.aoapc.bac2nd.ch3.UVa10082
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.08.04
+19 Tex Quotes, UVa 272
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0
