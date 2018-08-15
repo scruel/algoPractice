@@ -12,7 +12,7 @@ public class UVa1586 {
   public void solve(int testNumber, InputReader in, OutputWriter out) {
     int t = in.nextInt();
     while (t-- != 0) {
-      String s = in.nextLine();
+      String s = in.readLine();
       double result = 0.0;
       double tempR = 0.0;
       int j = 0;

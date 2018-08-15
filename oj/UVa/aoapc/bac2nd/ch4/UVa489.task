@@ -1,4 +1,4 @@
-7 UVa1339
+6 UVa489
 6 SINGLE
 8 STANDARD
 9 input.txt
@@ -6,27 +6,28 @@
 10 output.txt
 1
 0
-80 JWPUDJSTVP
-VICTORIOUS
-MAMA
-ROME
-HAHA
-HEHE
-AAA
-AAA
-NEERCISTHEBEST
-SECRETMESSAGES
+54 1
+cheese
+chese
+2
+cheese
+abcdefg
+3
+cheese
+abcdefgij
+-1
 
-17 YES
-NO
-YES
-YES
-NO
+61 Round 1
+You win.
+Round 2
+You chickened out.
+Round 3
+You lose.
 1
 40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch4
 16 -Xmx256m -Xss64m
 4 Main
-44 algsPractice.oj.UVa.aoapc.bac2nd.ch4.UVa1339
+43 algsPractice.oj.UVa.aoapc.bac2nd.ch4.UVa489
 42 net.egork.chelper.checkers.PEStrictChecker
 0 
 0

@@ -25,7 +25,7 @@ public class UVa11809 {
       }
     }
     for (; ; ) {
-      String s = in.nextLine();
+      String s = in.readLine();
       if (s.equals("0e0")) {
         break;
       }

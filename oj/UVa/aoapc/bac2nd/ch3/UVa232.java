@@ -23,8 +23,9 @@ public class UVa232 {
       mk = new int[r][c];
       cnt = 1;
       for (int i = 0; i < r; i++) {
+        String t = in.readLine();
         for (int j = 0; j < c; j++) {
-          arr[i][j] = in.nextChar();
+          arr[i][j] = t.charAt(j);
           check(i, j);
         }
       }

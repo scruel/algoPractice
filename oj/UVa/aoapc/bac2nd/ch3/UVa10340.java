@@ -8,8 +8,9 @@ import algsPractice.lib.OutputWriter;
  */
 public class UVa10340 {
   public void solve(int testNumber, InputReader in, OutputWriter out) {
-    while (!in.isExhausted()) {
+    for (;;) {
       String s = in.nextString();
+      if (s == null) break;
       String t = in.nextString();
 
       int i = 0;

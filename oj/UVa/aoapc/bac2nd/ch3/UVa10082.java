@@ -10,9 +10,10 @@ public class UVa10082 {
   String s = "`1234567890-=QWERTYUIOP[]\\ASDFGHJKL;'ZXCVBNM,./";
 
   public void solve(int testNumber, InputReader in, OutputWriter out) {
-    int ct;
-    while ((ct = in.read()) != -1) {
-      char c = (char) ct;
+    for (; ; ) {
+      int t = in.read();
+      if (t == -1) break;
+      char c = (char) t;
       int i = s.indexOf(c);
       if (i != -1) {
         out.print(

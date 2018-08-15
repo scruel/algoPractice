@@ -9,15 +9,17 @@ import algsPractice.lib.OutputWriter;
 public class UVa272 {
   public void solve(int testNumber, InputReader in, OutputWriter out) {
     boolean f = true;
-    int c;
-    while ((c = in.read()) != -1) {
+    for (;;) {
+      int t = in.read();
+      if (t == -1) break;
+      char c = (char) t;
       if (c == '\"') {
         if (f) out.print("``");
         else out.print("''");
         f = !f;
       }
       else {
-        out.print((char)c);
+        out.print(c);
       }
     }
   }

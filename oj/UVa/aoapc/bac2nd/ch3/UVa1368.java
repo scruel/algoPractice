@@ -2,7 +2,6 @@ package algsPractice.oj.UVa.aoapc.bac2nd.ch3;
 
 import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
-import static java.lang.Math.*;
 
 /**
  * @author Scruel Tao
@@ -17,7 +16,7 @@ public class UVa1368 {
       int m = in.nextInt();
       int[][] a = new int[m][256];
       while (n-- != 0) {
-        String s = in.nextLine();
+        String s = in.readLine();
         for (int i = 0; i < m; i++) {
           a[i][s.charAt(i)]++;
         }

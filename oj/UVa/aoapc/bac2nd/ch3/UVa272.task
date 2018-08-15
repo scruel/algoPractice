@@ -11,10 +11,11 @@ is the question".
 The programming contestant replied: "I must disagree.
 To `C' or not to `C', that is The Question!"
 
-166 ``To be or not to be,'' quoth the Bard, ``that
+167 ``To be or not to be,'' quoth the Bard, ``that
 is the question''.
 The programming contestant replied: ``I must disagree.
 To `C' or not to `C', that is The Question!''
+
 1
 40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch3
 16 -Xmx256m -Xss64m

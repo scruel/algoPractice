@@ -1,4 +1,4 @@
-7 UVa1339
+6 UVa213
 6 SINGLE
 8 STANDARD
 9 input.txt
@@ -6,27 +6,20 @@
 10 output.txt
 1
 0
-80 JWPUDJSTVP
-VICTORIOUS
-MAMA
-ROME
-HAHA
-HEHE
-AAA
-AAA
-NEERCISTHEBEST
-SECRETMESSAGES
+85 TNM AEIOU
+0010101100011
+1010001001110110011
+11000
+$#**\
+0100000101101100011100101000
 
-17 YES
-NO
-YES
-YES
-NO
+12 TAN ME
+##*\$
 1
 40 src/algsPractice/oj/UVa/aoapc/bac2nd/ch4
 16 -Xmx256m -Xss64m
 4 Main
-44 algsPractice.oj.UVa.aoapc.bac2nd.ch4.UVa1339
+43 algsPractice.oj.UVa.aoapc.bac2nd.ch4.UVa213
 42 net.egork.chelper.checkers.PEStrictChecker
 0 
 0

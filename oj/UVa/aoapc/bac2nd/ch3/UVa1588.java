@@ -14,9 +14,10 @@ public class UVa1588 {
   int dn;
 
   public void solve(int testNumber, InputReader in, OutputWriter out) {
-    while (!in.isExhausted()) {
-      m = in.nextLine();
-      d = in.nextLine();
+    for (;;) {
+      m = in.readLine();
+      if (m == null) break;
+      d = in.readLine();
       mn = m.length();
       dn = d.length();
       int all = mn + dn;

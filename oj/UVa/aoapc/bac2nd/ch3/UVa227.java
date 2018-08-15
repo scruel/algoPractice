@@ -2,7 +2,6 @@ package algsPractice.oj.UVa.aoapc.bac2nd.ch3;
 
 import algsPractice.lib.InputReader;
 import algsPractice.lib.OutputWriter;
-import static java.lang.Math.*;
 
 /**
  * @author Scruel Tao
@@ -18,7 +17,7 @@ public class UVa227 {
     while (true) {
       // 构建初始矩阵
       for (int i = 0; i < n; i++) {
-        String s = in.nextLine();
+        String s = in.readLine();
         if (s.charAt(0) == 'Z') return;
         if (s.length() == n - 1) s += ' ';
         char[] chars = s.toCharArray();
@@ -34,7 +33,7 @@ public class UVa227 {
 
       boolean f = true;
       while (true) {
-        char[] cmd = in.nextLine().toCharArray();
+        char[] cmd = in.readLine().toCharArray();
         for (int i = 0; i < cmd.length; i++) {
           if (cmd[i] == 'A') {
             if (!move(x - 1, y)) {

@@ -10,7 +10,7 @@ public class UVa1584 {
   public void solve(int testNumber, InputReader in, OutputWriter out) {
     int t = in.nextInt();
     while (t-- != 0) {
-      String s = in.nextLine();
+      String s = in.readLine();
       int n = s.length();
       int index = 0;
       for (int i = 0; i < n; i++) {

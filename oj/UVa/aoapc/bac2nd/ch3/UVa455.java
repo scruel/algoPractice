@@ -10,7 +10,8 @@ public class UVa455 {
   public void solve(int testNumber, InputReader in, OutputWriter out) {
     int t = in.nextInt();
     while (t-- != 0) {
-      char[] s = in.nextLine().toCharArray();
+      in.readLine();
+      char[] s = in.readLine().toCharArray();
       int res = 0;
       int n = s.length;
       // 枚举是几的周期串

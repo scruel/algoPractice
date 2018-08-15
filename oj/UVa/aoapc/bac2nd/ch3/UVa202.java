@@ -11,10 +11,11 @@ import java.util.Map;
  */
 public class UVa202 {
   public void solve(int testNumber, InputReader in, OutputWriter out) {
-    int kase = 0;
-    while (!in.isExhausted()) {
+    for (;;) {
       // if (kase++ != 0) out.println();
-      int a = in.nextInt();
+      String s = in.nextString();
+      if (s == null) break;
+      int a = Integer.parseInt(s);
       int b = in.nextInt();
       out.printf("%d/%d = ", a, b);
       int r = 0;

@@ -38,11 +38,12 @@ public class UVa1587 {
   }
 
   public void solve(int testNumber, InputReader in, OutputWriter out) {
-    while (!in.isExhausted()) {
-      Map<String, Integer> map = new HashMap<>();
+    for (;;) {
       Board[] boards = new Board[n];
       for (int i = 0; i < n; i++) {
-        int w = in.nextInt();
+        String s = in.nextString();
+        if (s == null) return;
+        int w = Integer.parseInt(s);
         int h = in.nextInt();
         if (w > h) {
           int t = w;
