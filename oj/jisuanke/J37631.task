@@ -1,0 +1,26 @@
+6 J37631
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+15 6 6
+1 2 3 4 5 6
+1 4
+1
+28 src/algsPractice/oj/jisuanke
+16 -Xmx256m -Xss64m
+4 Main
+31 algsPractice.oj.jisuanke.J37631
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.08.16
+45 https://www.jisuanke.com/minicourse/733/37631
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

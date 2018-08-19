@@ -1,0 +1,42 @@
+5 P1217
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+2
+0
+6 5 500
+
+43 5
+7
+11
+101
+131
+151
+181
+191
+313
+353
+373
+383
+
+1
+1
+11 5 100000000
+-1
+1
+30 src/algsPractice/oj/luogu/L1_6
+16 -Xmx256m -Xss64m
+4 Main
+32 algsPractice.oj.luogu.L1_6.P1217
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.08.17
+45 https://www.jisuanke.com/minicourse/733/37631
+0
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

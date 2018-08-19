@@ -22,6 +22,9 @@ public class InputReader {
   }
 
   public int read() {
+    if (tokenizer != null && tokenizer.hasMoreTokens()) {
+      throw new RuntimeException("Could not read new line during line operations.");
+    }
     try {
       return reader.read();
     } catch (IOException e) {
