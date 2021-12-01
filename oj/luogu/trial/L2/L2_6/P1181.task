@@ -1,0 +1,32 @@
+5 P1181
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+2
+0
+13 5 6
+4 2 4 5 1
+1 3
+1
+1
+16 6 6
+4 2 4 5 1 1
+
+1 4
+1
+39 src/algsPractice/oj/luogu/trial/L2/L2_6
+16 -Xmx256m -Xss64m
+4 Main
+41 algsPractice.oj.luogu.trial.L2.L2_6.P1181
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.09.12
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

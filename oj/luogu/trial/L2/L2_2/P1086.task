@@ -1,0 +1,48 @@
+5 P1086
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+3
+0
+92 6 7 21
+0 0 0 0 0 0 0
+0 0 0 0 13 0 0
+0 0 0 0 0 0 7
+0 15 0 0 0 0 0
+0 0 0 9 0 0 0
+0 0 0 0 0 0 0
+2 37
+1
+1
+93 6 7 20
+0 0 0 0 0 0 0
+0 0 0 0 13 0 0
+0 0 0 0 0 0 7
+0 15 0 0 0 0 0
+0 0 0 9 0 0 0
+0 0 0 0 0 0 0
+
+2 28
+1
+2
+9 1 1 5
+15
+
+2 15
+1
+39 src/algsPractice/oj/luogu/trial/L2/L2_2
+16 -Xmx256m -Xss64m
+4 Main
+41 algsPractice.oj.luogu.trial.L2.L2_2.P1086
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.09.11
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

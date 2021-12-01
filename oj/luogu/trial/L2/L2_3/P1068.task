@@ -1,0 +1,50 @@
+5 P1068
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+2
+0
+57 6 3 
+1000 90 
+3239 88 
+2390 95 
+7231 84 
+1005 95 
+1001 88
+50 88 5 
+1005 95 
+2390 95 
+1000 90 
+1001 88 
+3239 88 
+1
+1
+57 6 3 
+1000 90 
+3239 88 
+2390 95 
+7231 84 
+1005 95 
+1001 87
+40 88 4
+1005 95 
+2390 95 
+1000 90 
+3239 88 
+1
+39 src/algsPractice/oj/luogu/trial/L2/L2_3
+16 -Xmx256m -Xss64m
+4 Main
+41 algsPractice.oj.luogu.trial.L2.L2_3.P1068
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.09.12
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

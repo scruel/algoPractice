@@ -1,0 +1,36 @@
+5 TaskA
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+2
+0
+19 4 6
+1 3
+2 1
+3 3
+4 2
+1 2
+1
+1
+17 3 292
+3 2
+4 3
+4 3
+4 1314
+1
+36 src/algsPractice/oj/nowcoder/contest
+16 -Xmx256m -Xss64m
+4 Main
+38 algsPractice.oj.nowcoder.contest317.TaskA
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2019.01.22
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

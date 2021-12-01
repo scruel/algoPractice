@@ -1,0 +1,44 @@
+5 P1071
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+3
+0
+15 AA 
+AB 
+EOWIE
+
+
+7 Failed
+
+1
+1
+62 QWERTYUIOPLKJHGFDSAZXCVBN 
+ABCDEFGHIJKLMNOPQRSTUVWXY 
+DSLIEWO
+
+8 Failed 
+
+1
+2
+107 MSRTZCJKPFLQYVAWBINXUEDGHOOILSMIJFRCOPPQCEUNYDUMPP
+YIZSDWAHLNOVFUCERKJXQMGTBPPKOIYKANZWPLLVWMQJFGQYLL
+FLSO 
+4 NOIP
+1
+39 src/algsPractice/oj/luogu/trial/L2/L2_5
+16 -Xmx256m -Xss64m
+4 Main
+41 algsPractice.oj.luogu.trial.L2.L2_5.P1071
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.09.12
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

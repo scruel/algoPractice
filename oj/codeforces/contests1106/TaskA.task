@@ -1,0 +1,57 @@
+5 TaskA
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+4
+0
+32 5
+.....
+.XXX.
+.XXX.
+.XXX.
+.....
+
+1 1
+1
+1
+8 2
+XX
+XX
+
+1 0
+1
+2
+44 6
+......
+X.X.X.
+.X.X.X
+X.X.X.
+.X.X.X
+......
+
+1 4
+1
+3
+14 3
+XXX
+XXX
+XXX
+
+1 1
+1
+43 src/algsPractice/oj/codeforces/contests1106
+16 -Xmx256m -Xss64m
+4 Main
+45 algsPractice.oj.codeforces.contests1106.TaskA
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2019.01.31
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

@@ -1,0 +1,42 @@
+5 P1909
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+3
+0
+18 57
+2 2
+50 30
+30 27
+2 54
+1
+1
+29 9998
+128 233
+128 2333
+128 666
+5 18407
+1
+2
+30 9999
+101 1111
+1 9999
+1111 9999
+5 89991
+1
+39 src/algsPractice/oj/luogu/trial/L1/L1_2
+16 -Xmx256m -Xss64m
+4 Main
+41 algsPractice.oj.luogu.trial.L1.L1_2.P1909
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.08.15
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0

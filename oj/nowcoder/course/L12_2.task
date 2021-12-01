@@ -1,0 +1,26 @@
+5 L12_2
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+9 3 3
+1 2 4
+1 2
+1
+35 src/algsPractice/oj/nowcoder/course
+16 -Xmx256m -Xss64m
+4 Main
+37 algsPractice.oj.nowcoder.course.L12_2
+42 net.egork.chelper.checkers.PEStrictChecker
+0 
+0
+10 2018.09.18
+0 
+1
+28 algsPractice.lib.InputReader
+29 algsPractice.lib.OutputWriter
+0
+0
